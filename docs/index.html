@@ -1,23 +1,154 @@
-<!doctype html><html lang='ko'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'>
-<title>AWS Daily Strategic Brief — 20260516</title><meta name='description' content='AWS Korea Tech Blog, AWS News Blog, AWS Machine Learning Blog 기반 Enterprise AI·Data·Cloud 전략 브리핑'>
-<meta property='og:title' content='AWS Daily Strategic Brief — 20260516'><meta property='og:description' content='Enterprise AI·Data·Cloud 관점의 일일 AWS 전략형 블로그'><meta property='og:type' content='article'>
-<link rel='preconnect' href='https://fonts.googleapis.com'><link rel='preconnect' href='https://fonts.gstatic.com' crossorigin><link href='https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap' rel='stylesheet'>
-<style>
-:root{--bg:#f7f8fb;--ink:#101828;--muted:#667085;--brand:#2563eb;--card:#fff;--line:#e4e7ec;--navy:#0b1f3a}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:'Noto Sans KR',system-ui,sans-serif;font-size:17px;line-height:1.75;word-break:keep-all;overflow-wrap:break-word;text-wrap:pretty}a{color:var(--brand);font-weight:700}.hero{background:radial-gradient(circle at 20% 0%,#60a5fa55,transparent 34%),linear-gradient(135deg,#07172d,#102a56 58%,#1e3a8a);color:#fff;padding:88px 24px 76px}.hero-inner{max-width:1120px;margin:0 auto}.kicker{color:#bfdbfe;font-weight:800;letter-spacing:.08em;text-transform:uppercase}h1{font-size:clamp(2.3rem,6vw,5.2rem);line-height:1.05;margin:14px 0 22px}.lead{font-size:clamp(1.05rem,2vw,1.35rem);max-width:850px;color:#e5efff}main{max-width:1080px;margin:0 auto;padding:48px 24px}section{margin:54px 0}.message{background:#fff;border:1px solid var(--line);border-left:7px solid var(--brand);border-radius:24px;padding:28px;box-shadow:0 18px 40px #10182812}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}.card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:0 14px 32px #1018280d;min-width:0}.eyebrow{font-size:.9rem;color:var(--brand);font-weight:800;margin:0 0 8px}.blog-image{max-width:100%;height:auto;display:block;border-radius:28px;box-shadow:0 20px 50px #10182822;margin:18px auto}figure{margin:26px 0}figcaption{font-size:.92rem;color:var(--muted);text-align:center}.trend-list{display:grid;gap:16px;padding:0;list-style:none}.trend-list li{background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px 20px}.trend-list span{display:block;color:var(--muted);margin-top:6px}.table-wrap{overflow-x:auto;border-radius:22px;border:1px solid var(--line);background:#fff}table{width:100%;border-collapse:collapse;min-width:760px}th,td{padding:16px;border-bottom:1px solid var(--line);vertical-align:top;text-align:left}th{background:#eef4ff}.two{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;align-items:start}.pill{display:inline-block;padding:8px 12px;background:#eff6ff;color:#1d4ed8;border-radius:999px;font-weight:800;margin:4px}.appendix{font-size:.95rem;color:#344054}code{white-space:normal;background:#f2f4f7;border-radius:8px;padding:2px 5px}footer{padding:34px 24px;color:#667085;text-align:center}
-@media (max-width:768px){body{font-size:16.5px;line-height:1.7}.hero{padding:58px 18px 48px}main{padding:34px 18px}.two{grid-template-columns:1fr}.card,.message{border-radius:18px;padding:20px}table{min-width:680px}}
-@media (max-width:480px){body{font-size:16px}h1{font-size:2.35rem}.hero{padding-left:16px;padding-right:16px}main{padding-left:14px;padding-right:14px}.grid{grid-template-columns:1fr}}
-</style></head><body><header class='hero'><div class='hero-inner'><div class='kicker'>Enterprise AI · Data · Cloud</div><h1>AWS Daily Strategic Brief</h1><p class='lead'>한국시간 2026-05-16 07:03:42 KST 기준 AWS 공식 블로그 신규/최근 수집 데이터를 바탕으로 기업 의사결정자가 읽기 쉬운 전략형 블로그로 재구성했습니다.</p></div></header><main>
-<section class='message'><h2>오늘의 핵심 메시지</h2><p>AWS의 최신 변화는 단일 서비스 업데이트보다 <strong>생성형 AI 운영화, 데이터 플랫폼 현대화, 클라우드 거버넌스 자동화</strong>라는 큰 흐름 안에서 해석해야 합니다. 한국 기업은 빠른 PoC보다 보안·비용·데이터 통제·운영 책임 모델을 함께 설계하는 실행 전략이 중요합니다.</p><p>GPT Image 2 프롬프트 최적화는 계정 모델 제한으로 건너뛰고, ChatGPT Auth 기반 GPT Image 2를 --no-optimize 경로로 생성했습니다.</p></section>
-<section><figure><img src='./20260516/images/image-01.png' alt='Enterprise AI, Data, Cloud 전략을 상징하는 AWS Daily Brief 히어로 이미지' class='blog-image' /><figcaption>Enterprise AI, Data, Cloud 전략을 상징하는 AWS Daily Brief 히어로 이미지</figcaption></figure>
-<figure><img src='./20260516/images/image-02.png' alt='생성형 AI 운영화와 데이터 거버넌스 흐름 인포그래픽' class='blog-image' /><figcaption>생성형 AI 운영화와 데이터 거버넌스 흐름 인포그래픽</figcaption></figure>
-<figure><img src='./20260516/images/image-03.png' alt='2주 평가, 30일 PoC, 90일 운영화 실행 로드맵 이미지' class='blog-image' /><figcaption>2주 평가, 30일 PoC, 90일 운영화 실행 로드맵 이미지</figcaption></figure></section>
-<section><h2>핵심 트렌드 분석</h2><ul class='trend-list'><li><strong>Restrict access to sensitive documents in your Amazon Quick knowledge bases for Amazon S3</strong><span>Coarse-grained permissions that control access at the knowledge base level work well for many teams, but sensitive documents require more granular control to restrict specific docu</span></li><li><strong>GS SHOP의 영상 기반 AI 상품 추천 플랫폼 구축기</strong><span>by Jonghyuok Kim and Haein Lim on 15 5월 2026 Permalink Share GS SHOP은 대한민국을 대표하는 TV 홈쇼핑 비즈니스에서 출발하여, 이제는 고객의 라이프스타일을 함께 만들어 나가는 온라인 종합 쇼핑 플랫폼으로 자리잡고 있습니다. 기존의 TV 라이브 채널뿐 아니라 데이터 홈쇼</span></li><li><strong>Agentic AI 기반 플랫폼 –  Part3 : AgentCore Policy, Evaluation, Observability로 기업 운영 체계 구축하기</strong><span>다양한 형태의 MCP를 등록하고, AgentCore Gateway를 통해 단일 엔드포인트로 통합하는 아키텍처를 소개했습니다. MCP Registry를 통해 Agent가 Tool을 호출할 수 있는 환경은 갖추었지만, 기업 환경에서 실제 운영하기 위해서는 추가적인 질문에 답해야 합니다.</span></li><li><strong>AI-DLC 를 팀 프로젝트에 적용하기: Subagent 와 Custom Skill 로 확장한 Armiq 사례</strong><span>이번 사례의 파트너인 ARMIQ 는 SAP 데이터 영역에서 오랫동안 솔루션을 공급해 온 기업으로, 법인·사업부 분리나 매각 과정에서 발생하는 데이터 분할·이관 이슈, 그리고 데이터 압축·암호화·클라우드 전송 등 데이터 관리와 보안 전반에 특화된 솔루션 (AODS · ADCS · ALCS · AETL · ACMS · APD</span></li></ul></section>
-<section class='two'><div><h2>기술 변화의 의미</h2><p>클라우드 서비스 업데이트는 점점 더 애플리케이션 개발, 데이터 거버넌스, AI 모델 운영을 하나의 플랫폼 운영 문제로 묶고 있습니다. 이는 CIO/CDO/CTO 조직이 개별 기능 도입보다 공통 플랫폼, 표준 아키텍처, 비용·보안 가드레일을 우선 설계해야 함을 의미합니다.</p></div><div class='card'><h3>기업 적용 관점</h3><span class='pill'>Platform Engineering</span><span class='pill'>AI Governance</span><span class='pill'>FinOps</span><span class='pill'>Security by Design</span></div></section>
-<section><h2>수집 게시물 카드</h2><div class='grid'><article class='card'><p class='eyebrow'>AWS Machine Learning Blog · 2026-05-16</p><h3>Restrict access to sensitive documents in your Amazon Quick knowledge bases for Amazon S3</h3><p>Coarse-grained permissions that control access at the knowledge base level work well for many teams, but sensitive documents require more granular control to restrict specific documents or folders to authorized teams, individuals, or systems. Document-level ac</p><a href='https://aws.amazon.com/blogs/machine-learning/restrict-access-to-sensitive-documents-in-your-amazon-quick-knowledge-bases-for-amazon-s3/'>원문 보기</a></article><article class='card'><p class='eyebrow'>AWS Korea Tech Blog · 2026-05-15</p><h3>GS SHOP의 영상 기반 AI 상품 추천 플랫폼 구축기</h3><p>by Jonghyuok Kim and Haein Lim on 15 5월 2026 Permalink Share GS SHOP은 대한민국을 대표하는 TV 홈쇼핑 비즈니스에서 출발하여, 이제는 고객의 라이프스타일을 함께 만들어 나가는 온라인 종합 쇼핑 플랫폼으로 자리잡고 있습니다. 기존의 TV 라이브 채널뿐 아니라 데이터 홈쇼핑, 모바일 라이브까지 운영하며 쇼핑 채널을 넓혀왔고, 콘텐츠와 커머스를 결합한 멀티채널 쇼핑 플랫폼으로 진화해 가고 있습니다.</p><a href='https://aws.amazon.com/ko/blogs/tech/gs-shop-ai-powered-video-recommendation-platform/'>원문 보기</a></article><article class='card'><p class='eyebrow'>AWS Korea Tech Blog · 2026-05-15</p><h3>Agentic AI 기반 플랫폼 –  Part3 : AgentCore Policy, Evaluation, Observability로 기업 운영 체계 구축하기</h3><p>다양한 형태의 MCP를 등록하고, AgentCore Gateway를 통해 단일 엔드포인트로 통합하는 아키텍처를 소개했습니다. MCP Registry를 통해 Agent가 Tool을 호출할 수 있는 환경은 갖추었지만, 기업 환경에서 실제 운영하기 위해서는 추가적인 질문에 답해야 합니다.</p><a href='https://aws.amazon.com/ko/blogs/tech/agentic-ai-foundation-platform-part3/'>원문 보기</a></article><article class='card'><p class='eyebrow'>AWS Korea Tech Blog · 2026-05-15</p><h3>AI-DLC 를 팀 프로젝트에 적용하기: Subagent 와 Custom Skill 로 확장한 Armiq 사례</h3><p>이번 사례의 파트너인 ARMIQ 는 SAP 데이터 영역에서 오랫동안 솔루션을 공급해 온 기업으로, 법인·사업부 분리나 매각 과정에서 발생하는 데이터 분할·이관 이슈, 그리고 데이터 압축·암호화·클라우드 전송 등 데이터 관리와 보안 전반에 특화된 솔루션 (AODS · ADCS · ALCS · AETL · ACMS · APDE · ASRD · ATDM 등) 을 제공하고 있습니다. “AI 시대에 살아있는 데이터의 가능성을 실현한다”는 비전 아래 고객 맞춤형 솔루션을 </p><a href='https://aws.amazon.com/ko/blogs/tech/aidlc-armiq-subagent-customskills/'>원문 보기</a></article></div></section>
-<section><h2>한국 기업 관점 시사점</h2><div class='message'><p>한국 대기업·금융·제조·공공 조직은 클라우드/AI 도입에서 성능보다 <strong>책임 소재, 데이터 위치, 감사 가능성, 벤더 종속성, 비용 예측성</strong>을 중점 관리해야 합니다. AWS 업데이트는 글로벌 표준 기능을 빠르게 제공하지만, 국내 규제 및 내부 보안 기준에 맞춘 landing zone, IAM, 로그 보존, 모델 평가 절차가 병행되어야 합니다.</p></div></section>
-<section><h2>실행 전략</h2><div class='grid'><div class='card'><h3>1. 2주 내 평가</h3><p>관련 서비스의 계정/리전/권한/비용 조건을 확인하고 기존 표준 아키텍처와 충돌 여부를 검토합니다.</p></div><div class='card'><h3>2. 30일 PoC</h3><p>비즈니스 가치가 명확한 워크로드 1개를 선정하되 로그, 비용 태그, 보안 통제를 PoC 시작부터 적용합니다.</p></div><div class='card'><h3>3. 90일 운영화</h3><p>운영 Runbook, SLA/SLO, 모델/데이터 거버넌스, FinOps 지표를 포함해 플랫폼 표준으로 흡수합니다.</p></div></div></section>
-<section><h2>리스크/거버넌스 고려사항</h2><div class='table-wrap'><table><thead><tr><th>게시물/테마</th><th>주요 기술</th><th>실무 시사점</th></tr></thead><tbody><tr><td>Restrict access to sensitive documents in your Amazon Quick knowledge bases for Amazon S3</td><td>Amazon Q, S3, IAM</td><td>- 기업 아키텍처/플랫폼 팀은 해당 변화가 기존 표준 아키텍처, 보안 통제, 운영 자동화에 미치는 영향을 검토해야 합니다. - 한국 기업은 규제·데이터 주권·비용 최적화·내부 역량 전환 관점에서 PoC가 아닌 운영 적용 기준을 함께 설계해야 합니다. - 관련 서비스가 데이터/AI 워크로드와 연결되는 경우 모델 거버넌스, 관측성, FinOps 지표를 초기부터 포함하는 것이 바람직합니다.</td></tr><tr><td>GS SHOP의 영상 기반 AI 상품 추천 플랫폼 구축기</td><td>Bedrock, S3, Redshift, OpenSearch</td><td>- 기업 아키텍처/플랫폼 팀은 해당 변화가 기존 표준 아키텍처, 보안 통제, 운영 자동화에 미치는 영향을 검토해야 합니다. - 한국 기업은 규제·데이터 주권·비용 최적화·내부 역량 전환 관점에서 PoC가 아닌 운영 적용 기준을 함께 설계해야 합니다. - 관련 서비스가 데이터/AI 워크로드와 연결되는 경우 모델 거버넌스, 관측성, FinOps 지표를 초기부터 포함하는 것이 바람직합니다.</td></tr><tr><td>Agentic AI 기반 플랫폼 –  Part3 : AgentCore Policy, Evaluation, Observability로 기업 운영 체계 구축하기</td><td>Bedrock, Lambda, CloudWatch</td><td>- 기업 아키텍처/플랫폼 팀은 해당 변화가 기존 표준 아키텍처, 보안 통제, 운영 자동화에 미치는 영향을 검토해야 합니다. - 한국 기업은 규제·데이터 주권·비용 최적화·내부 역량 전환 관점에서 PoC가 아닌 운영 적용 기준을 함께 설계해야 합니다. - 관련 서비스가 데이터/AI 워크로드와 연결되는 경우 모델 거버넌스, 관측성, FinOps 지표를 초기부터 포함하는 것이 바람직합니다.</td></tr><tr><td>AI-DLC 를 팀 프로젝트에 적용하기: Subagent 와 Custom Skill 로 확장한 Armiq 사례</td><td>S3, CloudFormation, CDK, VPC, IAM</td><td>- 기업 아키텍처/플랫폼 팀은 해당 변화가 기존 표준 아키텍처, 보안 통제, 운영 자동화에 미치는 영향을 검토해야 합니다. - 한국 기업은 규제·데이터 주권·비용 최적화·내부 역량 전환 관점에서 PoC가 아닌 운영 적용 기준을 함께 설계해야 합니다. - 관련 서비스가 데이터/AI 워크로드와 연결되는 경우 모델 거버넌스, 관측성, FinOps 지표를 초기부터 포함하는 것이 바람직합니다.</td></tr></tbody></table></div></section>
-<section class='appendix'><h2>이미지 프롬프트 기록</h2><h3>Image Prompt 1</h3><ul><li>목적: 오늘 AWS 업데이트의 AI·Data·Cloud 전략 테마를 여는 히어로 이미지</li><li>삽입 위치: Hero 직후 첫 번째 이미지</li><li>image2 prompt: <code>Executive Korean tech blog hero illustration for AWS daily strategy briefing, enterprise AI data cloud convergence, abstract cloud architecture, secure data pipelines, boardroom strategy mood, premium editorial style, no logos, Korean business audience, high contrast, 16:9</code></li><li>권장 비율: 16:9</li><li>alt 텍스트: Enterprise AI, Data, Cloud 전략을 상징하는 AWS Daily Brief 히어로 이미지</li></ul>
-<h3>Image Prompt 2</h3><ul><li>목적: 기술 변화의 의미를 설명하는 인포그래픽</li><li>삽입 위치: 핵심 트렌드 분석 전후</li><li>image2 prompt: <code>Clean enterprise infographic about generative AI operationalization, data governance, platform engineering, and cloud security guardrails, Korean executive blog visual, modern cards and flow lines, no brand logos, legible abstract labels, 16:9</code></li><li>권장 비율: 16:9</li><li>alt 텍스트: 생성형 AI 운영화와 데이터 거버넌스 흐름 인포그래픽</li></ul>
-<h3>Image Prompt 3</h3><ul><li>목적: 실행 전략 로드맵을 시각화</li><li>삽입 위치: 실행 전략 섹션 주변</li><li>image2 prompt: <code>Strategic roadmap visual for Korean enterprises adopting AWS cloud and AI: assess in 2 weeks, proof of concept in 30 days, operationalize in 90 days, executive consulting style, premium blue palette, no logos, 16:9</code></li><li>권장 비율: 16:9</li><li>alt 텍스트: 2주 평가, 30일 PoC, 90일 운영화 실행 로드맵 이미지</li></ul></section>
-</main><footer>Generated by Hermes AWS daily ingest · Source: AWS official blogs · 20260516</footer></body></html>
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AWS Daily Strategy Brief: Claude Platform on AWS가 여는 엔터프라이즈 AI 운영의 새 선택지</title>
+  <meta name="description" content="2026년 5월 17일 AWS 블로그 기반 Enterprise AI·Data·Cloud 전략 브리핑: Claude Platform on AWS의 의미, 기업 적용 전략, 리스크와 거버넌스." />
+  <meta name="keywords" content="AWS, Claude Platform on AWS, Enterprise AI, Agentic AI, Cloud Governance, 한국 기업 AI 전략" />
+  <meta property="og:title" content="AWS Daily Strategy Brief: Claude Platform on AWS가 여는 엔터프라이즈 AI 운영의 새 선택지" />
+  <meta property="og:description" content="Claude Platform on AWS 발표를 기업 AI 운영·거버넌스 관점에서 해석한 일일 전략형 블로그." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="./20260517/images/image-01.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap');
+    :root { --bg:#f6f8fb; --ink:#172033; --muted:#5b6780; --primary:#174ea6; --accent:#f59e0b; --card:#ffffff; --line:#dbe4f0; --deep:#07182f; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:'Noto Sans KR', system-ui, -apple-system, sans-serif; background:var(--bg); color:var(--ink); font-size:17px; line-height:1.75; word-break:keep-all; overflow-wrap:break-word; text-wrap:pretty; }
+    a { color:var(--primary); }
+    .hero { background:linear-gradient(135deg,#07182f 0%,#123d75 55%,#f59e0b 160%); color:#fff; padding:72px 24px 56px; }
+    .hero-inner { max-width:1120px; margin:0 auto; display:grid; grid-template-columns:1.05fr .95fr; gap:36px; align-items:center; }
+    .eyebrow { display:inline-flex; gap:8px; align-items:center; font-size:14px; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#fbd38d; }
+    h1 { font-size:clamp(34px, 5vw, 60px); line-height:1.12; margin:18px 0; letter-spacing:-.04em; }
+    .lead { font-size:clamp(18px, 2.1vw, 23px); color:#dbeafe; margin:0 0 24px; }
+    .hero-card { background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.22); border-radius:28px; padding:22px; backdrop-filter:blur(10px); box-shadow:0 24px 80px rgba(0,0,0,.25); }
+    .blog-image { max-width:100%; height:auto; display:block; border-radius:22px; box-shadow:0 18px 60px rgba(15,23,42,.18); border:1px solid rgba(255,255,255,.35); }
+    main { max-width:1080px; margin:0 auto; padding:44px 24px 72px; }
+    section { margin:42px 0; }
+    h2 { font-size:clamp(26px,3vw,38px); line-height:1.25; margin:0 0 18px; letter-spacing:-.03em; }
+    h3 { font-size:22px; margin:0 0 10px; }
+    .summary-box { background:#fff7ed; border:1px solid #fed7aa; border-left:7px solid var(--accent); border-radius:20px; padding:24px; font-size:19px; font-weight:500; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px, 1fr)); gap:20px; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:22px; padding:24px; box-shadow:0 10px 28px rgba(15,23,42,.06); min-width:0; }
+    .card strong { color:#0f3f86; }
+    .pill { display:inline-flex; align-items:center; padding:7px 12px; border-radius:999px; background:#eaf2ff; color:#0f3f86; font-size:14px; font-weight:800; margin:4px 6px 4px 0; }
+    .infographic { background:linear-gradient(180deg,#ffffff,#edf5ff); border:1px solid var(--line); border-radius:28px; padding:28px; }
+    .steps { display:grid; grid-template-columns:repeat(auto-fit, minmax(220px,1fr)); gap:16px; counter-reset:step; }
+    .step { position:relative; padding:22px; background:#fff; border-radius:20px; border:1px solid #d9e6f7; }
+    .step:before { counter-increment:step; content:counter(step); display:inline-grid; place-items:center; width:36px; height:36px; border-radius:50%; background:var(--primary); color:#fff; font-weight:800; margin-bottom:12px; }
+    .table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:18px; border:1px solid var(--line); background:#fff; }
+    table { width:100%; border-collapse:collapse; min-width:720px; }
+    th, td { padding:15px 16px; border-bottom:1px solid var(--line); vertical-align:top; text-align:left; }
+    th { background:#0b2547; color:#fff; }
+    .quote { font-size:22px; font-weight:800; line-height:1.55; background:#0b2547; color:#fff; padding:28px; border-radius:24px; }
+    .appendix { font-size:14px; color:#46546b; background:#fff; border:1px dashed #b8c5d8; border-radius:20px; padding:22px; }
+    footer { padding:28px 24px 54px; color:#68758d; text-align:center; }
+    @media (max-width: 768px) {
+      body { font-size:16.5px; line-height:1.72; }
+      .hero { padding:48px 18px 34px; }
+      .hero-inner { grid-template-columns:1fr; gap:24px; }
+      main { padding:30px 18px 56px; }
+      .card, .summary-box, .infographic { padding:20px; border-radius:18px; }
+      .hero-card { padding:12px; border-radius:20px; }
+      .blog-image { border-radius:16px; }
+      th, td { padding:13px; }
+    }
+    @media (max-width: 480px) {
+      body { font-size:16px; }
+      h1 { font-size:34px; }
+      .lead { font-size:18px; }
+      .quote { font-size:19px; padding:22px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">AWS Daily Strategy Brief · 2026-05-17 KST</div>
+        <h1>Claude Platform on AWS: 기업 AI 운영 체계가 구매·감사·거버넌스로 이동한다</h1>
+        <p class="lead">AWS Korea Tech Blog 신규 글을 기반으로 Enterprise AI·Data·Cloud 관점에서 오늘의 변화 신호를 읽습니다.</p>
+        <span class="pill">Enterprise AI</span><span class="pill">Agentic AI</span><span class="pill">Cloud Governance</span><span class="pill">FinOps</span>
+      </div>
+      <div class="hero-card"><img src="./20260517/images/image-01.png" alt="AWS 기반 Claude Platform 전략 아키텍처 인포그래픽" class="blog-image" /></div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <div class="summary-box">이번 수집에서 확인된 신규 AWS 블로그의 핵심은 Anthropic의 네이티브 Claude Platform을 AWS 계정·Marketplace·IAM·CloudTrail 체계 안으로 끌어오는 흐름이다. 이는 단순한 모델 접근 경로 추가가 아니라, 기업이 생성형 AI와 에이전트 플랫폼을 구매·감사·비용관리·워크스페이스 분리 체계로 운영하는 방식에 변화를 만든다.</div>
+    </section>
+
+    <section>
+      <h2>1. 핵심 트렌드 분석: 모델 API가 아니라 AI 운영 채널의 경쟁</h2>
+      <div class="grid">
+        <article class="card"><h3>클라우드 마켓플레이스 기반 AI 구매</h3><p>AWS Marketplace 청구는 AI 비용을 기존 클라우드 조달·예산·태그 체계와 연결한다. 구매 부서는 별도 SaaS 계약보다 통합 지출 관리와 비용 할당을 선호할 가능성이 높다.</p></article>
+        <article class="card"><h3>IAM·CloudTrail 기반 통제</h3><p>AI 플랫폼 접근이 IAM, SigV4, CloudTrail 이벤트로 표현되면 보안팀은 API 키 배포보다 익숙한 감사·권한 모델로 전환할 수 있다.</p></article>
+        <article class="card"><h3>에이전트 개발자 경험의 상향 평준화</h3><p>Claude Code, MCP 커넥터, Agent Skills, 코드 실행, 파일 API는 단순 추론보다 복합 작업 자동화와 개발 워크플로우 생산성에 직접 영향을 준다.</p></article>
+      </div>
+    </section>
+
+    <section class="infographic">
+      <h2>2. 기술 변화의 의미: Bedrock 보완재로서의 네이티브 플랫폼</h2>
+      <p>Claude Platform on AWS는 Amazon Bedrock의 Claude 접근과 경쟁만 하는 것이 아니라, 서로 다른 통제 우선순위를 가진 선택지를 만든다. Bedrock은 AWS 관리형 모델 운영·데이터 거버넌스 요구에 강하고, Claude Platform on AWS는 Anthropic 네이티브 기능과 개발자 경험을 AWS 조달·감사 체계에 연결한다.</p>
+      <img src="./20260517/images/image-02.png" alt="한국 기업의 AWS 기반 생성형 AI 에이전트 도입 로드맵" class="blog-image" />
+    </section>
+
+    <section>
+      <h2>3. 기업 적용 관점: 어디에 먼저 넣을 것인가</h2>
+      <div class="steps">
+        <div class="step"><h3>개발 생산성 PoC</h3><p>Claude Code·MCP·Agent Skills를 내부 개발자 워크플로우에 적용해 코드 이해, 문서화, 테스트 보조, 운영 자동화부터 검증한다.</p></div>
+        <div class="step"><h3>워크스페이스 분리</h3><p>팀·프로젝트·환경별 워크스페이스를 나누고 IAM 정책과 비용 태그를 연결해 실험 비용과 권한을 분리한다.</p></div>
+        <div class="step"><h3>감사·비용 기준선</h3><p>CloudTrail 데이터 이벤트, Cost Explorer, 예산 알림을 표준 운영 체크리스트로 묶어 Shadow AI 리스크를 낮춘다.</p></div>
+        <div class="step"><h3>민감 데이터 경계 설계</h3><p>데이터 상주, 보안 경계, 모델 운영 주체가 중요한 업무는 Bedrock 경로와 비교해 사용 기준을 문서화한다.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. 한국 기업 관점 시사점</h2>
+      <div class="grid">
+        <article class="card"><h3>서울 리전 가용성은 도입 장벽을 낮춘다</h3><p>서울 리전 포함은 네트워크 지연, 내부 심의, 지역 기반 아키텍처 설계에서 긍정적 신호다. 단, 원문은 요청·데이터 처리 경계가 AWS 보안 경계 외부일 수 있음을 명시하므로 업무 등급별 검토가 필요하다.</p></article>
+        <article class="card"><h3>규제 산업은 이중 경로 전략이 필요</h3><p>금융·공공·제조 핵심 데이터는 Bedrock 중심, 개발 생산성·비민감 에이전트 자동화는 Claude Platform on AWS 중심으로 나누는 하이브리드 운영이 현실적이다.</p></article>
+        <article class="card"><h3>AI CoE의 역할이 구매·통제로 확장</h3><p>AI CoE는 모델 성능 평가뿐 아니라 워크스페이스, 권한, 비용, 로그, 프롬프트/도구 정책까지 포함한 운영 표준을 제공해야 한다.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. 실행 전략과 거버넌스 체크리스트</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>영역</th><th>권장 실행</th><th>검증 지표</th><th>확인 필요</th></tr></thead>
+          <tbody>
+            <tr><td>조달·비용</td><td>AWS Marketplace 구독, 비용 태그, 예산 알림 구성</td><td>팀/워크스페이스별 월 비용, 예산 초과 알림</td><td>조직 계약·할인 적용 방식</td></tr>
+            <tr><td>보안·권한</td><td>IAM 역할 기반 접근, 임시 자격 증명 우선</td><td>장기 API 키 수, 권한 경계 정책 수립 여부</td><td>업무별 최소권한 정책 템플릿</td></tr>
+            <tr><td>감사</td><td>CloudTrail 관리 이벤트와 추론 데이터 이벤트 로깅 검토</td><td>감사 로그 보존 기간, 이상 사용 탐지</td><td>데이터 이벤트 비용·범위</td></tr>
+            <tr><td>데이터 거버넌스</td><td>민감도 등급별 Bedrock/Claude Platform on AWS 사용 기준 분리</td><td>업무 등급 매핑률, 예외 승인 건수</td><td>데이터 상주·처리 위치 요구</td></tr>
+            <tr><td>운영 확장</td><td>PoC→표준 워크플로우→전사 확산 3단계 로드맵</td><td>개발 생산성, 결함 감소, 승인 리드타임</td><td>Agent Skills/MCP 보안 검토</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>6. 리스크/거버넌스 고려사항</h2>
+      <img src="./20260517/images/image-03.png" alt="AI 플랫폼 선택에서 리스크와 거버넌스 관점을 비교한 대시보드" class="blog-image" />
+      <div class="grid" style="margin-top:20px">
+        <article class="card"><h3>데이터 경계</h3><p>원문은 Claude Platform on AWS가 Anthropic에서 운영되며 기본 요청과 데이터가 AWS 보안 경계 외부에서 처리된다고 설명한다. 민감 데이터 업무는 반드시 별도 검토가 필요하다.</p></article>
+        <article class="card"><h3>도구 권한</h3><p>웹 검색, 웹 페치, 코드 실행, 파일 API, MCP 커넥터는 강력하지만 권한 오남용 가능성이 있다. 도구별 allowlist, 감사 로그, 사용자 교육이 필요하다.</p></article>
+        <article class="card"><h3>비용 폭주</h3><p>개발자 생산성 도구는 사용량이 빠르게 증가할 수 있다. 워크스페이스별 쿼터, 예산 알림, 사용량 대시보드를 초기부터 구성해야 한다.</p></article>
+      </div>
+    </section>
+
+    <section class="quote">오늘의 결론: “기업 AI 플랫폼의 선택 기준은 모델 성능만이 아니라, 누가 구매를 관리하고, 누가 로그를 감사하며, 어떤 데이터가 어느 경계에서 처리되는가”로 이동하고 있다.</section>
+
+    <section class="appendix">
+      <h2>출처 및 이미지 프롬프트 로그</h2>
+      <p><strong>수집 원문:</strong> <a href="https://aws.amazon.com/ko/blogs/tech/introducing-claude-platform-on-aws-anthropics-native-platform-through-your-aws-account/">AWS의 Claude Platform 소개: AWS 계정을 통한 Anthropic의 네이티브 Claude Platform 시작하기</a></p>
+      <p><strong>Image Prompt 1</strong><br/>목적: Hero/전략 아키텍처 이미지<br/>삽입 위치: Hero 영역<br/>image2 prompt: Enterprise AI control plane on AWS, Korean executive technology blog illustration, abstract cloud architecture with Claude Platform on AWS, IAM, CloudTrail, Marketplace billing, secure workspaces, warm professional palette, no logos, readable Korean title text inside image: 'AWS 기반 Claude Platform 전략'<br/>권장 비율: 3:2 landscape<br/>alt: AWS 기반 Claude Platform 전략 아키텍처 인포그래픽</p>
+      <p><strong>Image Prompt 2</strong><br/>목적: 도입 로드맵 시각화<br/>삽입 위치: 기술 변화의 의미 섹션<br/>image2 prompt: Korean enterprise adoption roadmap for generative AI agents on AWS, three stages: 실험, 통제, 확장, modern infographic style, cloud data governance, developer tools, agent workflow, no brand logos, clean executive blog image<br/>권장 비율: 3:2 landscape<br/>alt: 한국 기업의 AWS 기반 생성형 AI 에이전트 도입 로드맵</p>
+      <p><strong>Image Prompt 3</strong><br/>목적: 리스크/거버넌스 비교 대시보드<br/>삽입 위치: 리스크/거버넌스 고려사항 섹션<br/>image2 prompt: Risk and governance dashboard for AI platform selection, comparing native AI platform and governed cloud AI, Korean enterprise CIO perspective, audit logs, cost controls, data residency, policy guardrails, elegant dark blue and amber executive illustration, no logos<br/>권장 비율: 3:2 landscape<br/>alt: AI 플랫폼 선택에서 리스크와 거버넌스 관점을 비교한 대시보드</p>
+    </section>
+  </main>
+  <footer>Generated by Hermes Agent · AWS Daily Blog Ingest · 20260517</footer>
+</body>
+</html>
