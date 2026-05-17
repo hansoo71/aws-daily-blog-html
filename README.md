@@ -1,9 +1,7 @@
 # AWS Daily Blog HTML
 
-Daily strategic HTML blog generated from AWS blog markdown sources.
+Generated daily AWS strategic blog. Latest date: 20260518.
 
-- Latest Pages entry: `docs/index.html`
-- Dated source: `src/20260517/index.html`
-- Dated deploy: `docs/20260517/index.html`
-
-Sources are summarized from official AWS blog posts. Generated HTML/images are stored here; Obsidian OneDrive receives Markdown notes only.
+- Standalone: `/opt/data/out/aws-daily-blog-20260518.html`
+- Pages source: `docs/`
+- Source blogs: AWS Korea Tech Blog, AWS News Blog, AWS Machine Learning Blog
