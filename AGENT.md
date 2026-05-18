@@ -1,3 +1,1 @@
-# Agent Guide
-
-Keep `src/YYYYMMDD/` and `docs/YYYYMMDD/` synchronized. Do not commit credentials. HTML/images are GitHub artifacts; OneDrive receives Markdown notes only.
+Edit dated src/YYYYMMDD first, then sync docs/YYYYMMDD and docs/index.html. Do not commit secrets or full copyrighted source extracts. Keep images under dated images folders.
