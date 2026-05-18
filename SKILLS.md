@@ -1,3 +1,1 @@
-# Skills
-
-Natural language edits: update the dated HTML, sync docs/index.html, verify images and responsive tokens, commit.
+Natural language edits: update daily article analysis, add sources, regenerate images, validate responsive requirements, commit and sync GitHub Pages.
