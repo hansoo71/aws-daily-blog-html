@@ -1,7 +1,6 @@
 # AWS Daily Blog HTML
 
-Generated daily AWS strategic blog. Latest date: 20260518.
+AWS daily strategic HTML blog artifacts. Latest date: 20260519.
 
-- Standalone: `/opt/data/out/aws-daily-blog-20260518.html`
-- Pages source: `docs/`
-- Source blogs: AWS Korea Tech Blog, AWS News Blog, AWS Machine Learning Blog
+- Standalone local output: `/opt/data/out/aws-daily-blog-20260519.html`
+- Pages entry: `docs/index.html`
