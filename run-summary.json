@@ -1,0 +1,21 @@
+{
+  "date": "20260521",
+  "entries": [
+    "20260521_[Machine Learning]Build real-time voice applications with Amazon SageMaker AI and vLLM.md",
+    "20260521_[Machine Learning]Multimodal evaluators MLLM-as-a-judge for image-to-text tasks in Strands Evals.md"
+  ],
+  "image_mode": "fallback_png_after_gpt_image_2_failure",
+  "checks": {
+    "html_exists": true,
+    "title": true,
+    "og": true,
+    "noto": true,
+    "viewport": true,
+    "media_query": true,
+    "responsive_image_css": true,
+    "blog_image_token": true,
+    "img_count": 3,
+    "image_files": 3,
+    "sections": true
+  }
+}
