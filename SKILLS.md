@@ -1,1 +1,3 @@
-Natural language tasks: update today article, regenerate images, fix mobile layout, verify GitHub Pages. Keep image prompts in dated prompt log.
+# Skills
+
+Natural-language edits: update the dated `src/YYYYMMDD/index.html`, mirror to `docs/YYYYMMDD/index.html`, update `docs/index.html`, verify image paths and responsive CSS, then commit/push.
