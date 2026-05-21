@@ -1,7 +1,7 @@
 # AWS Daily Blog HTML
 
-Daily AWS blog strategy HTML artifacts. Latest: 20260521.
+Daily strategic AWS blog HTML generated from AWS Korea Tech Blog, AWS News Blog, and AWS Machine Learning Blog.
 
-- Source: AWS Korea Tech Blog, AWS News Blog, AWS Machine Learning Blog RSS
-- Standalone output: `/opt/data/out/aws-daily-blog-20260521.html`
-- Pages source: `docs/`
+- Latest: `docs/index.html`
+- Dated: `docs/20260522/index.html`
+- Standalone local artifact: `/opt/data/out/aws-daily-blog-20260522.html`
