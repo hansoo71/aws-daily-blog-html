@@ -1,3 +1,6 @@
-# Agent Guide
+# Agent Notes
 
-Keep Markdown collection in LLM Wiki/GBrain sources only. Keep HTML/images in this repo. Do not commit secrets or full private source extracts. Use `src/YYYYMMDD` as source and `docs/YYYYMMDD` for Pages.
+- Keep Markdown collection artifacts in LLM Wiki/GBrain, not this public repo.
+- Keep `src/YYYYMMDD/` and `docs/YYYYMMDD/` in sync.
+- `docs/index.html` is the latest GitHub Pages entry and must rewrite image paths to `./YYYYMMDD/images/...`.
+- Do not commit credentials, private customer data, or full copyrighted source extracts.
