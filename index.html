@@ -3,44 +3,149 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AWS Daily Strategy Blog — Enterprise AI Agent Operating Model | 2026년 5월 22일</title>
-  <meta name="description" content="2026년 5월 22일 AWS 블로그 신규 글을 Enterprise AI·Data·Cloud 관점에서 분석한 전략형 Executive Blog. AgentCore, MCP, SageMaker AI, BI agent, Healthcare workflow, Guardrails 시사점 정리." />
-  <meta property="og:title" content="AWS Daily Strategy Blog — Enterprise AI Agent Operating Model" />
-  <meta property="og:description" content="PoC에서 운영으로 이동하는 AI Agent: 권한, 관측, 평가, 실행 자동화 전략." />
+  <title>AWS가 보여준 Enterprise AI의 다음 국면: 샌드박스에서 운영 자동화, 규제 산업 에이전트까지</title>
+  <meta name="description" content="AWS Korea Tech Blog와 AWS Machine Learning Blog 신규 글을 바탕으로 Enterprise AI, Agentic Operations, 규제 산업 AI 거버넌스 관점의 일일 전략을 정리합니다." />
+  <meta name="keywords" content="AWS, Amazon Bedrock, GenAI Sandbox, Agentic AI, AIOps, Amazon Nova Act, HIPAA, Enterprise AI, Korea" />
+  <meta property="og:title" content="AWS가 보여준 Enterprise AI의 다음 국면: 샌드박스에서 운영 자동화, 규제 산업 에이전트까지" />
+  <meta property="og:description" content="샌드박스형 AI 확산, 다중 에이전트 AIOps, 규제 산업 브라우저 에이전트의 전략적 의미." />
   <meta property="og:type" content="article" />
   <meta property="og:image" content="./images/image-01.png" />
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap');
-    :root{--bg:#071323;--panel:#0f2036;--card:#ffffff;--ink:#162033;--muted:#5b6b82;--blue:#2563eb;--cyan:#06b6d4;--line:#dbe7f4;--soft:#f3f7fb;--green:#059669;}
-    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:'Noto Sans KR',system-ui,sans-serif;background:linear-gradient(180deg,#071323 0,#eef5fb 34%,#fff 100%);color:var(--ink);word-break:keep-all;overflow-wrap:break-word;text-wrap:pretty;line-height:1.72;font-size:17px}
-    a{color:#1d4ed8;text-decoration:none} .hero{color:white;padding:72px 24px 40px;background:radial-gradient(circle at 80% 10%,rgba(6,182,212,.32),transparent 34%),linear-gradient(135deg,#071323,#0d2342 60%,#06101f)}
-    .hero-inner,.container{max-width:1080px;margin:0 auto} .eyebrow{display:inline-flex;gap:8px;align-items:center;padding:7px 12px;border:1px solid rgba(255,255,255,.25);border-radius:999px;background:rgba(255,255,255,.08);font-size:14px;color:#c9f6ff} h1{font-size:clamp(2.2rem,5vw,4.8rem);line-height:1.08;margin:22px 0 20px;letter-spacing:-.06em} .lead{max-width:880px;font-size:clamp(1.05rem,2vw,1.35rem);color:#dbeafe} .hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:22px;margin-top:30px} .metric{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:22px;padding:22px} .metric b{display:block;font-size:2rem;color:#8ff1ff} .blog-image{max-width:100%;height:auto;display:block;border-radius:24px;box-shadow:0 20px 60px rgba(2,6,23,.22);margin:28px auto} .section{padding:54px 24px} .container{background:rgba(255,255,255,.7)} h2{font-size:clamp(1.7rem,3vw,2.6rem);line-height:1.18;letter-spacing:-.045em;margin:0 0 18px} h3{line-height:1.28;letter-spacing:-.03em} .keybox{border-left:6px solid var(--cyan);background:#ecfeff;border-radius:18px;padding:24px;margin:22px 0;font-size:1.08rem} .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px} .card,.source-card{background:white;border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 12px 36px rgba(15,35,65,.08);min-width:0} .source-card span{color:var(--cyan);font-weight:800;font-size:.9rem} .source-card h3{font-size:1.15rem;margin:8px 0 10px} .tag{display:inline-block;background:#e0f2fe;color:#075985;border-radius:999px;padding:5px 10px;margin:4px;font-size:.9rem;font-weight:700} .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:18px;background:white} table{border-collapse:collapse;width:100%;min-width:780px} th,td{padding:14px 16px;border-bottom:1px solid #e5edf7;text-align:left;vertical-align:top} th{background:#0f2b4a;color:white} .roadmap{counter-reset:step} .roadmap .card:before{counter-increment:step;content:counter(step);display:inline-grid;place-items:center;width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--cyan));color:white;font-weight:900;margin-bottom:12px} .appendix{font-size:.94rem;background:#f8fafc;border-top:1px solid #e2e8f0} footer{padding:28px 24px;color:#64748b;text-align:center}
-    @media (max-width:768px){body{font-size:16px;line-height:1.68}.hero{padding:44px 18px 28px}.section{padding:38px 18px}.hero-grid{grid-template-columns:1fr}.metric{padding:18px}.grid{grid-template-columns:1fr}.card,.source-card{padding:20px;border-radius:18px} .blog-image{border-radius:16px;margin:20px 0} table{min-width:720px}}
-    @media (max-width:480px){body{font-size:16px}h1{font-size:2.15rem}.lead{font-size:1rem}.eyebrow{font-size:13px}th,td{padding:12px}}
+    :root { --bg:#07111f; --paper:#f7f9fc; --ink:#132238; --muted:#5a6b80; --blue:#0f5bff; --cyan:#15b8d4; --orange:#ff9b2f; --card:#ffffff; --line:#dbe5f0; --navy:#0b1b32; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:'Noto Sans KR', system-ui, -apple-system, BlinkMacSystemFont, sans-serif; background:var(--paper); color:var(--ink); font-size:17px; line-height:1.72; word-break:keep-all; overflow-wrap:break-word; text-wrap:pretty; }
+    a { color:#0b55d9; }
+    .hero { background: radial-gradient(circle at 20% 10%, rgba(21,184,212,.25), transparent 30%), linear-gradient(135deg,#07111f 0%,#0d2748 55%,#0b1524 100%); color:#fff; padding:64px 20px 34px; }
+    .hero-inner { max-width:1120px; margin:0 auto; }
+    .eyebrow { display:inline-flex; gap:8px; align-items:center; color:#9ee8ff; font-weight:800; letter-spacing:.04em; text-transform:uppercase; font-size:14px; }
+    h1 { font-size:clamp(34px, 6vw, 64px); line-height:1.12; margin:18px 0 18px; letter-spacing:-.04em; }
+    .subtitle { max-width:920px; color:#d8e8f7; font-size:clamp(18px,2vw,23px); }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin:24px 0; }
+    .pill { border:1px solid rgba(255,255,255,.22); background:rgba(255,255,255,.08); border-radius:999px; padding:8px 13px; font-size:14px; color:#eaf5ff; }
+    .wrap { max-width:1080px; margin:0 auto; padding:36px 20px 80px; }
+    .blog-image { max-width:100%; height:auto; display:block; border-radius:22px; box-shadow:0 18px 55px rgba(5,22,43,.22); margin:26px auto; border:1px solid rgba(255,255,255,.35); }
+    .hero .blog-image { margin-top:34px; }
+    .keybox { background:linear-gradient(135deg,#fff 0%,#eef7ff 100%); border:1px solid var(--line); border-left:7px solid var(--orange); border-radius:22px; padding:24px; box-shadow:0 10px 30px rgba(25,60,100,.08); margin:28px 0; }
+    .keybox strong { color:#0b2f5f; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; margin:22px 0; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:22px; padding:22px; box-shadow:0 8px 28px rgba(19,34,56,.07); min-width:0; }
+    .card h3 { margin-top:0; color:#0b2f5f; font-size:21px; line-height:1.35; }
+    h2 { font-size:clamp(26px,4vw,38px); line-height:1.24; letter-spacing:-.03em; margin:48px 0 16px; color:#092241; }
+    h3 { letter-spacing:-.02em; }
+    .section-lead { color:var(--muted); font-size:19px; }
+    .quote { font-size:22px; line-height:1.55; padding:24px; border-radius:24px; background:#0c1f38; color:#f4fbff; box-shadow:0 14px 40px rgba(4,12,25,.18); }
+    .quote b { color:#ffd18c; }
+    .table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:18px; border:1px solid var(--line); background:#fff; }
+    table { width:100%; min-width:760px; border-collapse:collapse; font-size:15.5px; }
+    th { background:#0b2444; color:#fff; text-align:left; }
+    th,td { padding:14px 16px; border-bottom:1px solid #e7edf5; vertical-align:top; }
+    tr:last-child td { border-bottom:0; }
+    .strategy-list li { margin:10px 0; }
+    .appendix { background:#eef3f8; border-radius:24px; padding:24px; border:1px solid var(--line); font-size:15px; }
+    .footer { color:#66778b; font-size:14px; margin-top:50px; }
+    @media (max-width:768px) {
+      body { font-size:16.5px; line-height:1.68; }
+      .hero { padding:44px 16px 26px; }
+      .wrap { padding:26px 16px 58px; }
+      .card,.keybox,.appendix { border-radius:18px; padding:18px; }
+      .grid { grid-template-columns:1fr; gap:14px; }
+      .hero-meta { gap:8px; }
+      .pill { font-size:13px; padding:7px 10px; }
+      table { min-width:680px; font-size:14.5px; }
+      th,td { padding:12px; }
+    }
+    @media (max-width:480px) {
+      h1 { font-size:32px; }
+      h2 { font-size:25px; }
+      .subtitle,.section-lead { font-size:17px; }
+      .quote { font-size:19px; padding:18px; }
+    }
   </style>
 </head>
 <body>
-<header class="hero"><div class="hero-inner"><span class="eyebrow">AWS Daily Blog · 2026년 5월 22일 · KST 07:00 수집</span><h1>AI Agent는 이제 PoC가 아니라<br/>운영 체계의 문제다</h1><p class="lead">오늘 AWS Machine Learning Blog의 신규 흐름은 명확합니다. Bedrock AgentCore, MCP, Quick/BI, SageMaker OpenAI-compatible endpoint가 함께 가리키는 방향은 “모델 선택”이 아니라 <b>권한·격리·관측·실행 자동화</b>를 갖춘 Enterprise AI 운영 모델입니다.</p><div class="hero-grid"><div class="metric"><b>8</b>신규/보조 분석 문서</div><div class="metric"><b>3</b>전략 이미지 · GPT Image 2</div></div><img src="./images/image-01.png" alt="엔터프라이즈 AI 에이전트 운영 체계를 표현한 히어로 이미지" class="blog-image" /></div></header>
-<main>
-<section class="section"><div class="container"><h2>핵심 트렌드 분석</h2><div class="keybox"><strong>오늘의 핵심 메시지:</strong> AWS의 agentic AI 서사는 개별 agent demo에서 production operating model로 이동했다. 한국 기업은 AI agent를 앱 기능이 아니라 보안·데이터·업무 프로세스·비용 관측이 결합된 운영 플랫폼으로 설계해야 한다.</div><img src="./images/image-02.png" alt="프로덕션 AI 에이전트의 세 가지 운영 축 인포그래픽" class="blog-image" /><div class="grid"><div class="card"><h3>1. AgentCore 중심의 운영 표준화</h3><p>Multi-tenant agent, MCP 연결, Code Interpreter memory, dashboard automation, healthcare routing이 모두 AgentCore Runtime/Memory/Observability/Gateway 축으로 묶인다. 이는 enterprise agent platform의 reference architecture가 구체화되고 있음을 뜻한다.</p></div><div class="card"><h3>2. OpenAI-compatible endpoint의 전략성</h3><p>SageMaker AI의 OpenAI-compatible API는 기업이 기존 OpenAI SDK·LangChain·Strands 코드를 유지하면서 자체 계정의 모델 endpoint로 이동할 수 있게 한다. LLM gateway와 private inference 전략에 중요하다.</p></div><div class="card"><h3>3. BI·의료·HR로 확장되는 실행 agent</h3><p>오늘 글들은 “답변 생성”보다 CRM 품질 검증, dashboard 변경, radiology worklist 배정, recruitment screening 보조처럼 업무 상태를 바꾸는 agent를 다룬다. 따라서 통제와 책임 경계가 더 중요해진다.</p></div></div></div></section>
-<section class="section"><div class="container"><h2>기술 변화의 의미</h2><p>기술적으로는 세 가지 변화가 동시에 진행된다. 첫째, MCP/API server가 agent와 enterprise system 사이의 표준 tool boundary가 되고 있다. 둘째, long-context 경쟁은 Code Interpreter 기반 working memory와 recursive analysis 패턴으로 보완된다. 셋째, model endpoint는 OpenAI-compatible protocol을 통해 application code와 infrastructure ownership을 분리한다.</p><div class="table-wrap"><table><thead><tr><th>#</th><th>게시물</th><th>주요 기술</th><th>전략적 의미</th></tr></thead><tbody><tr><td>1</td><td>Intelligent radiology workflow optimization with AI agents</td><td>Amazon Bedrock AgentCore, Amazon Bedrock, Strands Agents</td><td>방사선 판독 worklist를 rigid rule 대신 agentic AI로 최적화해 전문분야, 업무량, 피로도, case complexity, 긴급도를 함께 고려하는 healthcare workflow 사례입니다....</td></tr>
-<tr><td>2</td><td>Integrating AWS API MCP Server with Amazon Quick using Amazon Bedrock AgentCore Runtime</td><td>Amazon Bedrock AgentCore, Amazon Bedrock, Amazon Quick, AWS API MCP Server</td><td>Amazon Quick과 AWS API MCP Server를 Bedrock AgentCore Runtime으로 연결해 자연어 질의를 AWS CLI/API 실행으로 전환하는 운영 assistant 구현 방식입니다....</td></tr>
-<tr><td>3</td><td>Building multi-tenant agents with Amazon Bedrock AgentCore</td><td>Amazon Bedrock AgentCore, Amazon Bedrock</td><td>SaaS형 agentic application을 production으로 올릴 때 필요한 tenant isolation, identity, memory namespace, RAG 격리, tool/API 접근통제, 비용 추적, observability 설계를 AgentCo...</td></tr>
-<tr><td>4</td><td>Break the context window barrier with Amazon Bedrock AgentCore</td><td>Amazon Bedrock AgentCore, Amazon Bedrock, Strands Agents</td><td>긴 문서를 한 번에 context window에 넣는 대신 AgentCore Code Interpreter를 persistent working memory로 사용하고 sub-LLM 호출을 반복하는 Recursive Language Model(RLM) 패턴을 설명합니다....</td></tr>
-<tr><td>5</td><td>Build AI agents for business intelligence with Amazon Bedrock AgentCore</td><td>Amazon Bedrock AgentCore, Amazon Bedrock, Strands Agents, Amazon Bedrock Knowledge Bases</td><td>BI와 대시보드 운영에 AI agent를 적용해 pipeline quality reporting, sales coaching, lead insight, dashboard discovery/modification을 자동화하는 사례/구현 글입니다....</td></tr>
-<tr><td>6</td><td>Build an AI-powered recruitment assistant using Amazon Bedrock</td><td>Amazon Bedrock</td><td>Amazon Bedrock, Nova, Guardrails, Lambda/API Gateway/S3/DynamoDB로 이력서 분석, 후보자 적합도 평가, 인터뷰 질문 생성을 지원하는 채용 assistant reference architecture입니다....</td></tr>
-<tr><td>7</td><td>Build AI-powered dashboard automation agents with NLP on Amazon Bedrock AgentCore</td><td>Amazon Bedrock AgentCore, Amazon Bedrock, Amazon Quick, Strands Agents</td><td>BI와 대시보드 운영에 AI agent를 적용해 pipeline quality reporting, sales coaching, lead insight, dashboard discovery/modification을 자동화하는 사례/구현 글입니다....</td></tr>
-<tr><td>8</td><td>Announcing OpenAI-compatible API support for Amazon SageMaker AI endpoints</td><td>SageMaker AI, Strands Agents</td><td>SageMaker AI endpoint가 `/openai/v1` OpenAI-compatible API와 time-limited bearer token을 지원해 OpenAI SDK, LangChain, Strands Agents를 endpoint URL 변경만으로 연동...</td></tr></tbody></table></div></div></section>
-<section class="section"><div class="container"><h2>기업 적용 관점</h2><div class="grid"><div class="card"><h3>Use case 선정</h3><p>반복 빈도, 업무 영향, 데이터 접근 권한, human review 가능성을 기준으로 우선순위를 정한다. 오늘 사례 기준으로 BI 데이터 품질, 운영 질의, 문서 분석, healthcare/HR 보조는 명확한 후보군이다.</p></div><div class="card"><h3>권한·데이터 경계</h3><p>Tenant context, act-on-behalf token, MCP tool 권한, RAG namespace 격리, endpoint별 bearer token scope를 설계 산출물로 남긴다.</p></div><div class="card"><h3>관측·평가·감사</h3><p>Agent invocation, tool call, prompt/response, guardrail intervention, 비용, 정확도, 사용자 feedback을 관측해야 운영 전환이 가능하다.</p></div><div class="card"><h3>업무 실행과 rollback</h3><p>Dashboard 변경처럼 실제 자산을 수정하는 agent는 validation-first, 새 버전 생성, rollback, 승인 workflow를 내장해야 한다.</p></div></div></div></section>
-<section class="section"><div class="container"><h2>한국 기업 관점 시사점과 실행 전략</h2><img src="./images/image-03.png" alt="한국 기업의 AI 에이전트 실행 로드맵 이미지" class="blog-image" /><div class="grid roadmap"><div class="card"><h3>고가치 업무부터 좁게 시작</h3><p>영업/운영/데이터/IT Ops의 반복적 판단·조회·검증 업무를 선별하고 KPI를 리드타임, 품질, 비용, 리스크 감소로 잡는다.</p></div><div class="card"><h3>보안팀과 공동 설계</h3><p>개발팀 단독 PoC가 아니라 보안·개인정보·감사·법무 기준을 시작 단계에 포함한다. HR/의료 영역은 특히 human decision boundary를 명시한다.</p></div><div class="card"><h3>Agent platform blueprint 작성</h3><p>Agent runtime, MCP registry, identity, memory, observability, evaluation, model gateway를 공통 blueprint로 정의한다.</p></div><div class="card"><h3>FinOps/운영 모델 결합</h3><p>Tenant별 비용, session별 latency, tool별 failure, model별 품질을 dashboard로 만들고 운영회의 지표로 편입한다.</p></div></div></div></section>
-<section class="section"><div class="container"><h2>리스크와 거버넌스 고려사항</h2><div class="keybox">AI agent가 API와 업무 시스템을 실행할수록 위험은 hallucination보다 <b>권한 오남용, 데이터 경계 붕괴, 감사 불가능한 자동화, 비용 폭증</b>으로 이동한다.</div><p><span class="tag">Least privilege</span><span class="tag">Tenant isolation</span><span class="tag">Guardrails</span><span class="tag">Human-in-the-loop</span><span class="tag">Cost attribution</span><span class="tag">Rollback</span></p></div></section>
-<section class="section"><div class="container"><h2>수집 원문 카드</h2><div class="grid"><article class="source-card"><span>20260522</span><h3>Intelligent radiology workflow optimization with AI agents</h3><p>방사선 판독 worklist를 rigid rule 대신 agentic AI로 최적화해 전문분야, 업무량, 피로도, case complexity, 긴급도를 함께 고려하는 healthcare workflow 사례입니다.</p><a href="**">원문 보기</a></article>
-<article class="source-card"><span>20260522</span><h3>Integrating AWS API MCP Server with Amazon Quick using Amazon Bedrock AgentCore Runtime</h3><p>Amazon Quick과 AWS API MCP Server를 Bedrock AgentCore Runtime으로 연결해 자연어 질의를 AWS CLI/API 실행으로 전환하는 운영 assistant 구현 방식입니다.</p><a href="**">원문 보기</a></article>
-<article class="source-card"><span>20260522</span><h3>Building multi-tenant agents with Amazon Bedrock AgentCore</h3><p>SaaS형 agentic application을 production으로 올릴 때 필요한 tenant isolation, identity, memory namespace, RAG 격리, tool/API 접근통제, 비용 추적, observability 설계를 AgentCore 중심으로 정리한 글입니다.</p><a href="**">원문 보기</a></article>
-<article class="source-card"><span>20260522</span><h3>Break the context window barrier with Amazon Bedrock AgentCore</h3><p>긴 문서를 한 번에 context window에 넣는 대신 AgentCore Code Interpreter를 persistent working memory로 사용하고 sub-LLM 호출을 반복하는 Recursive Language Model(RLM) 패턴을 설명합니다.</p><a href="**">원문 보기</a></article>
-<article class="source-card"><span>20260522</span><h3>Build AI agents for business intelligence with Amazon Bedrock AgentCore</h3><p>BI와 대시보드 운영에 AI agent를 적용해 pipeline quality reporting, sales coaching, lead insight, dashboard discovery/modification을 자동화하는 사례/구현 글입니다.</p><a href="**">원문 보기</a></article>
-<article class="source-card"><span>20260522</span><h3>Build an AI-powered recruitment assistant using Amazon Bedrock</h3><p>Amazon Bedrock, Nova, Guardrails, Lambda/API Gateway/S3/DynamoDB로 이력서 분석, 후보자 적합도 평가, 인터뷰 질문 생성을 지원하는 채용 assistant reference architecture입니다.</p><a href="**">원문 보기</a></article>
-<article class="source-card"><span>20260522</span><h3>Build AI-powered dashboard automation agents with NLP on Amazon Bedrock AgentCore</h3><p>BI와 대시보드 운영에 AI agent를 적용해 pipeline quality reporting, sales coaching, lead insight, dashboard discovery/modification을 자동화하는 사례/구현 글입니다.</p><a href="**">원문 보기</a></article>
-<article class="source-card"><span>20260521</span><h3>Announcing OpenAI-compatible API support for Amazon SageMaker AI endpoints</h3><p>SageMaker AI endpoint가 `/openai/v1` OpenAI-compatible API와 time-limited bearer token을 지원해 OpenAI SDK, LangChain, Strands Agents를 endpoint URL 변경만으로 연동할 수 있게 된 발표입니다.</p><a href="**">원문 보기</a></article></div></div></section>
-<section class="section appendix"><div class="container"><h2>Image Prompt Appendix</h2><h3>Image Prompt 1</h3><ul><li><b>목적:</b> 히어로/운영 체계 시각화</li><li><b>삽입 위치:</b> Hero 하단</li><li><b>image2 prompt:</b> Executive Korean blog hero illustration, 16:9. Theme: AWS enterprise AI agents moving from PoC to production. Visualize Amazon Bedrock AgentCore as a secure orchestration layer connecting MCP tools, governance, observability, tenant isolation, BI dashboards, healthcare workflow, and SageMaker inference. Clean premium cloud-tech style, dark navy and cyan accents, Korean headline text inside image: '엔터프라이즈 AI 에이전트 운영 체계'. Include no company logos, no AWS logo, no copyrighted marks. High resolution, readable Korean typography.</li><li><b>권장 비율:</b> 16:9</li><li><b>alt:</b> 엔터프라이즈 AI 에이전트 운영 체계를 표현한 히어로 이미지</li></ul><h3>Image Prompt 2</h3><ul><li><b>목적:</b> 3대 운영 축 인포그래픽</li><li><b>삽입 위치:</b> 핵심 트렌드 분석 섹션</li><li><b>image2 prompt:</b> Korean infographic, 16:9, premium executive tech blog style. Show three pillars for production AI agents: '격리와 권한', '관측과 평가', '업무 실행'. Include icons for tenant isolation, MCP/API tools, dashboards, healthcare routing, and model endpoint gateway. Noto Sans Korean-like clean typography, very legible text, no AWS logo, no brand logos, navy background with white cards and subtle gradient.</li><li><b>권장 비율:</b> 16:9</li><li><b>alt:</b> 프로덕션 AI 에이전트의 세 가지 운영 축 인포그래픽</li></ul><h3>Image Prompt 3</h3><ul><li><b>목적:</b> 한국 기업 실행 로드맵</li><li><b>삽입 위치:</b> 실행 전략 섹션</li><li><b>image2 prompt:</b> Korean strategic roadmap image, 16:9. Title text inside image: '한국 기업 실행 로드맵'. Four stages left to right: '1. 사용사례 선별', '2. 권한/데이터 경계', '3. 운영 관측/평가', '4. 확장과 비용관리'. Modern cloud architecture visual, enterprise boardroom meets data platform, readable Korean text, clean diagram style, no logos, no AWS logo, no people faces.</li><li><b>권장 비율:</b> 16:9</li><li><b>alt:</b> 한국 기업의 AI 에이전트 실행 로드맵 이미지</li></ul></div></section>
-</main><footer>Generated by Hermes AWS Daily Blog Ingest · Markdown은 LLM Wiki aws-blog collection에 동기화, HTML/이미지는 GitHub Pages repo에 보관.</footer></body></html>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">AWS Daily Strategy Brief · 2026-05-23 KST</div>
+      <h1>AWS가 보여준 Enterprise AI의 다음 국면: 샌드박스에서 운영 자동화, 규제 산업 에이전트까지</h1>
+      <p class="subtitle">2026년 5월 23일 AWS Blog Daily Strategy Brief — 현대오토에버 GenAI Sandbox 3부작과 Amazon Nova Act HIPAA eligibility가 말하는 기업 AI 실행 전략</p>
+      <div class="hero-meta">
+        <span class="pill">확인 블로그 3개</span><span class="pill">신규 수집 4건</span><span class="pill">Enterprise AI</span><span class="pill">AIOps</span><span class="pill">Regulated Agentic AI</span>
+      </div>
+      <img src="./images/image-01.png" alt="GenAI Sandbox 위에서 여러 팀이 Amazon Bedrock 기반 업무 자동화를 실험하는 전략적 클라우드 플랫폼 일러스트" class="blog-image" />
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="keybox">
+      <strong>오늘의 한 줄 결론:</strong> AWS 블로그의 메시지는 명확합니다. 기업 AI는 “모델을 잘 쓰는 단계”를 넘어, 안전한 실험 환경을 전사에 제공하고, 운영 장애 대응을 에이전트 협업으로 표준화하며, 규제 산업에서는 자동화보다 통제·감사·책임 분계를 먼저 설계하는 방향으로 이동하고 있습니다.
+    </section>
+
+    <section>
+      <h2>1. 핵심 트렌드: 샌드박스는 PoC 공간이 아니라 AI 운영 체계의 시작점</h2>
+      <p class="section-lead">현대오토에버 GenAI Sandbox 3부작은 한국 대기업이 생성형 AI를 확산하는 현실적인 경로를 보여줍니다. 중앙 AI 조직이 모든 현업 요구를 직접 개발하는 방식이 아니라, 보안·비용·권한·네트워크·개발 패키지를 표준화한 실험장을 제공하고 현업 팀이 직접 문제를 검증하게 만드는 구조입니다.</p>
+      <div class="grid">
+        <article class="card"><h3>안전한 실험</h3><p>Security Hub, GuardDuty, Macie, IAM Identity Center, ABAC 같은 통제를 기본값으로 제공해 실험 속도와 기업 보안 요구를 동시에 만족시킵니다.</p></article>
+        <article class="card"><h3>현업 주도 확산</h3><p>14개 팀 150명 규모의 해커톤은 “AI 전담팀의 산출물”이 아니라 “조직 전체의 실행 근육”을 만드는 장치였습니다.</p></article>
+        <article class="card"><h3>운영 전환 경로</h3><p>검증된 앱이 production으로 이동할 수 있도록 비용·권한·네트워크·보안 기준을 처음부터 내장한 점이 중요합니다.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. 기술 변화의 의미: AIOps는 챗봇이 아니라 증거 기반 에이전트 워크플로우</h2>
+      <p>ErrorWatcher와 빅데이터 클러스터 장애 대응 사례는 운영 자동화의 기준을 끌어올립니다. 단순히 로그를 LLM에 넣고 요약하는 방식이 아니라, Monitor·Detective·Solver·Reporter 또는 Coordinator·State Checker·Log Investigator·RCA·Reflector처럼 역할을 나누고, EvidencePack·RAG·OpenSearch·Checkpoint·반증 구조로 판단 품질을 높입니다.</p>
+      <img src="./images/image-02.png" alt="장애 감지부터 RCA와 승인 기반 복구까지 이어지는 다중 AI 에이전트 운영 자동화 흐름도" class="blog-image" />
+      <div class="quote">운영 자동화의 경쟁력은 <b>얼마나 많이 자동 실행하느냐</b>가 아니라, <b>얼마나 추적 가능한 증거와 승인 흐름 위에서 자동 판단을 보조하느냐</b>에 있습니다.</div>
+    </section>
+
+    <section>
+      <h2>3. 기업 적용 관점: 한국 기업이 바로 참고할 운영 패턴</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>패턴</th><th>AWS 블로그에서 보인 구현</th><th>한국 기업 적용 포인트</th></tr></thead>
+          <tbody>
+            <tr><td>AI Sandbox</td><td>Bedrock·Lambda·API Gateway·OpenSearch·S3와 사전 보안/비용/권한 통제</td><td>AI 아이디어 접수→샌드박스 실험→보안/비용 검증→운영 전환의 표준 프로세스 수립</td></tr>
+            <tr><td>Multi-Agent AIOps</td><td>LangGraph 기반 Monitor/Detective/Solver/Reporter와 RCA 병렬 검증</td><td>NOC/SRE/ITSM 업무에 먼저 적용하고, 파괴적 조치 전에는 승인 게이트 유지</td></tr>
+            <tr><td>Knowledge Asset Loop</td><td>신뢰도 높은 보고서·Incident 스냅샷·타임라인·명령 트레이스를 재사용</td><td>장애 대응 결과를 개인 노트가 아니라 조직 지식베이스와 벡터 검색으로 축적</td></tr>
+            <tr><td>Regulated Agentic AI</td><td>Nova Act HIPAA eligibility, IAM/KMS/CloudTrail/BAA/Well-Architected 통제</td><td>의료·금융·공공에서는 자동화 범위보다 데이터 접근권한, 감사 추적, 책임 분계부터 설계</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. 리스크와 거버넌스: 규제 산업에서는 “자동화보다 통제”가 먼저</h2>
+      <p>Amazon Nova Act의 HIPAA eligibility 발표는 agentic AI가 의료·보험·헬스케어 같은 규제 산업으로 이동하고 있음을 보여줍니다. 하지만 eligibility는 완성된 컴플라이언스가 아닙니다. 고객은 BAA 체결, HIPAA 계정 지정, IAM 정책, KMS 암호화, CloudTrail 로깅, Well-Architected Review를 스스로 구성해야 합니다.</p>
+      <img src="./images/image-03.png" alt="의료·금융 규제 산업에서 브라우저 기반 AI 에이전트가 감사와 보안 통제 아래 동작하는 모습" class="blog-image" />
+      <div class="grid">
+        <article class="card"><h3>데이터 최소화</h3><p>브라우저 에이전트가 보는 화면과 저장하는 로그에 민감정보가 과도하게 남지 않도록 마스킹과 보존 정책이 필요합니다.</p></article>
+        <article class="card"><h3>감사 가능성</h3><p>모든 에이전트 액션은 누가, 언제, 어떤 정책으로, 어떤 결과를 냈는지 재구성 가능해야 합니다.</p></article>
+        <article class="card"><h3>Human Supervision</h3><p>청구·승인·권한 변경처럼 업무 리스크가 큰 단계는 최종 승인자를 명시해야 합니다.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. 실행 전략: 90일 안에 시작할 수 있는 Enterprise AI 로드맵</h2>
+      <ol class="strategy-list">
+        <li><strong>0~30일:</strong> AI Sandbox 기준을 정의합니다. 허용 모델, 금지 데이터, 비용 한도, 프로젝트 태그, 로그/감사 기준, 사전 구성 템플릿을 먼저 만듭니다.</li>
+        <li><strong>31~60일:</strong> 장애 대응·보고서 자동화·지식검색처럼 ROI와 위험이 균형 잡힌 3~5개 현업 유스케이스를 해커톤/스프린트로 검증합니다.</li>
+        <li><strong>61~90일:</strong> 성공 사례를 production 전환 후보로 선정하고, Human-in-the-Loop, 평가 지표, 운영 로그, 보안 리뷰, 비용 대시보드를 포함한 운영 모델을 붙입니다.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>수집 원문</h2>
+      <ul><li><a href="https://aws.amazon.com/ko/blogs/tech/hae-genai-sandbox-hackathon-3/" target="_blank" rel="noopener">20260522_[Korea Tech]현대오토에버의 Amazon Bedrock으로 구축한 빅데이터 클러스터 장애 대응 자동화 에이전트 구축기.md</a></li><li><a href="https://aws.amazon.com/ko/blogs/tech/hae-genai-sandbox-hackathon-2/" target="_blank" rel="noopener">20260522_[Korea Tech]현대오토에버의 Amazon Bedrock으로 구축한 다중 AI 에이전트 장애 대응 시간 5분으로 단축하기.md</a></li><li><a href="https://aws.amazon.com/ko/blogs/tech/hae-genai-sandbox-hackathon-1/" target="_blank" rel="noopener">20260522_[Korea Tech]현대오토에버의 GenAI Sandbox 활용 생산성 향상 Hackathon 혁신과 협업의 성공 사례.md</a></li><li><a href="https://aws.amazon.com/blogs/machine-learning/amazon-nova-act-is-now-hipaa-eligible/" target="_blank" rel="noopener">20260522_[Machine Learning]Amazon Nova Act is now HIPAA eligible.md</a></li></ul>
+    </section>
+
+    <section class="appendix">
+      <h2>이미지 프롬프트 부록</h2>
+      <h3>Image Prompt 1</h3><p><b>목적:</b> 히어로 비주얼 / <b>삽입 위치:</b> Hero 하단 / <b>Ratio:</b> 16:9 / <b>Alt:</b> GenAI Sandbox 위에서 여러 팀이 Amazon Bedrock 기반 업무 자동화를 실험하는 전략적 클라우드 플랫폼 일러스트</p><p>Executive editorial illustration for a Korean enterprise technology blog. A secure GenAI Sandbox cloud platform at the center...</p>
+      <h3>Image Prompt 2</h3><p><b>목적:</b> AIOps lifecycle infographic / <b>삽입 위치:</b> 기술 변화 섹션 / <b>Ratio:</b> 16:9 / <b>Alt:</b> 장애 감지부터 RCA와 승인 기반 복구까지 이어지는 다중 AI 에이전트 운영 자동화 흐름도</p><p>Clean executive infographic in Korean showing a multi-agent AIOps incident response lifecycle...</p>
+      <h3>Image Prompt 3</h3><p><b>목적:</b> Regulated agentic AI governance card / <b>삽입 위치:</b> 리스크/거버넌스 섹션 / <b>Ratio:</b> 16:9 / <b>Alt:</b> 의료·금융 규제 산업에서 브라우저 기반 AI 에이전트가 감사와 보안 통제 아래 동작하는 모습</p><p>Premium Korean business technology illustration about regulated agentic AI...</p>
+    </section>
+
+    <p class="footer">Generated by Hermes scheduled AWS blog ingest. Markdown collection is mirrored to LLM Wiki collection aws-blog; HTML and image assets are kept in /opt/data/out and GitHub Pages repo only.</p>
+  </main>
+</body>
+</html>
