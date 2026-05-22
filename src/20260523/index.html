@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AWS가 보여준 Enterprise AI의 다음 국면: 샌드박스에서 운영 자동화, 규제 산업 에이전트까지</title>
+  <meta name="description" content="AWS Korea Tech Blog와 AWS Machine Learning Blog 신규 글을 바탕으로 Enterprise AI, Agentic Operations, 규제 산업 AI 거버넌스 관점의 일일 전략을 정리합니다." />
+  <meta name="keywords" content="AWS, Amazon Bedrock, GenAI Sandbox, Agentic AI, AIOps, Amazon Nova Act, HIPAA, Enterprise AI, Korea" />
+  <meta property="og:title" content="AWS가 보여준 Enterprise AI의 다음 국면: 샌드박스에서 운영 자동화, 규제 산업 에이전트까지" />
+  <meta property="og:description" content="샌드박스형 AI 확산, 다중 에이전트 AIOps, 규제 산업 브라우저 에이전트의 전략적 의미." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="./images/image-01.png" />
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap');
+    :root { --bg:#07111f; --paper:#f7f9fc; --ink:#132238; --muted:#5a6b80; --blue:#0f5bff; --cyan:#15b8d4; --orange:#ff9b2f; --card:#ffffff; --line:#dbe5f0; --navy:#0b1b32; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:'Noto Sans KR', system-ui, -apple-system, BlinkMacSystemFont, sans-serif; background:var(--paper); color:var(--ink); font-size:17px; line-height:1.72; word-break:keep-all; overflow-wrap:break-word; text-wrap:pretty; }
+    a { color:#0b55d9; }
+    .hero { background: radial-gradient(circle at 20% 10%, rgba(21,184,212,.25), transparent 30%), linear-gradient(135deg,#07111f 0%,#0d2748 55%,#0b1524 100%); color:#fff; padding:64px 20px 34px; }
+    .hero-inner { max-width:1120px; margin:0 auto; }
+    .eyebrow { display:inline-flex; gap:8px; align-items:center; color:#9ee8ff; font-weight:800; letter-spacing:.04em; text-transform:uppercase; font-size:14px; }
+    h1 { font-size:clamp(34px, 6vw, 64px); line-height:1.12; margin:18px 0 18px; letter-spacing:-.04em; }
+    .subtitle { max-width:920px; color:#d8e8f7; font-size:clamp(18px,2vw,23px); }
+    .hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin:24px 0; }
+    .pill { border:1px solid rgba(255,255,255,.22); background:rgba(255,255,255,.08); border-radius:999px; padding:8px 13px; font-size:14px; color:#eaf5ff; }
+    .wrap { max-width:1080px; margin:0 auto; padding:36px 20px 80px; }
+    .blog-image { max-width:100%; height:auto; display:block; border-radius:22px; box-shadow:0 18px 55px rgba(5,22,43,.22); margin:26px auto; border:1px solid rgba(255,255,255,.35); }
+    .hero .blog-image { margin-top:34px; }
+    .keybox { background:linear-gradient(135deg,#fff 0%,#eef7ff 100%); border:1px solid var(--line); border-left:7px solid var(--orange); border-radius:22px; padding:24px; box-shadow:0 10px 30px rgba(25,60,100,.08); margin:28px 0; }
+    .keybox strong { color:#0b2f5f; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; margin:22px 0; }
+    .card { background:var(--card); border:1px solid var(--line); border-radius:22px; padding:22px; box-shadow:0 8px 28px rgba(19,34,56,.07); min-width:0; }
+    .card h3 { margin-top:0; color:#0b2f5f; font-size:21px; line-height:1.35; }
+    h2 { font-size:clamp(26px,4vw,38px); line-height:1.24; letter-spacing:-.03em; margin:48px 0 16px; color:#092241; }
+    h3 { letter-spacing:-.02em; }
+    .section-lead { color:var(--muted); font-size:19px; }
+    .quote { font-size:22px; line-height:1.55; padding:24px; border-radius:24px; background:#0c1f38; color:#f4fbff; box-shadow:0 14px 40px rgba(4,12,25,.18); }
+    .quote b { color:#ffd18c; }
+    .table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:18px; border:1px solid var(--line); background:#fff; }
+    table { width:100%; min-width:760px; border-collapse:collapse; font-size:15.5px; }
+    th { background:#0b2444; color:#fff; text-align:left; }
+    th,td { padding:14px 16px; border-bottom:1px solid #e7edf5; vertical-align:top; }
+    tr:last-child td { border-bottom:0; }
+    .strategy-list li { margin:10px 0; }
+    .appendix { background:#eef3f8; border-radius:24px; padding:24px; border:1px solid var(--line); font-size:15px; }
+    .footer { color:#66778b; font-size:14px; margin-top:50px; }
+    @media (max-width:768px) {
+      body { font-size:16.5px; line-height:1.68; }
+      .hero { padding:44px 16px 26px; }
+      .wrap { padding:26px 16px 58px; }
+      .card,.keybox,.appendix { border-radius:18px; padding:18px; }
+      .grid { grid-template-columns:1fr; gap:14px; }
+      .hero-meta { gap:8px; }
+      .pill { font-size:13px; padding:7px 10px; }
+      table { min-width:680px; font-size:14.5px; }
+      th,td { padding:12px; }
+    }
+    @media (max-width:480px) {
+      h1 { font-size:32px; }
+      h2 { font-size:25px; }
+      .subtitle,.section-lead { font-size:17px; }
+      .quote { font-size:19px; padding:18px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="eyebrow">AWS Daily Strategy Brief · 2026-05-23 KST</div>
+      <h1>AWS가 보여준 Enterprise AI의 다음 국면: 샌드박스에서 운영 자동화, 규제 산업 에이전트까지</h1>
+      <p class="subtitle">2026년 5월 23일 AWS Blog Daily Strategy Brief — 현대오토에버 GenAI Sandbox 3부작과 Amazon Nova Act HIPAA eligibility가 말하는 기업 AI 실행 전략</p>
+      <div class="hero-meta">
+        <span class="pill">확인 블로그 3개</span><span class="pill">신규 수집 4건</span><span class="pill">Enterprise AI</span><span class="pill">AIOps</span><span class="pill">Regulated Agentic AI</span>
+      </div>
+      <img src="./images/image-01.png" alt="GenAI Sandbox 위에서 여러 팀이 Amazon Bedrock 기반 업무 자동화를 실험하는 전략적 클라우드 플랫폼 일러스트" class="blog-image" />
+    </div>
+  </header>
+  <main class="wrap">
+    <section class="keybox">
+      <strong>오늘의 한 줄 결론:</strong> AWS 블로그의 메시지는 명확합니다. 기업 AI는 “모델을 잘 쓰는 단계”를 넘어, 안전한 실험 환경을 전사에 제공하고, 운영 장애 대응을 에이전트 협업으로 표준화하며, 규제 산업에서는 자동화보다 통제·감사·책임 분계를 먼저 설계하는 방향으로 이동하고 있습니다.
+    </section>
+
+    <section>
+      <h2>1. 핵심 트렌드: 샌드박스는 PoC 공간이 아니라 AI 운영 체계의 시작점</h2>
+      <p class="section-lead">현대오토에버 GenAI Sandbox 3부작은 한국 대기업이 생성형 AI를 확산하는 현실적인 경로를 보여줍니다. 중앙 AI 조직이 모든 현업 요구를 직접 개발하는 방식이 아니라, 보안·비용·권한·네트워크·개발 패키지를 표준화한 실험장을 제공하고 현업 팀이 직접 문제를 검증하게 만드는 구조입니다.</p>
+      <div class="grid">
+        <article class="card"><h3>안전한 실험</h3><p>Security Hub, GuardDuty, Macie, IAM Identity Center, ABAC 같은 통제를 기본값으로 제공해 실험 속도와 기업 보안 요구를 동시에 만족시킵니다.</p></article>
+        <article class="card"><h3>현업 주도 확산</h3><p>14개 팀 150명 규모의 해커톤은 “AI 전담팀의 산출물”이 아니라 “조직 전체의 실행 근육”을 만드는 장치였습니다.</p></article>
+        <article class="card"><h3>운영 전환 경로</h3><p>검증된 앱이 production으로 이동할 수 있도록 비용·권한·네트워크·보안 기준을 처음부터 내장한 점이 중요합니다.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. 기술 변화의 의미: AIOps는 챗봇이 아니라 증거 기반 에이전트 워크플로우</h2>
+      <p>ErrorWatcher와 빅데이터 클러스터 장애 대응 사례는 운영 자동화의 기준을 끌어올립니다. 단순히 로그를 LLM에 넣고 요약하는 방식이 아니라, Monitor·Detective·Solver·Reporter 또는 Coordinator·State Checker·Log Investigator·RCA·Reflector처럼 역할을 나누고, EvidencePack·RAG·OpenSearch·Checkpoint·반증 구조로 판단 품질을 높입니다.</p>
+      <img src="./images/image-02.png" alt="장애 감지부터 RCA와 승인 기반 복구까지 이어지는 다중 AI 에이전트 운영 자동화 흐름도" class="blog-image" />
+      <div class="quote">운영 자동화의 경쟁력은 <b>얼마나 많이 자동 실행하느냐</b>가 아니라, <b>얼마나 추적 가능한 증거와 승인 흐름 위에서 자동 판단을 보조하느냐</b>에 있습니다.</div>
+    </section>
+
+    <section>
+      <h2>3. 기업 적용 관점: 한국 기업이 바로 참고할 운영 패턴</h2>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>패턴</th><th>AWS 블로그에서 보인 구현</th><th>한국 기업 적용 포인트</th></tr></thead>
+          <tbody>
+            <tr><td>AI Sandbox</td><td>Bedrock·Lambda·API Gateway·OpenSearch·S3와 사전 보안/비용/권한 통제</td><td>AI 아이디어 접수→샌드박스 실험→보안/비용 검증→운영 전환의 표준 프로세스 수립</td></tr>
+            <tr><td>Multi-Agent AIOps</td><td>LangGraph 기반 Monitor/Detective/Solver/Reporter와 RCA 병렬 검증</td><td>NOC/SRE/ITSM 업무에 먼저 적용하고, 파괴적 조치 전에는 승인 게이트 유지</td></tr>
+            <tr><td>Knowledge Asset Loop</td><td>신뢰도 높은 보고서·Incident 스냅샷·타임라인·명령 트레이스를 재사용</td><td>장애 대응 결과를 개인 노트가 아니라 조직 지식베이스와 벡터 검색으로 축적</td></tr>
+            <tr><td>Regulated Agentic AI</td><td>Nova Act HIPAA eligibility, IAM/KMS/CloudTrail/BAA/Well-Architected 통제</td><td>의료·금융·공공에서는 자동화 범위보다 데이터 접근권한, 감사 추적, 책임 분계부터 설계</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. 리스크와 거버넌스: 규제 산업에서는 “자동화보다 통제”가 먼저</h2>
+      <p>Amazon Nova Act의 HIPAA eligibility 발표는 agentic AI가 의료·보험·헬스케어 같은 규제 산업으로 이동하고 있음을 보여줍니다. 하지만 eligibility는 완성된 컴플라이언스가 아닙니다. 고객은 BAA 체결, HIPAA 계정 지정, IAM 정책, KMS 암호화, CloudTrail 로깅, Well-Architected Review를 스스로 구성해야 합니다.</p>
+      <img src="./images/image-03.png" alt="의료·금융 규제 산업에서 브라우저 기반 AI 에이전트가 감사와 보안 통제 아래 동작하는 모습" class="blog-image" />
+      <div class="grid">
+        <article class="card"><h3>데이터 최소화</h3><p>브라우저 에이전트가 보는 화면과 저장하는 로그에 민감정보가 과도하게 남지 않도록 마스킹과 보존 정책이 필요합니다.</p></article>
+        <article class="card"><h3>감사 가능성</h3><p>모든 에이전트 액션은 누가, 언제, 어떤 정책으로, 어떤 결과를 냈는지 재구성 가능해야 합니다.</p></article>
+        <article class="card"><h3>Human Supervision</h3><p>청구·승인·권한 변경처럼 업무 리스크가 큰 단계는 최종 승인자를 명시해야 합니다.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <h2>5. 실행 전략: 90일 안에 시작할 수 있는 Enterprise AI 로드맵</h2>
+      <ol class="strategy-list">
+        <li><strong>0~30일:</strong> AI Sandbox 기준을 정의합니다. 허용 모델, 금지 데이터, 비용 한도, 프로젝트 태그, 로그/감사 기준, 사전 구성 템플릿을 먼저 만듭니다.</li>
+        <li><strong>31~60일:</strong> 장애 대응·보고서 자동화·지식검색처럼 ROI와 위험이 균형 잡힌 3~5개 현업 유스케이스를 해커톤/스프린트로 검증합니다.</li>
+        <li><strong>61~90일:</strong> 성공 사례를 production 전환 후보로 선정하고, Human-in-the-Loop, 평가 지표, 운영 로그, 보안 리뷰, 비용 대시보드를 포함한 운영 모델을 붙입니다.</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>수집 원문</h2>
+      <ul><li><a href="https://aws.amazon.com/ko/blogs/tech/hae-genai-sandbox-hackathon-3/" target="_blank" rel="noopener">20260522_[Korea Tech]현대오토에버의 Amazon Bedrock으로 구축한 빅데이터 클러스터 장애 대응 자동화 에이전트 구축기.md</a></li><li><a href="https://aws.amazon.com/ko/blogs/tech/hae-genai-sandbox-hackathon-2/" target="_blank" rel="noopener">20260522_[Korea Tech]현대오토에버의 Amazon Bedrock으로 구축한 다중 AI 에이전트 장애 대응 시간 5분으로 단축하기.md</a></li><li><a href="https://aws.amazon.com/ko/blogs/tech/hae-genai-sandbox-hackathon-1/" target="_blank" rel="noopener">20260522_[Korea Tech]현대오토에버의 GenAI Sandbox 활용 생산성 향상 Hackathon 혁신과 협업의 성공 사례.md</a></li><li><a href="https://aws.amazon.com/blogs/machine-learning/amazon-nova-act-is-now-hipaa-eligible/" target="_blank" rel="noopener">20260522_[Machine Learning]Amazon Nova Act is now HIPAA eligible.md</a></li></ul>
+    </section>
+
+    <section class="appendix">
+      <h2>이미지 프롬프트 부록</h2>
+      <h3>Image Prompt 1</h3><p><b>목적:</b> 히어로 비주얼 / <b>삽입 위치:</b> Hero 하단 / <b>Ratio:</b> 16:9 / <b>Alt:</b> GenAI Sandbox 위에서 여러 팀이 Amazon Bedrock 기반 업무 자동화를 실험하는 전략적 클라우드 플랫폼 일러스트</p><p>Executive editorial illustration for a Korean enterprise technology blog. A secure GenAI Sandbox cloud platform at the center...</p>
+      <h3>Image Prompt 2</h3><p><b>목적:</b> AIOps lifecycle infographic / <b>삽입 위치:</b> 기술 변화 섹션 / <b>Ratio:</b> 16:9 / <b>Alt:</b> 장애 감지부터 RCA와 승인 기반 복구까지 이어지는 다중 AI 에이전트 운영 자동화 흐름도</p><p>Clean executive infographic in Korean showing a multi-agent AIOps incident response lifecycle...</p>
+      <h3>Image Prompt 3</h3><p><b>목적:</b> Regulated agentic AI governance card / <b>삽입 위치:</b> 리스크/거버넌스 섹션 / <b>Ratio:</b> 16:9 / <b>Alt:</b> 의료·금융 규제 산업에서 브라우저 기반 AI 에이전트가 감사와 보안 통제 아래 동작하는 모습</p><p>Premium Korean business technology illustration about regulated agentic AI...</p>
+    </section>
+
+    <p class="footer">Generated by Hermes scheduled AWS blog ingest. Markdown collection is mirrored to LLM Wiki collection aws-blog; HTML and image assets are kept in /opt/data/out and GitHub Pages repo only.</p>
+  </main>
+</body>
+</html>
