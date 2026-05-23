@@ -1,151 +1,174 @@
 <!doctype html>
-<html lang="ko">
+<html lang='ko'>
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AWS가 보여준 Enterprise AI의 다음 국면: 샌드박스에서 운영 자동화, 규제 산업 에이전트까지</title>
-  <meta name="description" content="AWS Korea Tech Blog와 AWS Machine Learning Blog 신규 글을 바탕으로 Enterprise AI, Agentic Operations, 규제 산업 AI 거버넌스 관점의 일일 전략을 정리합니다." />
-  <meta name="keywords" content="AWS, Amazon Bedrock, GenAI Sandbox, Agentic AI, AIOps, Amazon Nova Act, HIPAA, Enterprise AI, Korea" />
-  <meta property="og:title" content="AWS가 보여준 Enterprise AI의 다음 국면: 샌드박스에서 운영 자동화, 규제 산업 에이전트까지" />
-  <meta property="og:description" content="샌드박스형 AI 확산, 다중 에이전트 AIOps, 규제 산업 브라우저 에이전트의 전략적 의미." />
-  <meta property="og:type" content="article" />
-  <meta property="og:image" content="./20260523/images/image-01.png" />
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800;900&display=swap');
-    :root { --bg:#07111f; --paper:#f7f9fc; --ink:#132238; --muted:#5a6b80; --blue:#0f5bff; --cyan:#15b8d4; --orange:#ff9b2f; --card:#ffffff; --line:#dbe5f0; --navy:#0b1b32; }
-    * { box-sizing:border-box; }
-    html { scroll-behavior:smooth; }
-    body { margin:0; font-family:'Noto Sans KR', system-ui, -apple-system, BlinkMacSystemFont, sans-serif; background:var(--paper); color:var(--ink); font-size:17px; line-height:1.72; word-break:keep-all; overflow-wrap:break-word; text-wrap:pretty; }
-    a { color:#0b55d9; }
-    .hero { background: radial-gradient(circle at 20% 10%, rgba(21,184,212,.25), transparent 30%), linear-gradient(135deg,#07111f 0%,#0d2748 55%,#0b1524 100%); color:#fff; padding:64px 20px 34px; }
-    .hero-inner { max-width:1120px; margin:0 auto; }
-    .eyebrow { display:inline-flex; gap:8px; align-items:center; color:#9ee8ff; font-weight:800; letter-spacing:.04em; text-transform:uppercase; font-size:14px; }
-    h1 { font-size:clamp(34px, 6vw, 64px); line-height:1.12; margin:18px 0 18px; letter-spacing:-.04em; }
-    .subtitle { max-width:920px; color:#d8e8f7; font-size:clamp(18px,2vw,23px); }
-    .hero-meta { display:flex; flex-wrap:wrap; gap:10px; margin:24px 0; }
-    .pill { border:1px solid rgba(255,255,255,.22); background:rgba(255,255,255,.08); border-radius:999px; padding:8px 13px; font-size:14px; color:#eaf5ff; }
-    .wrap { max-width:1080px; margin:0 auto; padding:36px 20px 80px; }
-    .blog-image { max-width:100%; height:auto; display:block; border-radius:22px; box-shadow:0 18px 55px rgba(5,22,43,.22); margin:26px auto; border:1px solid rgba(255,255,255,.35); }
-    .hero .blog-image { margin-top:34px; }
-    .keybox { background:linear-gradient(135deg,#fff 0%,#eef7ff 100%); border:1px solid var(--line); border-left:7px solid var(--orange); border-radius:22px; padding:24px; box-shadow:0 10px 30px rgba(25,60,100,.08); margin:28px 0; }
-    .keybox strong { color:#0b2f5f; }
-    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; margin:22px 0; }
-    .card { background:var(--card); border:1px solid var(--line); border-radius:22px; padding:22px; box-shadow:0 8px 28px rgba(19,34,56,.07); min-width:0; }
-    .card h3 { margin-top:0; color:#0b2f5f; font-size:21px; line-height:1.35; }
-    h2 { font-size:clamp(26px,4vw,38px); line-height:1.24; letter-spacing:-.03em; margin:48px 0 16px; color:#092241; }
-    h3 { letter-spacing:-.02em; }
-    .section-lead { color:var(--muted); font-size:19px; }
-    .quote { font-size:22px; line-height:1.55; padding:24px; border-radius:24px; background:#0c1f38; color:#f4fbff; box-shadow:0 14px 40px rgba(4,12,25,.18); }
-    .quote b { color:#ffd18c; }
-    .table-scroll { overflow-x:auto; -webkit-overflow-scrolling:touch; border-radius:18px; border:1px solid var(--line); background:#fff; }
-    table { width:100%; min-width:760px; border-collapse:collapse; font-size:15.5px; }
-    th { background:#0b2444; color:#fff; text-align:left; }
-    th,td { padding:14px 16px; border-bottom:1px solid #e7edf5; vertical-align:top; }
-    tr:last-child td { border-bottom:0; }
-    .strategy-list li { margin:10px 0; }
-    .appendix { background:#eef3f8; border-radius:24px; padding:24px; border:1px solid var(--line); font-size:15px; }
-    .footer { color:#66778b; font-size:14px; margin-top:50px; }
-    @media (max-width:768px) {
-      body { font-size:16.5px; line-height:1.68; }
-      .hero { padding:44px 16px 26px; }
-      .wrap { padding:26px 16px 58px; }
-      .card,.keybox,.appendix { border-radius:18px; padding:18px; }
-      .grid { grid-template-columns:1fr; gap:14px; }
-      .hero-meta { gap:8px; }
-      .pill { font-size:13px; padding:7px 10px; }
-      table { min-width:680px; font-size:14.5px; }
-      th,td { padding:12px; }
-    }
-    @media (max-width:480px) {
-      h1 { font-size:32px; }
-      h2 { font-size:25px; }
-      .subtitle,.section-lead { font-size:17px; }
-      .quote { font-size:19px; padding:18px; }
-    }
-  </style>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>AWS Daily Strategy Blog — Enterprise AI 운영 자동화의 다음 단계 (2026-05-24)</title>
+<meta name='description' content='AWS Korea Tech Blog와 AWS Machine Learning Blog 기반 Enterprise AI·Data·Cloud 일일 전략 분석: GenAI Sandbox, Bedrock 멀티 에이전트 AIOps, Nova Act HIPAA eligibility.'>
+<meta name='keywords' content='AWS, Amazon Bedrock, Enterprise AI, AIOps, Nova Act, 한국 기업, Cloud Strategy, AI Governance'>
+<meta property='og:title' content='AWS Daily Strategy Blog — Enterprise AI 운영 자동화의 다음 단계'>
+<meta property='og:description' content='신규 게시물이 없어 최근 24시간 AWS 수집 문서를 기반으로 생성한 전략형 Executive Blog.'>
+<meta property='og:type' content='article'>
+<meta property='og:image' content='./images/image-01.png'>
+<style>
+:root { --bg:#07111f; --ink:#eef6ff; --muted:#b9c7d8; --card:#101d31; --line:#27405f; --accent:#ff9900; --blue:#57b7ff; --good:#4be0b7; --paper:#f7fafc; --text:#172033; }
+* { box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body { margin:0; font-family:'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background:linear-gradient(180deg,#05101f 0%,#0d1728 42%,#f5f7fb 42%,#f5f7fb 100%); color:var(--text); line-height:1.72; word-break:keep-all; overflow-wrap:break-word; text-wrap:pretty; font-size:17px; }
+a { color:#146bba; }
+.hero { color:var(--ink); padding:72px 24px 42px; background:radial-gradient(circle at 20% 10%,rgba(87,183,255,.30),transparent 30%), radial-gradient(circle at 80% 20%,rgba(255,153,0,.22),transparent 28%), linear-gradient(135deg,#081529,#0c1c35); }
+.hero-inner { max-width:1120px; margin:0 auto; display:grid; grid-template-columns:1.05fr .95fr; gap:34px; align-items:center; }
+.eyebrow { color:#9ed7ff; font-weight:800; letter-spacing:.08em; text-transform:uppercase; font-size:.85rem; }
+h1 { font-size:clamp(2.25rem,5vw,4.8rem); line-height:1.08; margin:.4rem 0 1rem; letter-spacing:-.04em; }
+.lead { font-size:clamp(1.05rem,2vw,1.35rem); color:#d6e8fb; max-width:760px; }
+.hero-meta { display:flex; gap:12px; flex-wrap:wrap; margin-top:22px; }
+.hero-meta span, .tag-cloud span { border:1px solid rgba(255,255,255,.22); border-radius:999px; padding:8px 12px; background:rgba(255,255,255,.07); color:#eaf6ff; }
+.blog-image { max-width:100%; height:auto; display:block; border-radius:24px; box-shadow:0 22px 60px rgba(0,0,0,.32); border:1px solid rgba(255,255,255,.12); }
+main { max-width:1080px; margin:0 auto; padding:44px 24px 88px; }
+.notice { background:#fff7e8; border:1px solid #ffd79a; border-left:6px solid var(--accent); border-radius:18px; padding:18px 20px; margin-bottom:28px; }
+.section { background:white; border:1px solid #e6ecf3; border-radius:28px; padding:30px; margin:28px 0; box-shadow:0 12px 36px rgba(18,31,54,.08); }
+.section.dark { background:linear-gradient(135deg,#0f1c30,#101827); color:var(--ink); border-color:#263e5d; }
+.section.dark p, .section.dark li { color:#d9e5f2; }
+h2 { font-size:clamp(1.6rem,3vw,2.35rem); line-height:1.22; margin:0 0 16px; letter-spacing:-.03em; }
+h3 { line-height:1.35; letter-spacing:-.02em; }
+.kicker { color:#2872b8; font-weight:800; margin-bottom:8px; }
+.key-box { display:grid; grid-template-columns:1fr 1fr; gap:18px; margin:22px 0; }
+.key-box > div { background:#f2f7ff; border:1px solid #d7e7fa; border-radius:20px; padding:20px; }
+.cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; }
+.card, .source-card { background:#f8fbff; border:1px solid #e0e9f5; border-radius:20px; padding:20px; min-width:0; }
+.source-chip { display:inline-flex; font-size:.82rem; color:#0e5a96; font-weight:800; background:#e9f5ff; padding:6px 10px; border-radius:999px; }
+.metric { font-size:2.6rem; color:#0d68b1; font-weight:900; line-height:1; }
+.tag-cloud { display:flex; flex-wrap:wrap; gap:10px; }
+.tag-cloud span { color:#0d3155; background:#eef6ff; border-color:#d5e9fb; font-weight:700; }
+.table-wrap { overflow-x:auto; -webkit-overflow-scrolling:touch; border:1px solid #e5ebf2; border-radius:18px; }
+table { width:100%; min-width:760px; border-collapse:collapse; background:white; }
+th,td { padding:14px 16px; border-bottom:1px solid #e8edf4; text-align:left; vertical-align:top; }
+th { background:#f0f5fb; color:#173754; }
+.roadmap { counter-reset:step; display:grid; gap:14px; }
+.roadmap li { list-style:none; background:#f7fbff; border:1px solid #dceaf8; border-radius:18px; padding:18px 18px 18px 58px; position:relative; }
+.roadmap li:before { counter-increment:step; content:counter(step); position:absolute; left:18px; top:18px; width:28px; height:28px; display:grid; place-items:center; border-radius:50%; background:#0e6bb7; color:white; font-weight:800; }
+.appendix pre { white-space:pre-wrap; background:#081525; color:#dbeafe; padding:18px; border-radius:18px; overflow:auto; }
+footer { color:#607087; font-size:.95rem; max-width:1080px; margin:0 auto 60px; padding:0 24px; }
+@media (max-width: 768px) {
+ body { font-size:16.5px; line-height:1.7; }
+ .hero { padding:46px 18px 28px; }
+ .hero-inner { grid-template-columns:1fr; gap:24px; }
+ main { padding:28px 16px 64px; }
+ .section { padding:22px 18px; border-radius:22px; }
+ .key-box { grid-template-columns:1fr; }
+ .cards { grid-template-columns:1fr; }
+ .hero-meta span { font-size:.9rem; }
+ table { min-width:680px; }
+}
+@media (max-width: 480px) {
+ body { font-size:16px; }
+ h1 { font-size:2.15rem; }
+ .metric { font-size:2.1rem; }
+ .section { padding:20px 16px; }
+ .blog-image { border-radius:18px; }
+}
+</style>
 </head>
 <body>
-  <header class="hero">
-    <div class="hero-inner">
-      <div class="eyebrow">AWS Daily Strategy Brief · 2026-05-23 KST</div>
-      <h1>AWS가 보여준 Enterprise AI의 다음 국면: 샌드박스에서 운영 자동화, 규제 산업 에이전트까지</h1>
-      <p class="subtitle">2026년 5월 23일 AWS Blog Daily Strategy Brief — 현대오토에버 GenAI Sandbox 3부작과 Amazon Nova Act HIPAA eligibility가 말하는 기업 AI 실행 전략</p>
-      <div class="hero-meta">
-        <span class="pill">확인 블로그 3개</span><span class="pill">신규 수집 4건</span><span class="pill">Enterprise AI</span><span class="pill">AIOps</span><span class="pill">Regulated Agentic AI</span>
-      </div>
-      <img src="./20260523/images/image-01.png" alt="GenAI Sandbox 위에서 여러 팀이 Amazon Bedrock 기반 업무 자동화를 실험하는 전략적 클라우드 플랫폼 일러스트" class="blog-image" />
+<header class='hero'>
+  <div class='hero-inner'>
+    <div>
+      <div class='eyebrow'>AWS Daily Strategy · Enterprise AI / Data / Cloud</div>
+      <h1>AI 운영 자동화는 이제 “샌드박스”에서 “통제된 프로덕션”으로 이동한다</h1>
+      <p class='lead'>이번 실행에서는 신규 RSS 수집 건이 없어, 최근 24시간 내 로컬 AWS 수집 문서 4건을 보조 입력으로 사용했다. 따라서 오늘의 전략 판단은 <strong>확인 필요</strong> 꼬리표를 달되, 현대오토에버 GenAI Sandbox·Bedrock 멀티 에이전트 AIOps·Nova Act HIPAA eligibility가 보여주는 방향성은 분명하다: 기업 AI 경쟁력은 모델 선택보다 운영 표준화, 거버넌스, 반복 업무 자동화 역량에서 갈린다.</p>
+      <div class='hero-meta'><span>수집 기준: 2026-05-24 07:09 KST</span><span>신규 저장: 0건</span><span>분석 입력: 최근 24시간 문서 4건</span></div>
     </div>
-  </header>
-  <main class="wrap">
-    <section class="keybox">
-      <strong>오늘의 한 줄 결론:</strong> AWS 블로그의 메시지는 명확합니다. 기업 AI는 “모델을 잘 쓰는 단계”를 넘어, 안전한 실험 환경을 전사에 제공하고, 운영 장애 대응을 에이전트 협업으로 표준화하며, 규제 산업에서는 자동화보다 통제·감사·책임 분계를 먼저 설계하는 방향으로 이동하고 있습니다.
-    </section>
+    <img src='./images/image-01.png' alt='AWS 기반 엔터프라이즈 AI 운영 자동화 전략을 표현한 히어로 이미지' class='blog-image' />
+  </div>
+</header>
+<main>
+<section class='notice'><strong>데이터 상태:</strong> RSS 3개 피드는 정상 확인되었으나 신규 게시물은 없었다. 본 HTML은 최근 24시간 이내 `/opt/data/home/brain/sources/aws` 문서를 사용한 전략형 보조 분석이며, 신규성 판단에는 “확인 필요”가 적용된다.</section>
+<section class='section'>
+<div class='kicker'>Executive Takeaway</div><h2>오늘의 핵심 메시지</h2>
+<div class='key-box'>
+<div><div class='metric'>01</div><h3>AI 확산의 병목은 인프라 리드타임이다</h3><p>GenAI Sandbox 사례는 보안·권한·비용·네트워크를 미리 표준화한 실험 환경이 현업의 AI 아이디어 실행 속도를 끌어올린다는 점을 보여준다.</p></div>
+<div><div class='metric'>02</div><h3>Agentic AIOps는 “자동 조치”보다 증거 기반 판단 체계다</h3><p>Bedrock·LangGraph·OpenSearch 기반 장애 대응 에이전트는 감지, RCA, 반증, 보고, 승인 흐름을 분리해 MTTR 단축과 운영 지식 자산화를 동시에 노린다.</p></div>
+<div><div class='metric'>03</div><h3>규제 산업 AI는 compliance-ready workflow가 승부처다</h3><p>Nova Act HIPAA eligibility는 UI 기반 agentic automation도 감사·암호화·BAA·책임 분계와 결합되어야 enterprise adoption이 가능하다는 신호다.</p></div>
+<div><div class='metric'>04</div><h3>한국 기업은 중앙 플랫폼 + 현업 실험 + 운영 전환 체계가 필요하다</h3><p>중앙 AI 조직이 모든 앱을 만드는 방식보다, 표준 샌드박스에서 현업이 검증하고 운영 조직이 production 전환을 지원하는 모델이 현실적이다.</p></div>
+</div>
+</section>
+<section class='section dark'>
+<div class='kicker'>Trend Analysis</div><h2>핵심 트렌드: Enterprise AI는 “모델 활용”에서 “운영 시스템”으로 재정의된다</h2>
+<img src='./images/image-02.png' alt='데이터 기반과 AI 에이전트, 거버넌스 계층을 연결한 전략 인포그래픽' class='blog-image' />
+<p>최근 AWS 사례의 공통 축은 개별 생성형 AI 앱이 아니라 <strong>반복 가능한 운영 시스템</strong>이다. 샌드박스는 실험 리드타임을 줄이고, 멀티 에이전트 장애 대응은 운영 판단을 구조화하며, HIPAA eligible Nova Act는 규제 업무의 브라우저 기반 자동화 가능성을 확장한다. 세 흐름 모두 데이터 접근, 권한 경계, 로그·감사, human review가 설계의 중심에 놓인다.</p>
+<ul><li>기술 변화의 의미: LLM은 단독 의사결정자가 아니라 로그·런북·지식베이스·ITSM·보안 통제 위에서 작동하는 orchestration layer가 된다.</li><li>기업 적용 관점: 성공 지표는 “챗봇 출시 수”가 아니라 MTTR, 업무 처리시간, 재사용 가능한 지식자산, 감사 가능한 의사결정 로그다.</li><li>한국 기업 관점: 제조·모빌리티·금융·공공은 기존 운영 도구를 버리기보다 Bedrock/AgentCore/Nova Act 계열을 판단 보조·자동화 계층으로 얹는 접근이 적합하다.</li></ul>
+</section>
+<section class='section'>
+<div class='kicker'>Technology Stack Signal</div><h2>주요 AWS 서비스·기술 신호</h2>
+<div class='tag-cloud'><span>Amazon Bedrock</span><span>Amazon API Gateway</span><span>AWS Lambda</span><span>Amazon S3</span><span>Amazon OpenSearch Serverless</span><span>Amazon Bedrock Knowledge Bases</span><span>AWS Config</span><span>Amazon Macie</span><span>Amazon GuardDuty</span><span>Amazon Inspector</span><span>AWS Security Hub</span><span>IAM Identity Center</span><span>Claude Sonnet</span><span>LangGraph</span><span>Amazon OpenSearch Service</span><span>Streamlit</span><span>Amazon EMR</span><span>Amazon RDS for PostgreSQL</span><span>PostgreSQL</span><span>Ambari</span><span>Amazon Bedrock AgentCore</span><span>Amazon Nova Act</span><span>Strands Agents</span><span>MCP</span></div>
+</section>
+<section class='section'>
+<div class='kicker'>Enterprise Application</div><h2>기업 적용 전략: 샌드박스에서 운영 전환까지 5단계</h2>
+<img src='./images/image-03.png' alt='PoC에서 운영 확산으로 가는 엔터프라이즈 AI 실행 로드맵 이미지' class='blog-image' />
+<ol class='roadmap'><li><strong>공통 GenAI Sandbox 구축:</strong> Bedrock, API Gateway, Lambda, S3, OpenSearch, IAM Identity Center, 보안 탐지 서비스를 템플릿화한다.</li><li><strong>현업 과제 선별:</strong> 장애 대응, 보고서 자동화, ESG/컴플라이언스, 보험·예약·클레임 같은 반복 업무부터 시작한다.</li><li><strong>에이전트 역할 분리:</strong> Monitor, Detective, Solver, Reporter처럼 책임과 입력 지식을 나누고, 각 단계의 evidence pack을 남긴다.</li><li><strong>Human-in-the-Loop와 감사:</strong> 자동 조치 전 승인, 신뢰도 기준, CloudTrail/KMS/IAM 통제를 production gate로 둔다.</li><li><strong>재사용 자산화:</strong> HIGH confidence 사례, 런북, 프롬프트, Knowledge Base, 운영 메트릭을 다음 과제의 가속 자산으로 전환한다.</li></ol>
+</section>
+<section class='section'>
+<div class='kicker'>Risk & Governance</div><h2>리스크와 거버넌스 고려사항</h2>
+<div class='cards'><div class='card'><h3>환각·확증 편향</h3><p>RCA-A/RCA-B 병렬 분석, 자체 반증, Reflector 교차검증 같은 구조를 기본 패턴으로 둔다.</p></div><div class='card'><h3>권한·데이터 경계</h3><p>ABAC, Permission Set, read-only 진단, KMS 암호화, 민감정보 탐지를 샌드박스부터 강제한다.</p></div><div class='card'><h3>자동 조치 책임</h3><p>복구 명령 실행은 초기에는 승인 기반으로 제한하고, 실행 로그와 롤백 절차를 함께 설계한다.</p></div><div class='card'><h3>규제 적합성</h3><p>HIPAA eligibility는 출발점일 뿐이며 한국 의료·보험·공공 적용은 국내 개인정보·의료정보·클라우드 인증 정책에 맞춘 별도 검증이 필요하다.</p></div></div>
+</section>
+<section class='section'>
+<div class='kicker'>Source Notes</div><h2>분석에 사용한 최근 AWS 수집 문서</h2>
+<div class='cards'>
+<article class='source-card'>
+  <span class='source-chip'>Korea Tech</span>
+  <h3>현대오토에버의 GenAI Sandbox 활용 생산성 향상 Hackathon: 혁신과 협업의 성공 사례</h3>
+  <p>현대오토에버와 AWS가 GenAI Sandbox를 구축하고 14개 팀, 150명이 참여한 해커톤을 통해 생성형 AI 실험·검증·프로덕션 전환의 기반을 만든 사례다. 핵심은 보안·비용·권한·네트워크·개발 패키지를 사전에 표준화해 개발자가 행정/인프라 리드타임 없이 업무 혁신 아이디어를 구현하도록 만든 점이다.</p>
+  <a href='https://aws.amazon.com/ko/blogs/tech/hae-genai-sandbox-hackathon-1/' target='_blank' rel='noopener'>원문 보기</a>
+</article>
 
-    <section>
-      <h2>1. 핵심 트렌드: 샌드박스는 PoC 공간이 아니라 AI 운영 체계의 시작점</h2>
-      <p class="section-lead">현대오토에버 GenAI Sandbox 3부작은 한국 대기업이 생성형 AI를 확산하는 현실적인 경로를 보여줍니다. 중앙 AI 조직이 모든 현업 요구를 직접 개발하는 방식이 아니라, 보안·비용·권한·네트워크·개발 패키지를 표준화한 실험장을 제공하고 현업 팀이 직접 문제를 검증하게 만드는 구조입니다.</p>
-      <div class="grid">
-        <article class="card"><h3>안전한 실험</h3><p>Security Hub, GuardDuty, Macie, IAM Identity Center, ABAC 같은 통제를 기본값으로 제공해 실험 속도와 기업 보안 요구를 동시에 만족시킵니다.</p></article>
-        <article class="card"><h3>현업 주도 확산</h3><p>14개 팀 150명 규모의 해커톤은 “AI 전담팀의 산출물”이 아니라 “조직 전체의 실행 근육”을 만드는 장치였습니다.</p></article>
-        <article class="card"><h3>운영 전환 경로</h3><p>검증된 앱이 production으로 이동할 수 있도록 비용·권한·네트워크·보안 기준을 처음부터 내장한 점이 중요합니다.</p></article>
-      </div>
-    </section>
+<article class='source-card'>
+  <span class='source-chip'>Korea Tech</span>
+  <h3>현대오토에버의 Amazon Bedrock으로 구축한 다중 AI 에이전트: 장애 대응 시간 5분으로 단축하기</h3>
+  <p>현대오토에버 차량제어서비스개발팀의 ErrorWatcher는 LangGraph 기반 다중 에이전트로 장애 감지, 근본 원인 분석, 해결책 제시, 보고서 생성을 자동화해 장애 대응 시간을 수 시간에서 5분 수준으로 단축한 사례다.</p>
+  <a href='https://aws.amazon.com/ko/blogs/tech/hae-genai-sandbox-hackathon-2/' target='_blank' rel='noopener'>원문 보기</a>
+</article>
 
-    <section>
-      <h2>2. 기술 변화의 의미: AIOps는 챗봇이 아니라 증거 기반 에이전트 워크플로우</h2>
-      <p>ErrorWatcher와 빅데이터 클러스터 장애 대응 사례는 운영 자동화의 기준을 끌어올립니다. 단순히 로그를 LLM에 넣고 요약하는 방식이 아니라, Monitor·Detective·Solver·Reporter 또는 Coordinator·State Checker·Log Investigator·RCA·Reflector처럼 역할을 나누고, EvidencePack·RAG·OpenSearch·Checkpoint·반증 구조로 판단 품질을 높입니다.</p>
-      <img src="./20260523/images/image-02.png" alt="장애 감지부터 RCA와 승인 기반 복구까지 이어지는 다중 AI 에이전트 운영 자동화 흐름도" class="blog-image" />
-      <div class="quote">운영 자동화의 경쟁력은 <b>얼마나 많이 자동 실행하느냐</b>가 아니라, <b>얼마나 추적 가능한 증거와 승인 흐름 위에서 자동 판단을 보조하느냐</b>에 있습니다.</div>
-    </section>
+<article class='source-card'>
+  <span class='source-chip'>Korea Tech</span>
+  <h3>현대오토에버의 Amazon Bedrock으로 구축한 빅데이터 클러스터 장애 대응 자동화 에이전트 구축기</h3>
+  <p>현대오토에버 데이터플랫폼기술팀은 Hadoop 기반 빅데이터 클러스터 운영에서 LangGraph, Amazon OpenSearch Service, Amazon Bedrock을 결합해 장애 대응 자동화 에이전트를 설계했다. 병렬 RCA, 자체 반증, Checkpoint, read-only 진단, Human-in-the-Loop 승인으로 운영 자동화와 안전성을 동시에 추구한다.</p>
+  <a href='https://aws.amazon.com/ko/blogs/tech/hae-genai-sandbox-hackathon-3/' target='_blank' rel='noopener'>원문 보기</a>
+</article>
 
-    <section>
-      <h2>3. 기업 적용 관점: 한국 기업이 바로 참고할 운영 패턴</h2>
-      <div class="table-scroll">
-        <table>
-          <thead><tr><th>패턴</th><th>AWS 블로그에서 보인 구현</th><th>한국 기업 적용 포인트</th></tr></thead>
-          <tbody>
-            <tr><td>AI Sandbox</td><td>Bedrock·Lambda·API Gateway·OpenSearch·S3와 사전 보안/비용/권한 통제</td><td>AI 아이디어 접수→샌드박스 실험→보안/비용 검증→운영 전환의 표준 프로세스 수립</td></tr>
-            <tr><td>Multi-Agent AIOps</td><td>LangGraph 기반 Monitor/Detective/Solver/Reporter와 RCA 병렬 검증</td><td>NOC/SRE/ITSM 업무에 먼저 적용하고, 파괴적 조치 전에는 승인 게이트 유지</td></tr>
-            <tr><td>Knowledge Asset Loop</td><td>신뢰도 높은 보고서·Incident 스냅샷·타임라인·명령 트레이스를 재사용</td><td>장애 대응 결과를 개인 노트가 아니라 조직 지식베이스와 벡터 검색으로 축적</td></tr>
-            <tr><td>Regulated Agentic AI</td><td>Nova Act HIPAA eligibility, IAM/KMS/CloudTrail/BAA/Well-Architected 통제</td><td>의료·금융·공공에서는 자동화 범위보다 데이터 접근권한, 감사 추적, 책임 분계부터 설계</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
+<article class='source-card'>
+  <span class='source-chip'>Machine Learning</span>
+  <h3>Amazon Nova Act is now HIPAA eligible</h3>
+  <p>Amazon Nova Act가 HIPAA eligible service가 되면서 헬스케어·생명과학 조직이 ePHI가 포함될 수 있는 브라우저 기반 반복 업무를 agentic AI로 자동화할 수 있는 길이 열렸다.</p>
+  <a href='https://aws.amazon.com/blogs/machine-learning/amazon-nova-act-is-now-hipaa-eligible/' target='_blank' rel='noopener'>원문 보기</a>
+</article></div>
+<div class='table-wrap' style='margin-top:22px'><table><thead><tr><th>블로그</th><th>문서</th><th>발행일</th><th>원문</th></tr></thead><tbody><tr><td>Korea Tech</td><td>현대오토에버의 GenAI Sandbox 활용 생산성 향상 Hackathon: 혁신과 협업의 성공 사례</td><td>Fri, 22 May 2026 02:08:59 +0000</td><td><a href='https://aws.amazon.com/ko/blogs/tech/hae-genai-sandbox-hackathon-1/' target='_blank' rel='noopener'>링크</a></td></tr>
+<tr><td>Korea Tech</td><td>현대오토에버의 Amazon Bedrock으로 구축한 다중 AI 에이전트: 장애 대응 시간 5분으로 단축하기</td><td>Fri, 22 May 2026 02:46:02 +0000</td><td><a href='https://aws.amazon.com/ko/blogs/tech/hae-genai-sandbox-hackathon-2/' target='_blank' rel='noopener'>링크</a></td></tr>
+<tr><td>Korea Tech</td><td>현대오토에버의 Amazon Bedrock으로 구축한 빅데이터 클러스터 장애 대응 자동화 에이전트 구축기</td><td>Fri, 22 May 2026 02:50:42 +0000</td><td><a href='https://aws.amazon.com/ko/blogs/tech/hae-genai-sandbox-hackathon-3/' target='_blank' rel='noopener'>링크</a></td></tr>
+<tr><td>Machine Learning</td><td>Amazon Nova Act is now HIPAA eligible</td><td>Thu, 21 May 2026 22:22:28 +0000</td><td><a href='https://aws.amazon.com/blogs/machine-learning/amazon-nova-act-is-now-hipaa-eligible/' target='_blank' rel='noopener'>링크</a></td></tr></tbody></table></div>
+</section>
+<section class='section appendix'>
+<div class='kicker'>Appendix</div><h2>Image Prompt Log</h2><pre>Image Prompt 1
+Purpose: Hero image for an executive Korean AWS strategy blog about enterprise AI operations automation.
+Insertion position: Hero section after headline.
+Image2 prompt: Create a polished executive technology blog hero illustration, 16:9. Theme: Korean enterprise AI operations center using AWS cloud, Amazon Bedrock multi-agent orchestration, AIOps incident response automation, data platforms, observability, governance. Modern premium editorial style, deep navy and AWS orange accents, abstract cloud architecture, Korean enterprise context, no logos, no brand marks, no readable trademark text, professional and optimistic. Include subtle Korean visual atmosphere but no garbled visible text.
+Ratio: 16:9
+Alt text: AWS 기반 엔터프라이즈 AI 운영 자동화 전략을 표현한 히어로 이미지
 
-    <section>
-      <h2>4. 리스크와 거버넌스: 규제 산업에서는 “자동화보다 통제”가 먼저</h2>
-      <p>Amazon Nova Act의 HIPAA eligibility 발표는 agentic AI가 의료·보험·헬스케어 같은 규제 산업으로 이동하고 있음을 보여줍니다. 하지만 eligibility는 완성된 컴플라이언스가 아닙니다. 고객은 BAA 체결, HIPAA 계정 지정, IAM 정책, KMS 암호화, CloudTrail 로깅, Well-Architected Review를 스스로 구성해야 합니다.</p>
-      <img src="./20260523/images/image-03.png" alt="의료·금융 규제 산업에서 브라우저 기반 AI 에이전트가 감사와 보안 통제 아래 동작하는 모습" class="blog-image" />
-      <div class="grid">
-        <article class="card"><h3>데이터 최소화</h3><p>브라우저 에이전트가 보는 화면과 저장하는 로그에 민감정보가 과도하게 남지 않도록 마스킹과 보존 정책이 필요합니다.</p></article>
-        <article class="card"><h3>감사 가능성</h3><p>모든 에이전트 액션은 누가, 언제, 어떤 정책으로, 어떤 결과를 냈는지 재구성 가능해야 합니다.</p></article>
-        <article class="card"><h3>Human Supervision</h3><p>청구·승인·권한 변경처럼 업무 리스크가 큰 단계는 최종 승인자를 명시해야 합니다.</p></article>
-      </div>
-    </section>
+Image Prompt 2
+Purpose: Infographic visual for trend analysis section.
+Insertion position: Core trend analysis section.
+Image2 prompt: Create a clean strategy infographic illustration, 16:9, showing three connected layers: Data foundation, AI agents, Governance/observability. Use abstract diagrams, dashboards, cloud nodes, risk controls, decision loops. Executive blog style, dark background with bright cyan and orange highlights, Korean enterprise audience, no company logos, no readable text except minimal abstract labels if necessary.
+Ratio: 16:9
+Alt text: 데이터 기반과 AI 에이전트, 거버넌스 계층을 연결한 전략 인포그래픽
 
-    <section>
-      <h2>5. 실행 전략: 90일 안에 시작할 수 있는 Enterprise AI 로드맵</h2>
-      <ol class="strategy-list">
-        <li><strong>0~30일:</strong> AI Sandbox 기준을 정의합니다. 허용 모델, 금지 데이터, 비용 한도, 프로젝트 태그, 로그/감사 기준, 사전 구성 템플릿을 먼저 만듭니다.</li>
-        <li><strong>31~60일:</strong> 장애 대응·보고서 자동화·지식검색처럼 ROI와 위험이 균형 잡힌 3~5개 현업 유스케이스를 해커톤/스프린트로 검증합니다.</li>
-        <li><strong>61~90일:</strong> 성공 사례를 production 전환 후보로 선정하고, Human-in-the-Loop, 평가 지표, 운영 로그, 보안 리뷰, 비용 대시보드를 포함한 운영 모델을 붙입니다.</li>
-      </ol>
-    </section>
-
-    <section>
-      <h2>수집 원문</h2>
-      <ul><li><a href="https://aws.amazon.com/ko/blogs/tech/hae-genai-sandbox-hackathon-3/" target="_blank" rel="noopener">20260522_[Korea Tech]현대오토에버의 Amazon Bedrock으로 구축한 빅데이터 클러스터 장애 대응 자동화 에이전트 구축기.md</a></li><li><a href="https://aws.amazon.com/ko/blogs/tech/hae-genai-sandbox-hackathon-2/" target="_blank" rel="noopener">20260522_[Korea Tech]현대오토에버의 Amazon Bedrock으로 구축한 다중 AI 에이전트 장애 대응 시간 5분으로 단축하기.md</a></li><li><a href="https://aws.amazon.com/ko/blogs/tech/hae-genai-sandbox-hackathon-1/" target="_blank" rel="noopener">20260522_[Korea Tech]현대오토에버의 GenAI Sandbox 활용 생산성 향상 Hackathon 혁신과 협업의 성공 사례.md</a></li><li><a href="https://aws.amazon.com/blogs/machine-learning/amazon-nova-act-is-now-hipaa-eligible/" target="_blank" rel="noopener">20260522_[Machine Learning]Amazon Nova Act is now HIPAA eligible.md</a></li></ul>
-    </section>
-
-    <section class="appendix">
-      <h2>이미지 프롬프트 부록</h2>
-      <h3>Image Prompt 1</h3><p><b>목적:</b> 히어로 비주얼 / <b>삽입 위치:</b> Hero 하단 / <b>Ratio:</b> 16:9 / <b>Alt:</b> GenAI Sandbox 위에서 여러 팀이 Amazon Bedrock 기반 업무 자동화를 실험하는 전략적 클라우드 플랫폼 일러스트</p><p>Executive editorial illustration for a Korean enterprise technology blog. A secure GenAI Sandbox cloud platform at the center...</p>
-      <h3>Image Prompt 2</h3><p><b>목적:</b> AIOps lifecycle infographic / <b>삽입 위치:</b> 기술 변화 섹션 / <b>Ratio:</b> 16:9 / <b>Alt:</b> 장애 감지부터 RCA와 승인 기반 복구까지 이어지는 다중 AI 에이전트 운영 자동화 흐름도</p><p>Clean executive infographic in Korean showing a multi-agent AIOps incident response lifecycle...</p>
-      <h3>Image Prompt 3</h3><p><b>목적:</b> Regulated agentic AI governance card / <b>삽입 위치:</b> 리스크/거버넌스 섹션 / <b>Ratio:</b> 16:9 / <b>Alt:</b> 의료·금융 규제 산업에서 브라우저 기반 AI 에이전트가 감사와 보안 통제 아래 동작하는 모습</p><p>Premium Korean business technology illustration about regulated agentic AI...</p>
-    </section>
-
-    <p class="footer">Generated by Hermes scheduled AWS blog ingest. Markdown collection is mirrored to LLM Wiki collection aws-blog; HTML and image assets are kept in /opt/data/out and GitHub Pages repo only.</p>
-  </main>
-</body>
-</html>
+Image Prompt 3
+Purpose: Practical roadmap visual for execution strategy section.
+Insertion position: Execution strategy section before roadmap table.
+Image2 prompt: Create a premium editorial roadmap illustration, 16:9, depicting a Korean enterprise moving from pilot AI automation to production-scale cloud AI operations. Visual motifs: roadmap path, security guardrails, human review, AWS cloud services as abstract blocks, analytics dashboards, operational playbook. No logos, no copyrighted marks, avoid dense text, modern blog article visual.
+Ratio: 16:9
+Alt text: PoC에서 운영 확산으로 가는 엔터프라이즈 AI 실행 로드맵 이미지
+</pre>
+</section>
+</main>
+<footer>Generated by Hermes AWS daily blog cron. Markdown collection artifacts remain in LLM Wiki/GBrain local sources; HTML and images are stored in /opt/data/out and GitHub Pages repo only. 신규 RSS 저장이 없는 fallback 분석이므로 신규성·시점 판단은 확인 필요.</footer>
+</body></html>
