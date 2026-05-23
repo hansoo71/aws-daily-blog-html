@@ -1,10 +1,8 @@
 # AWS Daily Blog HTML
 
-Daily Korean executive strategy blog generated from AWS Korea Tech Blog, AWS News Blog, and AWS Machine Learning Blog.
+Daily executive HTML blog generated from AWS Korea Tech Blog, AWS News Blog, and AWS Machine Learning Blog collection.
 
-- Latest Pages entry: `docs/index.html`
-- Dated source: `src/20260523/index.html`
-- Dated Pages build: `docs/20260523/index.html`
-- Images: `src/20260523/images/`, `docs/20260523/images/`
+Latest: `docs/index.html`
+Dated build: `docs/20260524/index.html`
 
-Source posts are official AWS blog posts summarized into local LLM Wiki/GBrain markdown; no full article extracts are published here.
+Sources are summarized from public AWS blog posts; full Markdown collection remains in local LLM Wiki/GBrain storage.
