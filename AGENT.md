@@ -1,1 +1,6 @@
-Edit `src/YYYYMMDD/index.html` first, then sync to `docs/YYYYMMDD/index.html` and latest `docs/index.html`. Keep image paths relative to each HTML file. Do not commit private source extracts or credentials.
+# Agent Guide
+
+- Keep `src/YYYYMMDD/` and `docs/YYYYMMDD/` in sync.
+- Latest `docs/index.html` should reference dated images with `./YYYYMMDD/images/...`.
+- Do not commit private source extracts or credentials.
+- Markdown blog collection belongs to LLM Wiki, not this repo.
