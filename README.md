@@ -1,10 +1,10 @@
 # AWS Daily Blog HTML
 
-Daily Korean executive blog generated from AWS Korea Tech Blog, AWS News Blog, and AWS Machine Learning Blog RSS collection.
+Daily Enterprise AI/Data/Cloud strategy blog generated from official AWS blog feeds.
 
-- Latest Pages source: `docs/index.html`
-- Dated source: `src/20260525/index.html`
-- Dated Pages build: `docs/20260525/index.html`
-- Standalone output: `/opt/data/out/aws-daily-blog-20260525.html`
+- Latest Pages entry: `docs/index.html`
+- Dated source: `src/20260526/index.html`
+- Dated Pages output: `docs/20260526/index.html`
+- Standalone output: `/opt/data/out/aws-daily-blog-20260526.html`
 
-This repo contains generated HTML/image assets only; Markdown collection notes remain in LLM Wiki `aws-blog`.
+Sources are official AWS blog posts summarized as knowledge Markdown; generated HTML and images are stored here.
