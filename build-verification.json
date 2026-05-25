@@ -1,0 +1,13 @@
+{
+  "standalone_exists": true,
+  "title": true,
+  "seo_meta": true,
+  "noto": true,
+  "viewport": true,
+  "media_query": true,
+  "responsive_image_css": true,
+  "blog_image_token": true,
+  "img_count": true,
+  "image_files": true,
+  "sections": true
+}
