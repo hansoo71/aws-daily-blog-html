@@ -1,6 +1,6 @@
 # Agent Guide
 
+- Keep Markdown collection artifacts in LLM Wiki/GBrain source storage, not this public repo.
 - Keep `src/YYYYMMDD/` and `docs/YYYYMMDD/` in sync.
-- Latest `docs/index.html` should reference dated images with `./YYYYMMDD/images/...`.
-- Do not commit private source extracts or credentials.
-- Markdown blog collection belongs to LLM Wiki, not this repo.
+- `docs/index.html` is the latest public entry and must rewrite dated image paths correctly.
+- Do not commit credentials, tokens, private customer data, or full copyrighted source extracts.
