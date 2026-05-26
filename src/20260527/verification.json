@@ -1,0 +1,12 @@
+{
+  "standalone_exists": true,
+  "title": true,
+  "seo_meta": true,
+  "noto": true,
+  "viewport": true,
+  "media_query": true,
+  "responsive_img": true,
+  "img_tags": 3,
+  "img_files": 3,
+  "sections": true
+}
