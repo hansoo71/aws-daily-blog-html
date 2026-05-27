@@ -1,5 +1,6 @@
-# Natural-language Maintenance Examples
+# Skills
 
-- “오늘 날짜 HTML의 이미지 alt를 더 설명적으로 바꿔줘.”
-- “모바일에서 표가 깨지지 않게 docs와 standalone을 다시 검증해줘.”
-- “새 AWS 블로그 markdown에서 Executive Blog를 갱신하고 Pages에 배포해줘.”
+Natural-language maintenance examples:
+- "오늘 날짜 HTML의 모바일 카드 간격을 줄여줘"
+- "docs/index.html을 최신 날짜로 다시 동기화해줘"
+- "이미지 프롬프트 로그를 확인하고 이미지 alt를 보강해줘"

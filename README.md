@@ -1,10 +1,10 @@
 # AWS Daily Blog HTML
 
-Daily Enterprise AI/Data/Cloud strategy blog generated from official AWS blog feeds.
+매일 AWS Korea Tech Blog, AWS News Blog, AWS Machine Learning Blog 신규 게시물을 기반으로 생성하는 한국어 전략형 HTML 블로그 저장소입니다.
 
-- Latest Pages entry: `docs/index.html`
-- Dated source: `src/20260526/index.html`
-- Dated Pages output: `docs/20260526/index.html`
-- Standalone output: `/opt/data/out/aws-daily-blog-20260526.html`
+- 최신 Pages 진입점: `docs/index.html`
+- 날짜별 원본: `src/20260528/index.html`
+- 날짜별 배포본: `docs/20260528/index.html`
+- 이미지: `src/20260528/images/`, `docs/20260528/images/`
 
-Sources are official AWS blog posts summarized as knowledge Markdown; generated HTML and images are stored here.
+공식 AWS 블로그 요약과 생성형 이미지 기반이며, 원문 전체 추출본은 저장소에 포함하지 않습니다.
