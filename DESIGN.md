@@ -1,3 +1,3 @@
-# Design
+# 디자인 원칙
 
-Executive technology blog style. Noto Sans KR, wide hero, 960–1120px content width, cards, responsive tables, mobile-first typography. Avoid official AWS/customer logos in generated visuals.
+넓은 히어로, 카드형 섹션, 모바일 한 열 레이아웃, 노토 산스 한국어 글꼴을 사용합니다. 표는 모바일에서 가로 스크롤됩니다.
