@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>아마존웹서비스 일일 전략 블로그 — 에이전트 운영 체계가 본격화되는 날</title>
+<meta name="description" content="2026년 6월 2일 아마존웹서비스 블로그 신규 글을 바탕으로 엔터프라이즈 인공지능, 데이터, 클라우드 관점의 핵심 트렌드와 실행 전략을 정리한 한국어 전략 블로그입니다." />
+<meta property="og:title" content="아마존웹서비스 일일 전략 블로그 — 에이전트 운영 체계가 본격화되는 날" />
+<meta property="og:description" content="베드록 에이전트코어, 오픈에이아이 모델 제공, 데이터 분석, 대형 모델 추론 인프라를 한국 기업 적용 관점에서 해석합니다." />
+<meta property="og:type" content="article" />
+<meta property="og:image" content="./images/image-01.png" />
+<style>
+:root{--bg:#f6f8fc;--ink:#182033;--muted:#5c667a;--line:#d9e0ef;--card:#ffffff;--accent:#6046ff;--accent2:#0b8f8f;--warn:#fff4d7;--deep:#10152a;--soft:#eef2ff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:'Noto Sans KR',system-ui,-apple-system,BlinkMacSystemFont,sans-serif;font-size:17px;line-height:1.72;word-break:keep-all;overflow-wrap:break-word;text-wrap:pretty}a{color:#4432d0;text-decoration:none}a:hover{text-decoration:underline}.hero{background:radial-gradient(circle at 15% 20%,#6d5bff 0,#231a66 42%,#0d1328 100%);color:white;padding:72px 22px 54px}.hero-inner{max-width:1120px;margin:0 auto}.eyebrow{display:inline-flex;gap:8px;align-items:center;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.22);border-radius:999px;padding:8px 14px;font-size:14px}.hero h1{font-size:clamp(34px,5vw,64px);line-height:1.12;margin:24px 0 18px;letter-spacing:-.04em;max-width:980px}.hero p{font-size:clamp(18px,2vw,22px);max-width:900px;color:#e7e9ff}.meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.meta span{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.18);border-radius:14px;padding:9px 12px}.wrap{max-width:1080px;margin:0 auto;padding:34px 20px}.lead-card{margin-top:-54px;background:var(--card);border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:0 24px 70px rgba(13,19,40,.16)}.blog-image{width:100%;max-width: 100%; height: auto; display: block;border-radius:22px;border:1px solid var(--line);box-shadow:0 18px 50px rgba(16,21,42,.16);margin:24px auto}section{margin:46px 0}.section-title{font-size:30px;line-height:1.25;letter-spacing:-.03em;margin:0 0 16px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 10px 26px rgba(24,32,51,.06)}.card h3{margin:0 0 10px;font-size:21px}.badge{display:inline-block;font-size:13px;background:var(--soft);color:#4432d0;border-radius:999px;padding:5px 10px;margin-bottom:10px}.message{background:linear-gradient(135deg,#fff,#eef2ff);border-left:6px solid var(--accent);border-radius:20px;padding:22px;margin:24px 0}.warning{background:var(--warn);border-left-color:#e79c13}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:18px;background:#fff}table{width:100%;border-collapse:collapse;min-width:760px}th,td{text-align:left;vertical-align:top;border-bottom:1px solid var(--line);padding:14px 16px}th{background:#edf1ff;color:#28345a}.steps{counter-reset:item;display:grid;gap:14px}.step{position:relative;background:#fff;border:1px solid var(--line);border-radius:20px;padding:20px 20px 20px 62px}.step:before{counter-increment:item;content:counter(item);position:absolute;left:18px;top:18px;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:var(--accent);color:#fff;font-weight:800}.source-list li{margin:8px 0}.footer{background:#10152a;color:#dce2ff;margin-top:60px;padding:30px 20px}.footer-inner{max-width:1080px;margin:0 auto;font-size:14px;color:#b9c2e8}.prompt{font-size:14px;background:#fbfcff;border:1px dashed #b8c2df;border-radius:18px;padding:18px;margin-top:12px}.kpi{font-size:34px;font-weight:900;color:#4432d0;line-height:1}.split{display:grid;grid-template-columns:1.1fr .9fr;gap:22px;align-items:start}@media (max-width:768px){body{font-size:16.5px;line-height:1.68}.hero{padding:48px 18px 72px}.hero h1{font-size:36px}.wrap{padding:24px 16px}.lead-card{margin-top:-44px;padding:21px;border-radius:22px}.section-title{font-size:26px}.split{grid-template-columns:1fr}.card{padding:19px}.meta{gap:8px}.meta span{font-size:14px}.table-wrap{margin-left:-4px;margin-right:-4px}.blog-image{border-radius:18px}}@media (max-width:480px){body{font-size:16px}.hero h1{font-size:31px}.hero p{font-size:17px}.eyebrow{font-size:13px}.wrap{padding-left:14px;padding-right:14px}.grid{grid-template-columns:1fr}.step{padding:18px 16px 18px 56px}th,td{padding:12px}.kpi{font-size:28px}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="eyebrow">2026년 6월 2일 · 아마존웹서비스 블로그 전략 해설</div>
+    <h1>에이전트 운영 체계가 본격화되는 날</h1>
+    <p>오늘의 신규 글은 하나의 메시지로 수렴한다. 기업 인공지능은 이제 모델 호출 단계를 지나, 도구 게이트웨이·정책·결제·관측성·고성능 추론 인프라를 갖춘 운영 체계로 이동하고 있다.</p>
+    <div class="meta"><span>확인 블로그 3개</span><span>신규 수집 11건</span><span>핵심 축: 에이전트 운영 · 데이터 분석 · 추론 인프라</span></div>
+  </div>
+</header>
+<main class="wrap">
+  <article class="lead-card">
+    <p><strong>한 줄 결론:</strong> 한국 기업은 생성형 인공지능 과제를 더 이상 개별 챗봇이나 파일 검색으로만 설계하면 안 된다. 오늘 공개된 흐름은 모델, 코딩 에이전트, 도구 호출, 결제, 보안 정책, 관측성, 고성능 추론 저장소가 하나의 통제 가능한 플랫폼으로 묶이는 방향을 보여준다.</p>
+    <img src="./images/image-01.png" alt="아마존웹서비스 기반 에이전트 운영 체계를 표현한 추상 일러스트" class="blog-image" />
+  </article>
+
+  <section>
+    <h2 class="section-title">핵심 트렌드 분석</h2>
+    <div class="grid">
+      <div class="card"><span class="badge">트렌드 1</span><h3>모델 선택에서 운영 플랫폼 선택으로</h3><p>오픈에이아이 지피티-5.5·지피티-5.4·코덱스의 베드록 일반 제공은 모델 조달 이슈를 넘어 리전, 감사, 네트워크 격리, 비용 약정, 개발자 워크플로까지 아마존웹서비스 운영 체계 안으로 넣는 사건이다.</p></div>
+      <div class="card"><span class="badge">트렌드 2</span><h3>도구 호출은 중앙 게이트웨이에서 통제</h3><p>에이전트코어 게이트웨이 확장은 여러 모델 컨텍스트 프로토콜 서버를 하나의 도구·프롬프트·리소스 카탈로그로 묶고, 권한·자격증명·관측성을 중앙화하는 방향을 보여준다.</p></div>
+      <div class="card"><span class="badge">트렌드 3</span><h3>데이터 업무도 대화형 실행 환경으로</h3><p>아마존 퀵은 연구 데이터와 시계열 데이터베이스를 자연어 분석 흐름으로 연결한다. 문서 검색을 넘어 근거 추적, 계획, 버전 수정, 외부 도구 실행이 결합된다.</p></div>
+      <div class="card"><span class="badge">트렌드 4</span><h3>추론 인프라는 비용과 속도의 전장</h3><p>러스터용 고성능 파일시스템와 그래픽처리장치 직접 저장 경로는 대형 모델 콜드스타트와 자동확장 지연을 줄인다. 모델 운영 비용은 그래픽처리장치, 저장소, 네트워크 설계에 의해 크게 좌우된다.</p></div>
+    </div>
+  </section>
+
+  <section class="split">
+    <div>
+      <h2 class="section-title">기술 변화의 의미</h2>
+      <p>오늘의 공통분모는 <strong>에이전트가 실제 업무 시스템을 호출하기 시작할 때 필요한 통제면</strong>이다. 단순 응답 생성은 모델 품질 경쟁이지만, 업무 실행은 권한, 정책, 감사, 세션, 비용, 결제, 데이터 경계를 요구한다.</p>
+      <div class="message"><strong>핵심 메시지:</strong> 앞으로 기업 인공지능 플랫폼의 차별점은 “어떤 모델을 쓸 수 있는가”보다 “모델이 어떤 도구를 어떤 권한으로, 어떤 근거와 비용 안에서 실행했는가를 설명할 수 있는가”가 된다.</div>
+    </div>
+    <div class="card"><div class="kpi">11건</div><p>이번 실행에서 신규 저장한 글 수. 그중 다수가 베드록 에이전트코어, 모델 컨텍스트 프로토콜, 정책, 결제, 관측성, 코덱스와 연결되어 있다.</p></div>
+  </section>
+
+  <section>
+    <h2 class="section-title">기업 적용 관점: 오늘부터 바꿔야 할 설계 질문</h2>
+    <div class="table-wrap">
+      <table aria-label="기업 적용 관점 전략 표">
+        <thead><tr><th>영역</th><th>기존 질문</th><th>새 질문</th><th>권장 대응</th></tr></thead>
+        <tbody>
+          <tr><td>모델·코딩 에이전트</td><td>어떤 모델이 성능이 좋은가</td><td>리전·감사·비용·개발자 흐름을 어떻게 통제하는가</td><td>베드록 기반 모델 카탈로그와 코딩 에이전트 운영 정책을 함께 검토</td></tr>
+          <tr><td>도구와 모델 컨텍스트 프로토콜</td><td>서버를 몇 개 연결할 수 있는가</td><td>도구 목록, 자격증명, 세션, 사용자 위임을 어디서 중앙 관리하는가</td><td>게이트웨이 중심 도구 등록·승인·폐기 절차 수립</td></tr>
+          <tr><td>데이터 에이전트</td><td>데이터를 검색할 수 있는가</td><td>행·열 권한, 근거, 질의 변환, 감사가 보장되는가</td><td>레이크 포메이션·정책·인터셉터를 결합한 데이터 접근 설계</td></tr>
+          <tr><td>결제와 유료 자원</td><td>에이전트가 결제할 수 있는가</td><td>예산 한도, 만료, 사용자 동의, 지갑 정보 보호가 강제되는가</td><td>결제 세션과 예산 정책을 모델 외부 인프라 계층에 배치</td></tr>
+          <tr><td>추론 인프라</td><td>그래픽처리장치가 충분한가</td><td>모델 로딩, 자동확장, 장애 복구, 저장소 경로가 비용 효율적인가</td><td>병렬 파일시스템, 직접 저장 경로, 양자화, 서빙 프레임워크를 통합 설계</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">한국 기업 관점 시사점</h2>
+    <img src="./images/image-02.png" alt="에이전트 거버넌스 4계층 운영 모델 인포그래픽" class="blog-image" />
+    <div class="grid">
+      <div class="card"><h3>금융·제조</h3><p>시계열 데이터, 품질 데이터, 설비 로그를 자연어로 분석하려면 모델 컨텍스트 프로토콜 서버를 직접 열기보다 인증·정책·감사를 담당하는 게이트웨이를 앞세워야 한다.</p></div>
+      <div class="card"><h3>유통·커머스</h3><p>리만코리아 사례처럼 상품 검색은 임베딩만으로 끝나지 않는다. 상품 단위 데이터 구조, 하이브리드 검색, 메타데이터 필터, 평가셋이 필요하다.</p></div>
+      <div class="card"><h3>연구·바이오</h3><p>퀵 리서치 흐름은 공개 문헌과 내부 문서를 함께 다루는 조직에 근거 추적과 버전 기반 분석 검토가 중요함을 보여준다.</p></div>
+      <div class="card"><h3>정보기술 조직</h3><p>코덱스와 고성능 모델 제공은 개발 생산성의 기회이지만, 저장소 접근권한, 변경 감사, 비용 한도, 보안 검토 자동화가 함께 설계되어야 한다.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">실행 전략</h2>
+    <div class="steps">
+      <div class="step"><strong>사용 사례를 운영 위험 기준으로 분류한다.</strong><br/>읽기 전용, 내부 데이터 조회, 외부 도구 실행, 결제·구매 실행을 구분하고 승인 단계를 다르게 둔다.</div>
+      <div class="step"><strong>공통 게이트웨이를 먼저 만든다.</strong><br/>팀별 모델 컨텍스트 프로토콜 서버 난립을 막고, 도구 등록·자격증명·정책·로그를 중앙 카탈로그로 관리한다.</div>
+      <div class="step"><strong>평가셋과 관측성을 제품 요건으로 넣는다.</strong><br/>도구 선택 정확도, 대화 턴 품질, 세션 결과, 시스템 비용·오류를 단계별로 측정한다.</div>
+      <div class="step"><strong>데이터 접근은 모델 밖에서 강제한다.</strong><br/>행·열 보안, 역할 매핑, 지리 조건, 민감정보 필터링은 정책과 인터셉터에서 처리한다.</div>
+      <div class="step"><strong>추론 인프라의 콜드스타트를 비용 항목으로 본다.</strong><br/>대형 모델 서비스는 그래픽처리장치 수뿐 아니라 체크포인트 로딩 경로와 파일시스템 처리량까지 설계한다.</div>
+    </div>
+    <img src="./images/image-03.png" alt="데이터 분석과 대형 언어모델 추론 인프라가 연결된 클라우드 구조" class="blog-image" />
+  </section>
+
+  <section>
+    <h2 class="section-title">리스크와 거버넌스 고려사항</h2>
+    <div class="message warning"><strong>주의:</strong> 에이전트가 도구, 데이터, 결제, 코드를 실행하는 순간 프롬프트 안전장치만으로는 부족하다. 예산 한도, 세션 만료, 권한 검증, 응답 필터, 감사 로그, 사용자 동의는 모델 외부의 결정적 통제여야 한다.</div>
+    <div class="grid">
+      <div class="card"><h3>권한 과잉</h3><p>도구 호출 권한을 역할과 업무 맥락 기준으로 분리하고, 관리자성 도구는 별도 승인과 기록을 남긴다.</p></div>
+      <div class="card"><h3>비용 폭주</h3><p>모델 추론, 도구 호출, 결제 세션, 저장소 처리량을 각각 예산과 경보로 관리한다.</p></div>
+      <div class="card"><h3>근거 불명확</h3><p>연구·분석 산출물은 문장별 근거와 버전 이력을 보존하고, 자동 요약은 검토 흐름을 포함해야 한다.</p></div>
+      <div class="card"><h3>운영 소유권 부재</h3><p>플랫폼팀, 보안팀, 데이터 소유자, 제품책임자, 현업 검토자의 역할을 명확히 해야 한다.</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title">수집 원문 목록</h2>
+    <ul class="source-list">
+      <li><a href="https://aws.amazon.com/ko/blogs/tech/building-nlp-search-with-kiro-agent-and-bedrock/">리만코리아 자연어 상품 검색 구축기</a></li>
+      <li><a href="https://aws.amazon.com/blogs/aws/get-started-with-openai-gpt-5-5-gpt-5-4-models-and-codex-on-amazon-bedrock/">오픈에이아이 모델과 코덱스 베드록 시작하기</a></li>
+      <li><a href="https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-opus-4-8-on-aws-aurora-mysql-with-kiro-powers-and-more-june-1-2026/">아마존웹서비스 주간 소식</a></li>
+      <li><a href="https://aws.amazon.com/blogs/machine-learning/openai-models-and-codex-on-amazon-bedrock-are-now-generally-available/">오픈에이아이 모델과 코덱스 베드록 일반 제공</a></li>
+      <li><a href="https://aws.amazon.com/blogs/machine-learning/agentops-operationalize-agentic-ai-at-scale-with-amazon-bedrock-agentcore/">에이전트 운영 체계 대규모 적용</a></li>
+      <li><a href="https://aws.amazon.com/blogs/machine-learning/extending-mcp-support-for-amazon-bedrock-agentcore-gateway-2/">에이전트코어 게이트웨이 모델 컨텍스트 프로토콜 확장</a></li>
+      <li><a href="https://aws.amazon.com/blogs/machine-learning/secure-ai-agents-with-policy-and-lambda-interceptors-in-amazon-bedrock-agentcore-gateway/">정책과 람다 인터셉터 기반 보안 에이전트</a></li>
+      <li><a href="https://aws.amazon.com/blogs/machine-learning/enable-safe-agentic-payments-with-built-in-guardrails-using-amazon-bedrock-agentcore-payments/">안전한 에이전트 결제 가드레일</a></li>
+      <li><a href="https://aws.amazon.com/blogs/machine-learning/transforming-rare-cancer-research-with-amazon-quick-integrating-biomedical-databases-for-breakthrough-discoveries/">아마존 퀵 기반 희귀암 연구 데이터 통합</a></li>
+      <li><a href="https://aws.amazon.com/blogs/machine-learning/amazon-quick-integration-with-time-series-databases-for-market-intelligence-using-mcp/">아마존 퀵과 시계열 데이터베이스 모델 컨텍스트 프로토콜 통합</a></li>
+      <li><a href="https://aws.amazon.com/blogs/machine-learning/accelerate-llm-model-loading-and-increase-context-windows-with-gpudirect-on-amazon-fsx-for-lustre-and-turboquant/">대형 언어모델 로딩 가속과 긴 맥락 인프라</a></li>
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="section-title">이미지 프롬프트 부록</h2>
+    <div class="prompt"><strong>이미지 프롬프트 1:</strong> 대표 히어로 이미지. 삽입 위치는 본문 상단. 권장 비율은 3:2. 대체 텍스트는 “아마존웹서비스 기반 에이전트 운영 체계를 표현한 추상 일러스트”.</div>
+    <div class="prompt"><strong>이미지 프롬프트 2:</strong> 에이전트 거버넌스 인포그래픽. 삽입 위치는 거버넌스와 리스크 섹션. 권장 비율은 3:2. 대체 텍스트는 “에이전트 거버넌스 4계층 운영 모델 인포그래픽”.</div>
+    <div class="prompt"><strong>이미지 프롬프트 3:</strong> 데이터와 추론 인프라 시각화. 삽입 위치는 데이터·클라우드 실행 전략 섹션. 권장 비율은 3:2. 대체 텍스트는 “데이터 분석과 대형 언어모델 추론 인프라가 연결된 클라우드 구조”.</div>
+  </section>
+</main>
+<footer class="footer"><div class="footer-inner">이 문서는 2026년 6월 2일 한국시간 오전 7시 기준 수집한 아마존웹서비스 공식 블로그 글을 바탕으로 작성한 전략형 한국어 블로그입니다. 원문 링크는 본문 출처 목록에 보존했습니다.</div></footer>
+</body>
+</html>
