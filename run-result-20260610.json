@@ -1,0 +1,78 @@
+{
+  "repo": "/opt/data/repos/aws-daily-blog-html",
+  "html": "/opt/data/out/aws-daily-blog-20260610.html",
+  "validation": {
+    "required": {
+      "<title>": true,
+      "og:title": true,
+      "Noto Sans KR": true,
+      "viewport": true,
+      "@media (max-width:768px)": true,
+      "blog-image": true
+    },
+    "img_count": 5,
+    "images_exist": 3,
+    "unexpected_english_tokens": [],
+    "allowed_english_tokens": [
+      "AI",
+      "AgentCore",
+      "Bedrock",
+      "Browser",
+      "Claude",
+      "Fable",
+      "Isaac",
+      "NVIDIA",
+      "New",
+      "Relic",
+      "SageMaker",
+      "Tool"
+    ]
+  },
+  "http_local": {
+    "root": {
+      "status": 200,
+      "contains_key": true
+    },
+    "dated": {
+      "status": 200,
+      "contains_key": true
+    },
+    "image": {
+      "status": 200,
+      "contains_key": true
+    }
+  },
+  "commit_created": true,
+  "local_sha": "9d443b405255b198c170adfad292a9ed089fb5da",
+  "github": {
+    "auth": true,
+    "owner": "hansoo71",
+    "repo": "aws-daily-blog-html",
+    "method": "Contents API",
+    "repo_url": "https://github.com/hansoo71/aws-daily-blog-html",
+    "remote_sha": "a6016bec8a9548d90a6e4c54624c9e5a60ea8cbf",
+    "pages_url": "https://hansoo71.github.io/aws-daily-blog-html/",
+    "pages_status": "errored",
+    "public_checks": {
+      "root": {
+        "status": 200,
+        "contains_key": true,
+        "url": "https://hansoo71.github.io/aws-daily-blog-html/"
+      },
+      "dated": {
+        "status": 200,
+        "contains_key": true,
+        "url": "https://hansoo71.github.io/aws-daily-blog-html/20260610/"
+      },
+      "image": {
+        "error": "HTTP Error 404: Not Found",
+        "url": "https://hansoo71.github.io/aws-daily-blog-html/20260610/images/image-01.png"
+      }
+    },
+    "push_error": "git push timeout; Contents API fallback 사용",
+    "clean_config": true,
+    "uploaded_files": 24,
+    "upload_errors": [],
+    "docs_index_verified": true
+  }
+}
