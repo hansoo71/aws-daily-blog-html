@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang='ko'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>2026년 6월 12일 AWS 블로그 일일 전략 브리핑</title>
+<meta name='description' content='AWS 공식 블로그 신규 게시물 8건을 바탕으로 인공지능 에이전트 평가, 문서 자동화, 보안 통제, 데이터 시각화 변화를 한국어로 분석한 일일 전략형 기술 블로그입니다.'>
+<meta property='og:title' content='2026년 6월 12일 AWS 블로그 일일 전략 브리핑'>
+<meta property='og:description' content='신규 AWS 블로그 8건에서 관찰된 인공지능 에이전트, 문서 자동화, 보안, 데이터 시각화 변화와 기업 검토 포인트를 정리했습니다.'>
+<meta property='og:type' content='article'>
+<meta property='og:image' content='./images/image-01.png'>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap');
+:root{--bg:#081426;--panel:#0f2038;--panel2:#132942;--ink:#f7fbff;--muted:#b8c7d9;--line:rgba(255,255,255,.14);--accent:#ff9f1c;--accent2:#62d2ff;--good:#77e0a4;}
+*{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:linear-gradient(180deg,#081426,#0b1728 38%,#f6f8fb 38%);font-family:'Noto Sans KR',system-ui,sans-serif;color:#142033;word-break:keep-all;overflow-wrap:break-word;text-wrap:pretty;line-height:1.72;font-size:17px;}
+a{color:#0a6cd6;text-decoration:none} a:hover{text-decoration:underline} .hero{color:var(--ink);padding:72px 24px 32px;} .hero-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center} .eyebrow{color:#ffd08a;font-weight:800;letter-spacing:.08em} h1{font-size:clamp(38px,6vw,72px);line-height:1.08;margin:12px 0 18px;letter-spacing:-.05em} .lead{font-size:clamp(18px,2.2vw,23px);color:#dce8f5;max-width:760px} .hero-card{background:rgba(255,255,255,.08);border:1px solid var(--line);border-radius:28px;padding:24px;box-shadow:0 24px 80px rgba(0,0,0,.25)} .hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:24px} .stat{background:rgba(255,255,255,.1);border:1px solid var(--line);border-radius:18px;padding:16px} .stat strong{display:block;font-size:30px;color:#fff} .wrap{max-width:1080px;margin:0 auto;padding:38px 24px} .section{background:white;border-radius:30px;padding:34px;margin:26px 0;box-shadow:0 18px 50px rgba(22,38,60,.08);border:1px solid #e7edf5} h2{font-size:clamp(26px,3vw,40px);line-height:1.22;margin:0 0 16px;letter-spacing:-.035em;color:#101c2d} h3{font-size:22px;line-height:1.35;margin:10px 0;color:#12243b} .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px} .post-card,.insight,.risk{background:#f7f9fc;border:1px solid #e1e8f0;border-radius:22px;padding:22px;min-width:0} .badge{display:inline-flex;border-radius:999px;background:#fff4df;color:#8a4d00;padding:6px 12px;font-weight:800;font-size:13px} .meta{font-size:14px;color:#5d6a78} .keybox{border-left:6px solid var(--accent);background:#fff8ec;border-radius:20px;padding:22px;margin:20px 0} .image-frame{margin:28px 0;background:#071526;border-radius:28px;padding:12px;box-shadow:0 24px 70px rgba(5,22,40,.18)} .blog-image{max-width:100%;height:auto;display:block;border-radius:20px;margin:0 auto} .caption{font-size:14px;color:#697688;margin-top:8px;text-align:center} .table-scroll{overflow-x:auto;border:1px solid #e3eaf3;border-radius:18px} table{width:100%;border-collapse:collapse;min-width:760px;background:#fff} th,td{padding:14px 16px;border-bottom:1px solid #e8eef6;text-align:left;vertical-align:top} th{background:#eef5ff;color:#17345c} .pillars{counter-reset:item} .pillar{position:relative;padding-left:54px} .pillar:before{counter-increment:item;content:counter(item);position:absolute;left:18px;top:22px;background:#132942;color:white;border-radius:50%;width:26px;height:26px;display:grid;place-items:center;font-weight:800} footer{color:#5c6878;text-align:center;padding:28px}
+@media (max-width:768px){body{font-size:16px;line-height:1.68}.hero{padding:48px 18px 24px}.hero-inner{grid-template-columns:1fr}.hero-stats{grid-template-columns:1fr}.wrap{padding:24px 16px}.section{padding:24px 18px;border-radius:24px}.grid{grid-template-columns:1fr}table{min-width:680px}h1{font-size:42px}}
+@media (max-width:480px){body{font-size:16px}.hero-card{padding:18px}.post-card,.insight,.risk{padding:18px}.image-frame{border-radius:20px;padding:8px}}
+</style>
+</head>
+<body>
+<header class='hero'>
+  <div class='hero-inner'>
+    <div><div class='eyebrow'>공식 블로그 기반 일일 전략 브리핑</div><h1>인공지능 에이전트, 문서 자동화, 보안 통제가 동시에 전진했습니다</h1><p class='lead'>2026년 6월 12일 실행에서 AWS 한국 기술 블로그, AWS 뉴스 블로그, AWS 기계학습 블로그 피드 3개를 확인했고 신규 게시물 8건을 수집했습니다. 오늘의 관찰은 에이전트 평가와 보안, 문서·이미지 데이터 처리, 대시보드 의사결정 기능이 서로 다른 글에서 같은 방향으로 강화되고 있다는 점입니다.</p></div>
+    <aside class='hero-card' aria-label='수집 요약'><div class='hero-stats'><div class='stat'><strong>3</strong><span>확인한 블로그</span></div><div class='stat'><strong>8</strong><span>신규 수집 글</span></div><div class='stat'><strong>3</strong><span>생성 이미지</span></div></div><p class='lead' style='font-size:16px'>고정된 추진 로드맵이 아니라, 이번에 실제 수집된 출처에서 확인되는 변화만 기준으로 리스크와 검토 포인트를 정리했습니다.</p></aside>
+  </div>
+</header>
+<main class='wrap'>
+  <div class='image-frame'><img src='./images/image-01.png' alt='문서 자동화, 에이전트 평가, 보안 통제, 데이터 시각화 흐름을 보여주는 클라우드 전략 일러스트' class='blog-image'><div class='caption'>오늘 수집된 글의 공통 축: 평가·자동화·보안·시각화</div></div>
+  <section class='section'><h2>핵심 트렌드 분석</h2><div class='keybox'><strong>핵심 메시지:</strong> 오늘 수집된 8건은 단일 서비스 발표보다, 기업이 인공지능 기능을 실제 업무 데이터와 연결할 때 필요한 평가 기준, 보안 경계, 추출 정확도, 대시보드 사용성을 구체화하는 방향으로 묶입니다.</div><div class='grid'><div class='insight'><h3>에이전트 신뢰성의 기준이 코드와 평가 도구로 내려오고 있습니다</h3><p>Agent-EvalKit, Bedrock AgentCore 기반 프롬프트 인젝션 방어, Codex와 Claude Code를 함께 쓰는 Harness Engineering 글은 모두 에이전트 사용을 단순 호출이 아니라 평가·권한·실행 흐름으로 관리해야 한다는 신호를 줍니다.</p></div><div class='insight'><h3>문서와 이미지 데이터 처리가 더 세분화되고 있습니다</h3><p>Amazon Bedrock 기반 온디맨드·배치 문서 처리, Bedrock Data Automation 청사진 최적화, 농약 제품 이미지 인식 사례는 비정형 데이터 활용이 범용 요약을 넘어 추출 정확도와 업무 적용성으로 이동하고 있음을 보여줍니다.</p></div><div class='insight'><h3>의사결정 화면의 작은 기능도 업무 수용성을 좌우합니다</h3><p>Amazon QuickSight 스파크라인과 사용자 지정 정렬은 거대한 모델 변화는 아니지만, 현업 사용자가 추세를 더 빨리 보고 원하는 기준으로 정렬하는 실무 경험을 개선합니다.</p></div></div></section>
+  <section class='section'><h2>수집된 신규 게시물</h2><div class='grid'><article class='post-card'>
+  <span class='badge'>AWS 한국 기술 블로그</span>
+  <h3>Amazon Bedrock Vision LLM과 Amazon OpenSearch Service를 활용한 농약 제품 이미지 인식 시스템 구축기</h3>
+  <p>농약 제품 사진을 기반으로 제품 정보를 찾는 이미지 인식 사례입니다. 현장 이미지와 검색 인덱스를 연결할 때 데이터 품질, 제품 마스터, 사용자 촬영 환경을 함께 검토해야 합니다.</p>
+  <p class='meta'>발행일 2026-06-11 · 주요 기술: Amazon Bedrock</p>
+</article><article class='post-card'>
+  <span class='badge'>AWS 한국 기술 블로그</span>
+  <h3>Amazon Bedrock 위에서 Codex와 Claude Code 함께 쓰기: Harness Engineering으로 구현해보기</h3>
+  <p>여러 코딩 에이전트를 Bedrock 기반 실행 환경에서 조합하는 실험입니다. 개발 생산성뿐 아니라 저장소 권한, 검토 흐름, 테스트 자동화 기준을 함께 설계해야 합니다.</p>
+  <p class='meta'>발행일 2026-06-11 · 주요 기술: Amazon Bedrock</p>
+</article><article class='post-card'>
+  <span class='badge'>AWS 한국 기술 블로그</span>
+  <h3>프롬프트 인젝션 방어: AgentCore 기반 다층 보안 설계 패턴</h3>
+  <p>에이전트가 다른 사용자의 데이터나 내부 정보를 노출하지 않도록 다층 보안 경계를 설계하는 패턴입니다. 권한 분리, 정책 집행, 감사 로그가 핵심 검토 항목입니다.</p>
+  <p class='meta'>발행일 2026-06-11 · 주요 기술: Amazon Bedrock, Bedrock AgentCore, AWS Lambda, Amazon DynamoDB</p>
+</article><article class='post-card'>
+  <span class='badge'>AWS 기계학습 블로그</span>
+  <h3>온디맨드·배치 파이프라인으로 문서 데이터 추출 유연성 확보</h3>
+  <p>문서 처리 시간을 기준으로 즉시 처리와 배치 처리를 선택하는 지능형 문서 처리 패턴입니다. 업무 긴급도와 비용 제약에 따라 처리 경로를 나누는 설계가 중요합니다.</p>
+  <p class='meta'>발행일 2026-06-12 · 주요 기술: Amazon Bedrock, AWS Lambda, Amazon S3, AWS Marketplace, Amazon DynamoDB</p>
+</article><article class='post-card'>
+  <span class='badge'>AWS 기계학습 블로그</span>
+  <h3>Agent-EvalKit으로 인공지능 에이전트 평가를 체계화</h3>
+  <p>인공지능 에이전트를 여섯 단계 평가 흐름으로 검증하는 공개 도구 사례입니다. 정확성, 작업 완결성, 실패 재현성, 평가 데이터 관리가 도입 판단의 중심이 됩니다.</p>
+  <p class='meta'>발행일 2026-06-12 · 주요 기술: Amazon Bedrock, AWS Marketplace</p>
+</article><article class='post-card'>
+  <span class='badge'>AWS 기계학습 블로그</span>
+  <h3>Amazon QuickSight 스파크라인·사용자 지정 정렬로 대시보드 의사결정 개선</h3>
+  <p>대시보드 안에서 추세선과 사용자 지정 정렬을 제공해 현업 의사결정을 돕는 기능 업데이트입니다. 작은 시각화 기능도 사용자 수용성과 업무 속도에 영향을 줍니다.</p>
+  <p class='meta'>발행일 2026-06-12 · 주요 기술: Amazon Q, AWS Marketplace</p>
+</article><article class='post-card'>
+  <span class='badge'>AWS 기계학습 블로그</span>
+  <h3>Amazon Bedrock Data Automation 청사진 추출 정확도 최적화</h3>
+  <p>예시 문서와 기대값을 바탕으로 추출 지시문을 빠르게 개선하는 기능입니다. 별도 미세조정 없이 정확도를 높일 수 있지만, 대표 예시 선정과 정답 데이터 품질이 중요합니다.</p>
+  <p class='meta'>발행일 2026-06-12 · 주요 기술: Amazon Bedrock, AWS Marketplace</p>
+</article><article class='post-card'>
+  <span class='badge'>AWS 기계학습 블로그</span>
+  <h3>선도 개발팀의 인공지능 네이티브 개발 방식 재구성</h3>
+  <p>선도 개발팀이 인공지능을 단순 보조 도구가 아니라 개발 방식 재설계의 축으로 활용하는 사례입니다. 생산성 수치보다 검증, 품질, 팀 운영 방식의 변화가 함께 검토되어야 합니다.</p>
+  <p class='meta'>발행일 2026-06-11 · 주요 기술: Amazon Bedrock, AWS Marketplace</p>
+</article></div></section>
+  <section class='section'><h2>기술 변화의 의미</h2><p>이번 수집 데이터에서 가장 눈에 띄는 변화는 인공지능 기능의 “가능성”보다 “검증 가능한 사용 조건”이 더 많이 등장한다는 점입니다. Agent-EvalKit은 평가 절차를, Bedrock AgentCore 보안 패턴은 데이터 노출 방어를, Bedrock Data Automation 최적화는 추출 품질을 각각 다룹니다. 기업 의사결정자는 기능 도입 여부만 보지 말고 평가 데이터, 승인 경로, 로그, 실패 시 재처리 기준을 함께 확인해야 합니다.</p><div class='image-frame'><img src='./images/image-02.png' alt='인공지능 에이전트 평가 기준과 보안·비용·감사 통제를 연결한 인포그래픽' class='blog-image'><div class='caption'>에이전트 적용 검토 시 함께 확인해야 할 평가·보안·감사 축</div></div></section>
+  <section class='section'><h2>기업 적용 관점</h2><div class='grid'><div class='pillar post-card'><h3>문서 자동화</h3><p>온디맨드와 배치 처리 선택지는 업무 긴급도와 비용 제약을 나눠 설계할 수 있게 합니다. 다만 실제 문서 유형, 정답 데이터, 예외 처리 기준이 없으면 정확도 개선 효과는 확인 필요입니다.</p></div><div class='pillar post-card'><h3>이미지 인식</h3><p>농약 제품 이미지 인식 사례는 현장 사진과 검색·추천 경험을 연결하는 실무형 패턴입니다. 한국 기업은 제품 마스터 데이터 품질과 이미지 촬영 조건을 먼저 점검해야 합니다.</p></div><div class='pillar post-card'><h3>개발 생산성</h3><p>Codex, Claude Code, Harness Engineering 글은 여러 코딩 에이전트를 조합하는 실험을 다룹니다. 적용 전에는 산출물 검토, 저장소 권한, 자동 실행 범위, 회귀 테스트를 분리해야 합니다.</p></div></div><div class='image-frame'><img src='./images/image-03.png' alt='문서·이미지 입력에서 추출·검증을 거쳐 대시보드 의사결정으로 이어지는 데이터 파이프라인' class='blog-image'><div class='caption'>비정형 입력을 검증 가능한 업무 의사결정으로 연결하는 흐름</div></div></section>
+  <section class='section'><h2>한국 기업 관점 시사점</h2><div class='grid'><div class='insight'><h3>리스크: 프롬프트 인젝션과 데이터 경계</h3><p>Bedrock AgentCore 보안 설계 글은 사용자 데이터 노출 문제를 직접 다룹니다. 한국 기업은 개인정보, 고객 데이터, 내부 문서 접근 권한을 에이전트 단위로 분리할 수 있는지 확인해야 합니다.</p></div><div class='insight'><h3>기회: 현장 데이터의 검색 가능성 확대</h3><p>농업 이미지 인식과 문서 추출 글은 현장 사진, 스캔 문서, 양식 데이터가 검색·검증 가능한 업무 자산으로 전환될 가능성을 보여줍니다.</p></div><div class='insight'><h3>검토 포인트: 평가 데이터와 대시보드 수용성</h3><p>Agent-EvalKit과 Amazon QuickSight 기능 글은 모델 성능뿐 아니라 사용자가 믿고 확인할 수 있는 평가·시각화 경험이 중요하다는 점을 보여줍니다.</p></div></div></section>
+  <section class='section'><h2>실행 전략과 거버넌스 고려사항</h2><ul><li><strong>관찰된 사실:</strong> 에이전트 평가, 프롬프트 인젝션 방어, 문서 추출 최적화가 같은 날 수집 데이터에 함께 등장했습니다.</li><li><strong>근거 출처:</strong> AWS Korea Tech Blog 3건과 AWS Machine Learning Blog 5건에서 확인했습니다. AWS News Blog 신규 저장 건은 이번 실행에서 없었습니다.</li><li><strong>의사결정 포인트:</strong> 신규 기능 검토 시 기능 목록보다 평가셋, 예외 데이터, 권한 경계, 감사 로그, 대시보드 소비자 역할을 먼저 정의해야 합니다.</li><li><strong>확인 필요:</strong> 각 기능의 실제 비용, 지역별 사용 가능 여부, 조직의 기존 보안 기준 충족 여부는 원문과 현재 계정 설정 기준으로 별도 확인이 필요합니다.</li></ul></section>
+  <section class='section'><h2>출처별 수집 표</h2><div class='table-scroll'><table><thead><tr><th>표시 제목</th><th>출처 블로그</th><th>발행일</th><th>주요 기술</th><th>링크</th></tr></thead><tbody><tr><td>Amazon Bedrock Vision LLM과 Amazon OpenSearch Service를 활용한 농약 제품 이미지 인식 시스템 구축기</td><td>AWS 한국 기술 블로그</td><td>2026-06-11</td><td>Amazon Bedrock</td><td><a href='https://aws.amazon.com/ko/blogs/tech/knco-agricultural-ai-chatbot-for-smart-farm-part2/' aria-label='원문 열기'>원문</a></td></tr>
+<tr><td>Amazon Bedrock 위에서 Codex와 Claude Code 함께 쓰기: Harness Engineering으로 구현해보기</td><td>AWS 한국 기술 블로그</td><td>2026-06-11</td><td>Amazon Bedrock</td><td><a href='https://aws.amazon.com/ko/blogs/tech/codex-claudecode-harness/' aria-label='원문 열기'>원문</a></td></tr>
+<tr><td>프롬프트 인젝션 방어: AgentCore 기반 다층 보안 설계 패턴</td><td>AWS 한국 기술 블로그</td><td>2026-06-11</td><td>Amazon Bedrock, Bedrock AgentCore, AWS Lambda, Amazon DynamoDB</td><td><a href='https://aws.amazon.com/ko/blogs/tech/design-against-prompt-injection-with-bedrock-agentcore/' aria-label='원문 열기'>원문</a></td></tr>
+<tr><td>온디맨드·배치 파이프라인으로 문서 데이터 추출 유연성 확보</td><td>AWS 기계학습 블로그</td><td>2026-06-12</td><td>Amazon Bedrock, AWS Lambda, Amazon S3, AWS Marketplace, Amazon DynamoDB</td><td><a href='https://aws.amazon.com/blogs/machine-learning/extract-data-with-on-demand-and-batch-pipelines-dynamically/' aria-label='원문 열기'>원문</a></td></tr>
+<tr><td>Agent-EvalKit으로 인공지능 에이전트 평가를 체계화</td><td>AWS 기계학습 블로그</td><td>2026-06-12</td><td>Amazon Bedrock, AWS Marketplace</td><td><a href='https://aws.amazon.com/blogs/machine-learning/evaluate-ai-agents-systematically-with-agent-evalkit/' aria-label='원문 열기'>원문</a></td></tr>
+<tr><td>Amazon QuickSight 스파크라인·사용자 지정 정렬로 대시보드 의사결정 개선</td><td>AWS 기계학습 블로그</td><td>2026-06-12</td><td>Amazon Q, AWS Marketplace</td><td><a href='https://aws.amazon.com/blogs/machine-learning/spot-trends-faster-sort-smarter-unlocking-sparklines-and-custom-sort-in-amazon-quick/' aria-label='원문 열기'>원문</a></td></tr>
+<tr><td>Amazon Bedrock Data Automation 청사진 추출 정확도 최적화</td><td>AWS 기계학습 블로그</td><td>2026-06-12</td><td>Amazon Bedrock, AWS Marketplace</td><td><a href='https://aws.amazon.com/blogs/machine-learning/optimize-blueprint-extraction-accuracy-in-amazon-bedrock-data-automation/' aria-label='원문 열기'>원문</a></td></tr>
+<tr><td>선도 개발팀의 인공지능 네이티브 개발 방식 재구성</td><td>AWS 기계학습 블로그</td><td>2026-06-11</td><td>Amazon Bedrock, AWS Marketplace</td><td><a href='https://aws.amazon.com/blogs/machine-learning/how-frontier-teams-are-reinventing-ai-native-development/' aria-label='원문 열기'>원문</a></td></tr></tbody></table></div></section>
+</main>
+<footer>생성 시각: 2026년 6월 12일 07시대 한국시간 · 공개 페이지에는 원문 전체가 아니라 수집 요약과 전략 분석만 포함했습니다.</footer>
+</body></html>
