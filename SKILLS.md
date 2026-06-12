@@ -1,3 +1,4 @@
 # Skills
 
-자연어 요청 예: 오늘 날짜 산출물을 다시 생성해 주세요, 특정 날짜 HTML의 이미지 경로를 점검해 주세요, GitHub Pages 배포 상태를 확인해 주세요.
+- 신규 일자 추가: `/opt/data/out/aws-daily-blog-YYYYMMDD.html`과 이미지를 생성한 뒤 `src/YYYYMMDD`, `docs/YYYYMMDD`, `docs/index.html`을 갱신합니다.
+- 검증: 이미지 3개 이상, `blog-image`, `viewport`, 미디어 쿼리, 한글 접근성 라벨을 확인합니다.
