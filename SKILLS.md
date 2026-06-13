@@ -1,4 +1,5 @@
-# Skills
+# SKILLS
 
-- 신규 일자 추가: `/opt/data/out/aws-daily-blog-YYYYMMDD.html`과 이미지를 생성한 뒤 `src/YYYYMMDD`, `docs/YYYYMMDD`, `docs/index.html`을 갱신합니다.
-- 검증: 이미지 3개 이상, `blog-image`, `viewport`, 미디어 쿼리, 한글 접근성 라벨을 확인합니다.
+- “오늘 HTML의 출처 섹션을 보강해줘” → `src/<date>/index.html`과 `docs/<date>/index.html`을 함께 수정합니다.
+- “모바일에서 표가 깨져” → 표 래퍼와 반응형 규칙을 먼저 점검합니다.
+- “완전한 한글화” → 텍스트 노드와 접근성 속성만 HTML-aware 방식으로 수정합니다.

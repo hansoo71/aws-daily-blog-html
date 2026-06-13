@@ -1,48 +1,68 @@
 <!doctype html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>아마존웹서비스 일일 기술 블로그 브리핑 — 20260613</title>
-  <meta name="description" content="아마존웹서비스 블로그 신규 글을 바탕으로 에이전트형 인공지능, 문서 처리, 회의 지식화, 팀 생산성 관점의 기업 적용 시사점을 정리한 한국어 전략형 기술 블로그입니다." />
-  <meta property="og:title" content="아마존웹서비스 일일 기술 블로그 브리핑 — 20260613" />
-  <meta property="og:description" content="에이전트형 인공지능, 문서 처리, 회의 지식화, 내부 팀 생산성 관점의 기업 적용 포인트를 출처 기반으로 정리했습니다." />
-  <meta property="og:type" content="article" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>아마존웹서비스 일일 기술 블로그 — 에이전트형 업무와 문서 지능화 관찰</title>
+  <meta name="description" content="아마존웹서비스 공식 블로그 수집 자료를 바탕으로 에이전트형 인공지능, 문서 지능화, 협업 보조 흐름을 한국 기업 의사결정 관점에서 정리한 일일 기술 블로그입니다.">
+  <meta property="og:title" content="아마존웹서비스 일일 기술 블로그 — 에이전트형 업무와 문서 지능화 관찰">
+  <meta property="og:description" content="수집된 아마존웹서비스 블로그 근거로 기술 변화, 기업 적용 관점, 리스크와 거버넌스 검토 포인트를 정리했습니다.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="./20260614/images/image-01.png">
   <style>
-:root{--bg:#071425;--panel:#0f223a;--text:#102034;--muted:#5a6b80;--line:#d9e2ec;--accent:#26c6da;--accent2:#7c4dff;--paper:#f7fbff;--card:#ffffff}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:'Noto Sans KR','Apple SD Gothic Neo',system-ui,-apple-system,BlinkMacSystemFont,sans-serif;color:var(--text);background:linear-gradient(180deg,#edf6ff 0%,#ffffff 45%,#f5f8fb 100%);font-size:17px;line-height:1.72;word-break:keep-all;overflow-wrap:break-word;text-wrap:pretty}.hero{background:radial-gradient(circle at 15% 10%,rgba(38,198,218,.36),transparent 34%),linear-gradient(135deg,#071425,#102d54 58%,#155e75);color:white;padding:72px 24px 44px}.hero-inner{max-width:1120px;margin:auto;display:grid;grid-template-columns:minmax(0,1.05fr) minmax(280px,.95fr);gap:36px;align-items:center}.eyebrow{display:inline-flex;padding:7px 12px;border:1px solid rgba(255,255,255,.35);border-radius:999px;color:#dff8ff;font-size:.88rem}.hero h1{font-size:clamp(2rem,5vw,4.2rem);line-height:1.12;margin:18px 0 18px;letter-spacing:-.05em}.lead{font-size:clamp(1.05rem,2.1vw,1.32rem);color:#e7f6ff;max-width:780px}.hero .blog-image{border-radius:28px;box-shadow:0 24px 60px rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.2)}main{max-width:1080px;margin:0 auto;padding:42px 22px}.section{margin:44px 0}.section h2{font-size:clamp(1.55rem,3vw,2.35rem);letter-spacing:-.035em;margin:0 0 18px}.message{background:#fff;border-left:7px solid var(--accent);padding:24px 26px;border-radius:18px;box-shadow:0 16px 40px rgba(30,60,90,.08)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}.insight-card,.source-card,.check-card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:24px;box-shadow:0 14px 34px rgba(36,60,90,.08);min-width:0}.insight-card .num{display:inline-flex;width:34px;height:34px;border-radius:12px;background:#e4fbff;color:#006b7a;align-items:center;justify-content:center;font-weight:800}.insight-card h3,.source-card h3{font-size:1.18rem;line-height:1.42;margin:12px 0}.blog-image{max-width:100%;height:auto;display:block}.image-frame{margin:28px 0;border-radius:26px;overflow:hidden;background:#0f223a;box-shadow:0 18px 44px rgba(30,60,90,.16)}.image-frame figcaption{padding:12px 18px;background:#fff;color:var(--muted);font-size:.92rem}.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:18px;background:#fff}table{width:100%;border-collapse:collapse;min-width:720px}th,td{padding:14px 16px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}th{background:#edf6ff;color:#18324c}a{color:#005f9e;font-weight:700}pre{white-space:pre-wrap;background:#f4f7fb;border-radius:14px;padding:14px;max-height:260px;overflow:auto}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:22px}.tag{display:inline-block;background:#eef7ff;color:#0d4e75;border:1px solid #cae8ff;border-radius:999px;padding:5px 10px;margin:4px;font-size:.9rem}.footer{padding:34px 22px;text-align:center;color:#5a6b80}.toc{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}.toc a{color:white;text-decoration:none;border:1px solid rgba(255,255,255,.25);border-radius:999px;padding:8px 12px;background:rgba(255,255,255,.08)}@media (max-width:768px){body{font-size:16.5px;line-height:1.68}.hero{padding:48px 18px 30px}.hero-inner{grid-template-columns:1fr}.toc a{font-size:.92rem}.two-col{grid-template-columns:1fr}main{padding:30px 16px}.insight-card,.source-card,.check-card{padding:20px;border-radius:18px}table{min-width:640px}.hero h1{letter-spacing:-.04em}}@media (max-width:480px){body{font-size:16px}.hero h1{font-size:2rem}.lead{font-size:1.02rem}.section{margin:34px 0}th,td{padding:12px}.image-frame{border-radius:18px}}
-</style>
+    :root{--bg:#07111f;--panel:#0f1d2f;--panel2:#12243a;--text:#eef5ff;--muted:#b9c6d8;--line:#27405f;--accent:#ffb45c;--accent2:#83d9ff;--paper:#f7fafc;--ink:#122033;--soft:#e9f1f8;}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:'Noto Sans KR','Apple SD Gothic Neo',system-ui,sans-serif;background:linear-gradient(180deg,var(--bg),#0b1728 40%,#eef4f9 40%);color:var(--text);word-break:keep-all;overflow-wrap:break-word;text-wrap:pretty;line-height:1.72;font-size:17px}
+    a{color:inherit} .hero{max-width:1180px;margin:0 auto;padding:68px 24px 34px}.eyebrow{display:inline-flex;gap:8px;align-items:center;border:1px solid rgba(255,180,92,.35);background:rgba(255,180,92,.12);color:#ffe1bd;border-radius:999px;padding:8px 14px;font-size:14px;font-weight:700}.hero h1{font-size:clamp(34px,6vw,64px);line-height:1.1;letter-spacing:-.05em;margin:24px 0 18px;max-width:1040px}.hero p{max-width:880px;color:var(--muted);font-size:clamp(17px,2vw,21px)}.meta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.meta span{border:1px solid rgba(255,255,255,.13);background:rgba(255,255,255,.07);padding:9px 12px;border-radius:14px;color:#dbe8f7;font-size:14px}.wrap{max-width:1080px;margin:0 auto;padding:0 24px 72px}.article{background:var(--paper);color:var(--ink);border-radius:30px;padding:34px;box-shadow:0 28px 80px rgba(4,12,24,.25)}.blog-image{max-width:100%;height:auto;display:block;border-radius:24px;border:1px solid #d8e4ef;box-shadow:0 14px 42px rgba(17,32,51,.16);margin:26px auto}.leadbox{background:#fff7ec;border:1px solid #ffd59d;border-radius:24px;padding:24px;margin:24px 0}.leadbox strong{color:#7a4300}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}.card{background:white;border:1px solid #dfe8f2;border-radius:22px;padding:22px;min-width:0}.card h3{margin:0 0 10px;font-size:20px;letter-spacing:-.03em}.card p,.card li{color:#42546a}.section{margin:44px 0}.section h2{font-size:clamp(25px,4vw,38px);line-height:1.2;letter-spacing:-.045em;margin:0 0 18px}.section h2:before{content:'';display:block;width:54px;height:5px;background:linear-gradient(90deg,var(--accent),var(--accent2));border-radius:99px;margin-bottom:14px}.quote{border-left:5px solid #ffad4d;padding:18px 22px;background:#fff;border-radius:0 20px 20px 0;color:#2b4058}.table-wrap{overflow-x:auto;border:1px solid #dde7f1;border-radius:20px;background:white}table{width:100%;border-collapse:collapse;min-width:760px}th,td{text-align:left;vertical-align:top;padding:16px;border-bottom:1px solid #e7eef5}th{background:#eef5fc;color:#1d344f}td{color:#43556c}.tag{display:inline-block;border-radius:999px;background:#edf6ff;color:#174267;padding:5px 10px;margin:3px;font-size:13px;font-weight:700}.source-list li{margin-bottom:10px}.footer{margin-top:42px;padding-top:24px;border-top:1px solid #dfe8f2;color:#566a81;font-size:14px}.notice{background:#eef7ff;border:1px solid #c9e5ff;border-radius:20px;padding:18px;color:#26465e}.mini{font-size:14px;color:#66788c}.pill{font-weight:800;color:#8a4b00;background:#fff4e3;border-radius:999px;padding:3px 9px}.toc{display:flex;flex-wrap:wrap;gap:8px;margin:20px 0}.toc a{text-decoration:none;background:#0e2136;color:#dff2ff;border:1px solid #294966;border-radius:999px;padding:8px 12px;font-size:14px}
+    @media (max-width:768px){body{font-size:16px;line-height:1.7}.hero{padding:42px 18px 22px}.wrap{padding:0 14px 44px}.article{border-radius:22px;padding:22px}.grid{grid-template-columns:1fr;gap:14px}.card{padding:18px}.meta span{width:100%}.blog-image{border-radius:18px;margin:20px auto}.section{margin:34px 0}table{min-width:680px}th,td{padding:13px}.hero h1{font-size:36px}.hero p{font-size:17px}}
+    @media (max-width:480px){.article{padding:18px;border-radius:18px}.hero h1{font-size:32px}.section h2{font-size:25px}.leadbox{padding:18px}.toc a{width:100%;text-align:center}.table-wrap{margin-left:-4px;margin-right:-4px}}
+  </style>
 </head>
 <body>
   <header class="hero">
-    <div class="hero-inner">
-      <div>
-        <span class="eyebrow">한국시간 2026-06-13 수집 · 신규 4건</span>
-        <h1>아마존웹서비스 블로그에서 읽는 업무형 인공지능 적용 신호</h1>
-        <p class="lead">이번 실행에서 확인된 신규 글은 모두 아마존웹서비스 기계학습 블로그에서 나왔습니다. 관찰된 변화는 범용 발표보다 특정 업무 데이터, 회의, 문서, 전문서비스 팀의 실제 작업 단위에 인공지능을 붙이는 방향에 집중되어 있습니다.</p>
-        <nav class="toc" aria-label="문서 주요 섹션"><a href="#trend">핵심 트렌드</a><a href="#meaning">기술 변화의 의미</a><a href="#enterprise">기업 적용 관점</a><a href="#risk">리스크와 거버넌스</a><a href="#sources">출처</a></nav>
-      </div>
-      <img src="./20260613/images/image-01.png" alt="에이전트형 인공지능과 문서·회의 지식 흐름을 표현한 메인 이미지" class="blog-image" />
+    <div class="eyebrow">2026년 6월 14일 · 오전 7시 수집 기준</div>
+    <h1>에이전트형 업무, 문서 지능화, 협업 보조가 한 화면에 모이고 있습니다</h1>
+    <p>오늘 실행에서는 신규 게시물이 확인되지 않았습니다. 따라서 최근 24시간 이내 로컬 수집본을 보조 입력으로 삼아, 아마존웹서비스 공식 블로그에서 관찰된 변화만 근거로 일일 전략형 기술 블로그를 구성했습니다.</p>
+    <div class="meta" aria-label="수집 요약">
+      <span>확인 블로그 3개</span><span>피드 항목 50개 확인</span><span>신규 저장 0건</span><span>보조 입력 4건</span>
     </div>
   </header>
-  <main>
-    <section class="section message" id="summary"><h2>핵심 요약</h2><p>오늘 수집된 4개 신규 문서는 에이전트형 인공지능을 권리 이전 업무, 회의 준비와 후속조치, 피디에프 기반 지능형 문서 처리, 전문서비스 팀의 일하는 방식에 적용한 사례와 아키텍처를 다룹니다. 단일 제품 발표보다 업무 맥락과 데이터 흐름을 어떻게 묶을 것인지가 공통 관찰점입니다.</p></section>
-    <section class="section" id="trend"><h2>핵심 트렌드 분석</h2><div class="grid"><div class="insight-card"><span class="num">1</span><h3>업무별 에이전트가 실제 업무 단위로 좁혀지고 있습니다</h3><p>로켓 클로즈 사례는 권리 이전 업무처럼 문서·검증·반복 판단이 많은 업무에 에이전트형 인공지능을 적용하는 방향을 보여줍니다. 이는 범용 챗봇보다 특정 업무 절차와 데이터 흐름을 기준으로 설계해야 함을 시사합니다.</p></div>
-<div class="insight-card"><span class="num">2</span><h3>회의와 문서가 후속 실행 데이터로 바뀌고 있습니다</h3><p>아마존 퀵·시스코 웹엑스 엠시피 서버 기반 회의 보조자와 피디에프 문서 처리 파이프라인은 비정형 자료를 요약·분류·후속조치로 연결하는 패턴을 보여줍니다.</p></div>
-<div class="insight-card"><span class="num">3</span><h3>내부 팀의 일하는 방식 자체가 실험 대상이 되고 있습니다</h3><p>아마존웹서비스 프로페셔널 서비스 사례는 생성형 인공지능을 외부 고객 기능만이 아니라 내부 전문서비스 팀의 업무 방식 개선 대상으로 다룹니다. 다만 조직별 성과·책임 모델은 원문만으로 일반화하기 어려워 확인 필요입니다.</p></div>
-<div class="insight-card"><span class="num">4</span><h3>도입 전 통제 항목은 더 구체적이어야 합니다</h3><p>이번 수집 문서들은 에이전트, 문서 처리, 회의 데이터, 내부 생산성이라는 서로 다른 활용처를 다룹니다. 공통적으로 데이터 접근권한, 품질 검증, 비용 단위, 사람 검토 위치를 사전에 확인해야 합니다.</p></div></div></section>
-    <figure class="image-frame"><img src="./20260613/images/image-02.png" alt="원천 데이터가 인공지능 처리와 업무 실행으로 전환되는 흐름 이미지" class="blog-image" /><figcaption>비정형 자료를 업무 실행으로 연결하는 흐름을 요약한 시각 자료입니다.</figcaption></figure>
-    <section class="section two-col" id="meaning"><div><h2>기술 변화의 의미</h2><p>이번 수집분의 공통점은 모델 자체보다 모델이 호출되는 업무 맥락이 구체화된다는 점입니다. 문서 처리 파이프라인은 피디에프에서 추출된 정보를 요약·검증 가능한 데이터로 바꾸고, 회의 보조자는 회의 전후의 준비·정리·후속조치를 연결합니다. 로켓 클로즈 사례는 에이전트형 인공지능을 특정 산업 업무에 맞춘 반복 실행 구조로 다룹니다.</p><p>따라서 기업의 검토 포인트는 “어떤 모델을 쓸 것인가”보다 “어떤 원천 데이터, 승인 절차, 사람 검토 위치, 결과 저장소를 연결할 것인가”에 가깝습니다.</p></div><div class="check-card"><h3>관찰된 적용 영역</h3><span class="tag">에이전트형 인공지능</span><span class="tag">회의 지식화</span><span class="tag">지능형 문서 처리</span><span class="tag">전문서비스 생산성</span><span class="tag">모델 기반 업무 자동화</span></div></section>
-    <section class="section" id="enterprise"><h2>기업 적용 관점</h2><div class="grid"><div class="check-card"><h3>기회</h3><p>반복 문서 검토, 회의 전후 정리, 피디에프 기반 정보 추출처럼 입력과 산출물이 비교적 명확한 영역에서 적용 후보를 찾을 수 있습니다.</p></div><div class="check-card"><h3>검토 포인트</h3><p>원천 데이터 권한, 사용자별 접근 범위, 결과물 검증 책임, 비용 산정 단위, 로그 보관 방식을 먼저 정의해야 합니다.</p></div><div class="check-card"><h3>확인 필요</h3><p>각 사례의 실제 성과 수치, 리전·가격·세부 구현 제약은 원문별 조건이 다르므로 적용 전 추가 확인이 필요합니다.</p></div></div></section>
-    <section class="section" id="execution"><h2>실행 전략</h2><p>이번 자료만 기준으로 보면 실행은 대규모 전환 구호보다 업무 단위 후보를 좁히는 방식이 적합합니다. 문서·회의·반복 검증 업무 중 입력 자료가 안정적이고, 사람이 최종 판단을 보완할 수 있으며, 로그와 비용을 추적할 수 있는 영역을 우선 검토해야 합니다. 이후에는 결과 품질, 누락·오탐 사례, 데이터 접근권한, 비용 변동을 함께 측정하는 운영 지표가 필요합니다.</p></section>
-    <figure class="image-frame"><img src="./20260613/images/image-03.png" alt="보안 비용 품질 데이터 네 가지 검토 축을 표현한 거버넌스 이미지" class="blog-image" /><figcaption>에이전트형 인공지능 적용 전 검토해야 할 통제 축입니다.</figcaption></figure>
-    <section class="section" id="risk"><h2>리스크와 거버넌스 고려사항</h2><div class="grid"><div class="check-card"><h3>데이터 경계</h3><p>회의와 피디에프는 민감 정보가 포함될 수 있으므로 원천 저장소·검색 범위·요약 결과의 재사용 범위를 분리해야 합니다.</p></div><div class="check-card"><h3>품질 검증</h3><p>요약·추출·후속조치 생성 결과는 업무별 기준 샘플과 사람 검토 절차를 통해 확인해야 합니다.</p></div><div class="check-card"><h3>비용 관리</h3><p>문서 분량, 회의 빈도, 에이전트 호출 횟수에 따라 비용이 달라질 수 있으므로 기능별 사용량 추적이 필요합니다.</p></div><div class="check-card"><h3>책임 소재</h3><p>자동 생성 결과의 승인권자와 수정 책임을 명확히 하지 않으면 업무 속도보다 재검토 부담이 커질 수 있습니다.</p></div></div></section>
-    <section class="section" id="collected"><h2>수집 문서별 근거 요약</h2><div class="grid"><article class="source-card"><h3>로켓 클로즈의 권리 이전 업무를 위한 에이전트형 인공지능 최적화</h3><p>권리 이전 업무처럼 문서 확인과 반복 판단이 많은 절차에 에이전트형 인공지능을 붙이는 사례입니다. 기업은 업무 단계, 예외 처리, 사람 검토 위치를 함께 설계해야 합니다.</p></article>
-<article class="source-card"><h3>아마존 퀵과 시스코 웹엑스 엠시피 서버를 활용한 회의 준비·후속조치 보조자</h3><p>회의 전 준비와 회의 후 후속조치를 연결하는 보조자 패턴입니다. 회의 데이터의 접근권한, 요약 품질, 후속 업무 저장 위치가 핵심 검토 지점입니다.</p></article>
-<article class="source-card"><h3>피디에프 문서를 인사이트로 전환하는 지능형 문서 처리 파이프라인</h3><p>피디에프 기반 비정형 문서를 추출·분류·요약 가능한 업무 데이터로 바꾸는 파이프라인형 접근입니다. 문서 원본 보존과 결과 검증 절차가 중요합니다.</p></article>
-<article class="source-card"><h3>아마존웹서비스 프로페셔널 서비스의 내부 전환형 프런티어 팀 사례</h3><p>전문서비스 조직 내부의 일하는 방식을 인공지능으로 개선한 사례입니다. 다만 성과 수치와 조직 적용 조건은 원문 범위만으로 일반화하기 어려워 확인 필요입니다.</p></article></div></section>
-    <section class="section" id="sources"><h2>출처 목록</h2><div class="table-wrap"><table><thead><tr><th>번호</th><th>한국어 표시 제목</th><th>출처 블로그</th><th>발행일</th><th>링크</th></tr></thead><tbody><tr><td>1</td><td>로켓 클로즈의 권리 이전 업무를 위한 에이전트형 인공지능 최적화</td><td>아마존웹서비스 기계학습 블로그</td><td>2026-06-13</td><td><a href="https://aws.amazon.com/blogs/machine-learning/building-supercharger-how-rocket-close-optimized-title-operations-with-agentic-ai/" target="_blank" rel="noopener">원문 열기</a></td></tr>
-<tr><td>2</td><td>아마존 퀵과 시스코 웹엑스 엠시피 서버를 활용한 회의 준비·후속조치 보조자</td><td>아마존웹서비스 기계학습 블로그</td><td>2026-06-12</td><td><a href="https://aws.amazon.com/blogs/machine-learning/build-a-meeting-prep-and-follow-up-assistant-with-amazon-quick-and-cisco-webex-mcp-servers/" target="_blank" rel="noopener">원문 열기</a></td></tr>
-<tr><td>3</td><td>피디에프 문서를 인사이트로 전환하는 지능형 문서 처리 파이프라인</td><td>아마존웹서비스 기계학습 블로그</td><td>2026-06-12</td><td><a href="https://aws.amazon.com/blogs/machine-learning/from-pdfs-to-insights-architecting-an-intelligent-document-processing-pipeline-with-aws-generative-ai-services/" target="_blank" rel="noopener">원문 열기</a></td></tr>
-<tr><td>4</td><td>아마존웹서비스 프로페셔널 서비스의 내부 전환형 프런티어 팀 사례</td><td>아마존웹서비스 기계학습 블로그</td><td>2026-06-12</td><td><a href="https://aws.amazon.com/blogs/machine-learning/built-from-the-inside-out-how-aws-professional-services-became-a-frontier-team-first/" target="_blank" rel="noopener">원문 열기</a></td></tr></tbody></table></div></section>
-  </main><footer class="footer">생성 위치: 로컬 산출물 및 공개 정적 페이지 저장소 · 원문 전체가 아니라 출처 기반 요약과 분석만 포함했습니다.</footer>
-</body></html>
+  <main class="wrap">
+    <article class="article">
+      <nav class="toc" aria-label="본문 바로가기"><a href="#trend">핵심 흐름</a><a href="#meaning">기술 변화의 의미</a><a href="#enterprise">기업 적용 관점</a><a href="#risk">리스크와 거버넌스</a><a href="#sources">출처</a></nav>
+      <img src="./20260614/images/image-01.png" alt="지식 연결과 검증, 자동화가 이어지는 기업 인공지능 활용 흐름" class="blog-image">
+      <section class="leadbox">
+        <strong>오늘의 핵심 메시지:</strong> 수집본은 인공지능을 단순한 대화 보조가 아니라 업무 지식, 문서 구조, 협업 맥락, 행동 커넥터를 연결하는 실행 계층으로 다루고 있습니다. 다만 신규 게시물이 없었기 때문에, 본문 시사점은 최근 수집본 기반의 보조 분석이며 최신성은 일부 <span class="pill">확인 필요</span>로 보아야 합니다.
+      </section>
+      <section class="section" id="trend"><h2>핵심 트렌드 분석</h2><div class="grid">
+        <div class="card"><h3>업무 지식의 에이전트화</h3><p>로켓 클로즈 사례는 소유권·평가·정산 업무처럼 문서와 지역 규칙이 얽힌 영역에서, 지식 검색과 업무 판단 보조를 하나의 흐름으로 묶는 방향을 보여줍니다.</p></div>
+        <div class="card"><h3>문서 처리의 의미 이해 확대</h3><p>지능형 문서 처리 글은 단순 문자 추출보다 분류, 추출, 정규화, 검증, 신뢰도 점수를 함께 고려하는 구조를 강조합니다.</p></div>
+        <div class="card"><h3>협업 맥락의 대화형 연결</h3><p>회의 준비와 후속조치 보조 글은 회의 기록, 영상, 메시지, 기업 데이터 저장소, 업무 실행 커넥터를 하나의 대화형 업무 공간에 연결하는 패턴을 설명합니다.</p></div>
+        <div class="card"><h3>조직 작업 방식의 재설계</h3><p>프로페셔널 서비스 사례는 인공지능 도구 추가보다 작업 단위, 맥락 제공, 품질 판단, 피드백 주기를 다시 설계하는 접근을 제시합니다.</p></div>
+      </div></section>
+      <section class="section" id="meaning"><h2>기술 변화의 의미</h2><p class="quote">관찰된 변화는 특정 모델 성능보다 “업무 맥락을 어디까지 안전하게 연결할 수 있는가”에 초점을 둡니다. 문서, 회의, 내부 지식, 업무 행동이 연결될수록 권한·감사·검증 설계가 기술 선택만큼 중요해집니다.</p>
+      <img src="./20260614/images/image-02.png" alt="문서 분류, 추출, 검증, 검색, 업무 적용 단계가 이어지는 파이프라인" class="blog-image">
+      <div class="table-wrap"><table><thead><tr><th>관찰된 사실</th><th>근거 출처</th><th>기업 의사결정 포인트</th></tr></thead><tbody>
+        <tr><td>문서 처리 파이프라인이 분류와 추출뿐 아니라 검증, 신뢰도, 검색 연계를 포함합니다.</td><td>지능형 문서 처리 파이프라인 블로그</td><td>업무 자동화 후보를 고를 때 정확도뿐 아니라 예외 처리와 사람 검토 기준을 함께 설계해야 합니다.</td></tr>
+        <tr><td>회의 맥락과 후속조치가 여러 협업 도구와 기업 저장소를 가로질러 연결됩니다.</td><td>회의 준비·후속조치 보조 블로그</td><td>커넥터 연결 범위, 권한 상속, 감사 기록, 외부 협업 데이터 처리 정책을 먼저 확정해야 합니다.</td></tr>
+        <tr><td>에이전트형 업무 사례는 내부 지식과 절차를 자연어 상호작용에 연결합니다.</td><td>로켓 클로즈 사례 블로그</td><td>고객 대응·심사·계약·정산 같은 지식 집약 업무에서 데이터 품질과 책임 경계를 검토할 기회가 있습니다.</td></tr>
+      </tbody></table></div></section>
+      <section class="section" id="enterprise"><h2>기업 적용 관점과 한국 기업 시사점</h2><div class="grid">
+        <div class="card"><h3>적용 기회</h3><ul><li>반복 문서 검토와 근거 검색이 많은 심사·정산·고객지원 업무</li><li>회의 전후로 맥락 수집과 액션 정리가 반복되는 프로젝트 조직</li><li>내부 지식과 외부 협업 도구가 분리되어 검색 시간이 큰 조직</li></ul></div>
+        <div class="card"><h3>검토 기준</h3><ul><li>권한이 다른 데이터 원천을 한 에이전트가 조회할 때의 접근 통제</li><li>추출 결과의 신뢰도 기준과 사람 검토 단계</li><li>업무 액션 실행 전 승인, 되돌리기, 감사 기록</li></ul></div>
+      </div>
+      <p>한국 기업 관점에서는 개인정보, 내부 문서, 협력사 자료, 외부 회의 데이터가 한 흐름에 연결되는 순간 규정 준수 검토가 선행되어야 합니다. 수집본만으로 특정 산업별 규제 적합성은 판단하기 어려우므로, 실제 적용 전에는 법무·보안·개인정보 담당자의 별도 검토가 필요합니다.</p></section>
+      <section class="section" id="risk"><h2>리스크와 거버넌스 고려사항</h2>
+      <img src="./20260614/images/image-03.png" alt="회의 맥락과 후속조치, 권한, 감사 기록이 연결된 업무 보조 구조" class="blog-image">
+      <div class="grid"><div class="card"><h3>데이터 경계</h3><p>회의, 문서, 메시지, 저장소가 연결될수록 사용자별 접근권한과 데이터 보존 정책을 동일한 수준으로 맞추어야 합니다.</p></div><div class="card"><h3>검증 경계</h3><p>문서 추출이나 답변 생성 결과가 업무 판단으로 이어질 때, 신뢰도 점수와 사람 검토 기준을 운영 규칙으로 남겨야 합니다.</p></div><div class="card"><h3>비용 경계</h3><p>검색, 문서 처리, 장문 요약, 커넥터 호출이 늘어나면 사용량과 비용 관측 지표가 필요합니다. 이번 수집본만으로 구체 과금 영향은 확인 필요입니다.</p></div></div></section>
+      <section class="section"><h2>실행 전략</h2><p>고정된 단계별 로드맵 대신, 이번 수집본에서 직접 관찰되는 항목 중심으로 실행 점검표를 제안합니다.</p><ul><li>첫째, 문서·회의·업무 지식 중 연결 가치가 가장 큰 원천을 한 가지로 좁혀 검증합니다.</li><li>둘째, 모델보다 권한·감사·사람 검토 기준을 먼저 문서화합니다.</li><li>셋째, 업무 액션 실행은 조회·초안·승인·실행을 분리해 점진적으로 열어야 합니다.</li><li>넷째, 성공 지표는 응답 품질뿐 아니라 검색 시간 감소, 예외 처리율, 검토자 수정률, 비용 단위로 봐야 합니다.</li></ul></section>
+      <section class="section" id="sources"><h2>출처와 데이터 상태</h2><div class="notice">오늘 피드 확인 결과 신규 저장 문서는 0건입니다. 아래 항목은 최근 24시간 이내 로컬 수집본을 보조 입력으로 사용했습니다. 최신 신규 공지로 확정하기에는 확인 필요입니다.</div><ul class="source-list">
+        <li><a href="https://aws.amazon.com/blogs/machine-learning/building-supercharger-how-rocket-close-optimized-title-operations-with-agentic-ai/">로켓 클로즈의 에이전트형 소유권 업무 최적화 사례</a></li>
+        <li><a href="https://aws.amazon.com/blogs/machine-learning/built-from-the-inside-out-how-aws-professional-services-became-a-frontier-team-first/">프로페셔널 서비스 조직의 인공지능 기반 작업 방식 재설계 사례</a></li>
+        <li><a href="https://aws.amazon.com/blogs/machine-learning/from-pdfs-to-insights-architecting-an-intelligent-document-processing-pipeline-with-aws-generative-ai-services/">생성형 인공지능 서비스 기반 지능형 문서 처리 파이프라인</a></li>
+        <li><a href="https://aws.amazon.com/blogs/machine-learning/build-a-meeting-prep-and-follow-up-assistant-with-amazon-quick-and-cisco-webex-mcp-servers/">회의 준비와 후속조치 보조 흐름</a></li>
+      </ul><p class="mini">이미지 생성 프롬프트는 같은 폴더의 프롬프트 기록 파일에 보존했습니다.</p></section>
+      <footer class="footer">이 문서는 아마존웹서비스 공식 블로그 수집 자료를 바탕으로 생성한 한국어 기술 블로그입니다. 내부 오퍼링이나 특정 고객사 전략으로 확장하지 않았으며, 출처에서 확인되지 않은 내용은 확인 필요로 표시했습니다.</footer>
+    </article>
+  </main>
+</body>
+</html>
