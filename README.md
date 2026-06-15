@@ -1,7 +1,3 @@
-# 아마존웹서비스 일일 기술 블로그 HTML
+# AWS Daily Blog HTML
 
-아마존웹서비스 공식 블로그 수집 자료를 바탕으로 매일 생성되는 한국어 기술 블로그 저장소입니다.
-
-- 최신 문서: `docs/index.html`
-- 날짜별 문서: `docs/20260615/index.html`
-- 원본 작업본: `src/20260615/index.html`
+AWS 블로그 일일 전략형 HTML 산출물 저장소입니다.
