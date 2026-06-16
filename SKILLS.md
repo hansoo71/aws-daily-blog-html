@@ -1,3 +1,1 @@
-# Skills
-
-일일 AWS 블로그 수집, HTML 생성, 이미지 자산 동기화, GitHub Pages 배포를 반복합니다.
+자연어로 날짜별 HTML 업데이트, 이미지 교체, GitHub Pages 재검증을 요청할 수 있습니다.

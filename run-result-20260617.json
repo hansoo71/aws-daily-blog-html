@@ -1,0 +1,103 @@
+{
+  "kst": "2026-06-17 07:04:16 KST",
+  "date": "20260617",
+  "checked_blog_count": 3,
+  "feed_item_count": 40,
+  "feed_errors": [],
+  "new_count": 3,
+  "new_files": [
+    "20260616_[KoreaTech]에잇퍼센트의 Kiro CLI 기반 Amazon ECS 현대화 여정.md",
+    "20260617_[MachineLearning]Introducing container caching in Amazon SageMaker AI for faster model scaling.md",
+    "20260617_[MachineLearning]Parallelize speculative decoding with P-EAGLE on Amazon SageMaker AI.md"
+  ],
+  "skipped_count": 37,
+  "html": "/opt/data/out/aws-daily-blog-20260617.html",
+  "out_dir": "/opt/data/out/aws-daily-blog-20260617",
+  "images": [
+    "/opt/data/out/aws-daily-blog-20260617/images/image-01.png",
+    "/opt/data/out/aws-daily-blog-20260617/images/image-02.png",
+    "/opt/data/out/aws-daily-blog-20260617/images/image-03.png"
+  ],
+  "image_modes": [
+    {
+      "file": "/opt/data/out/aws-daily-blog-20260617/images/image-01.png",
+      "mode": "gpt-image-2",
+      "output": "MEDIA:/opt/data/out/aws-daily-blog-20260617/images/image-01.png\n"
+    },
+    {
+      "file": "/opt/data/out/aws-daily-blog-20260617/images/image-02.png",
+      "mode": "gpt-image-2",
+      "output": "MEDIA:/opt/data/out/aws-daily-blog-20260617/images/image-02.png\n"
+    },
+    {
+      "file": "/opt/data/out/aws-daily-blog-20260617/images/image-03.png",
+      "mode": "gpt-image-2",
+      "output": "MEDIA:/opt/data/out/aws-daily-blog-20260617/images/image-03.png\n"
+    }
+  ],
+  "prompt_log": "/opt/data/out/aws-daily-blog-20260617/image-prompts.md",
+  "gbrain_import": {
+    "cmd": "/opt/data/home/.bun/bin/gbrain import /opt/data/home/brain/sources/aws --no-embed --json",
+    "exit": 0,
+    "output": "[gbrain phase] import.collect_files start dir=/opt/data/home/brain/sources/aws strategy=markdown\n[gbrain phase] import.collect_files done 6ms files=332\nFound 332 markdown files\n[import.files] start\n[import.files] 10/332 (3%) imported=3 skipped=7 errors=0\n[import.files] 20/332 (6%) imported=3 skipped=17 errors=0\n[import.files] 30/332 (9%) imported=3 skipped=27 errors=0\n[import.files] 40/332 (12%) imported=3 skipped=37 errors=0\n[import.files] 50/332 (15%) imported=3 skipped=47 errors=0\n[import.files] 60/332 (18%) imported=3 skipped=57 errors=0\n[import.files] 70/332 (21%) imported=3 skipped=67 errors=0\n[import.files] 80/332 (24%) imported=3 skipped=77 errors=0\n[import.files] 90/332 (27%) imported=3 skipped=87 errors=0\n[import.files] 100/332 (30%) imported=3 skipped=97 errors=0\n[import.files] 110/332 (33%) imported=3 skipped=107 errors=0\n[import.files] 120/332 (36%) imported=3 skipped=117 errors=0\n[import.files] 130/332 (39%) imported=3 skipped=127 errors=0\n[import.files] 140/332 (42%) imported=3 skipped=137 errors=0\n[import.files] 150/332 (45%) imported=3 skipped=147 errors=0\n[import.files] 160/332 (48%) imported=3 skipped=157 errors=0\n[import.files] 170/332 (51%) imported=3 skipped=167 errors=0\n[import.files] 180/332 (54%) imported=3 skipped=177 errors=0\n[import.files] 190/332 (57%) imported=3 skipped=187 errors=0\n[import.files] 200/332 (60%) imported=3 skipped=197 errors=0\n[import.files] 210/332 (63%) imported=3 skipped=207 errors=0\n[import.files] 220/332 (66%) imported=3 skipped=217 errors=0\n[import.files] 230/332 (69%) imported=3 skipped=227 errors=0\n[import.files] 240/332 (72%) imported=3 skipped=237 errors=0\n[import.files] 250/332 (75%) imported=3 skipped=247 errors=0\n[import.files] 260/332 (78%) imported=3 skipped=257 errors=0\n[import.files] 270/332 (81%) imported=3 skipped=267 errors=0\n[import.files] 280/332 (84%) imported=3 skipped=277 errors=0\n[import.files] 290/332 (87%) imported=3 skipped=287 errors=0\n[import.files] 300/332 (90%) imported=3 skipped=297 errors=0\n[import.files] 310/332 (93%) imported=3 skipped=307 errors=0\n[import] WARNING: 20260407_[AWS뉴스블로그]AWS Weekly Roundup AWS DevOps Agent & Security Agent GA, Product Lifecycle updates, and more (April 6, 2026).md shares content_hash with sources/aws/20260407_aws뉴스블로그aws-weekly-roundup-aws-devops-agent-security-agent-ga-product-lifecycle-updates-and-more-april-6-2026 (6044401d) but has different frontmatter.id. Indexing both.\n[import.files] 320/332 (96%) imported=5 skipped=315 errors=0\n[import.files] 330/332 (99%) imported=5 skipped=325 errors=0\n[import.files] 332/332 (100%) imported=5 skipped=327 errors=0\n[import.files] 332/332 (100%) done\n{\"status\":\"success\",\"duration_s\":5.1,\"imported\":5,\"skipped\":327,\"errors\":0,\"chunks\":13,\"total_files\":332}\n"
+  },
+  "gbrain_embed": {
+    "cmd": "/opt/data/home/.bun/bin/gbrain embed --stale",
+    "exit": 0,
+    "output": "[embed.pages] start\n[embed.pages] 9/288 (3%)\n[embed.pages] 15/288 (5%)\n[embed.pages] 25/288 (8%)\n[embed.pages] 35/288 (12%)\n[embed.pages] 45/288 (15%)\n[embed.pages] 55/288 (19%)\n[embed.pages] 65/288 (22%)\n[embed.pages] 75/288 (26%)\n[embed.pages] 85/288 (29%)\n[embed.pages] 95/288 (32%)\n[embed.pages] 105/288 (36%)\n[embed.pages] 115/288 (39%)\n[embed.pages] 125/288 (43%)\n[embed.pages] 135/288 (46%)\n[embed.pages] 145/288 (50%)\n[embed.pages] 155/288 (53%)\n[embed.pages] 165/288 (57%)\n[embed.pages] 175/288 (60%)\n[embed.pages] 185/288 (64%)\n[embed.pages] 195/288 (67%)\n[embed.pages] 205/288 (71%)\n[embed.pages] 215/288 (74%)\n[embed.pages] 225/288 (78%)\n[embed.pages] 233/288 (80%)\n[embed.pages] 243/288 (84%)\n[embed.pages] 253/288 (87%)\n[embed.pages] 263/288 (91%)\n[embed.pages] 273/288 (94%)\n[embed.pages] 275/288 (95%)\n[embed.pages] 285/288 (98%)\n[embed.pages] 288/288 (100%)\nEmbedded 485 chunks across 288 pages\n[embed.pages] 288/288 (100%) done\n"
+  },
+  "html_checks": {
+    "exists": true,
+    "title": true,
+    "seo_meta": true,
+    "og_meta": true,
+    "noto": true,
+    "viewport": true,
+    "media_query": true,
+    "responsive_image_css": true,
+    "blog_image": true,
+    "img_count": true,
+    "sections": true
+  },
+  "docs_used": [
+    {
+      "file": "20260616_[KoreaTech]에잇퍼센트의 Kiro CLI 기반 Amazon ECS 현대화 여정.md",
+      "title": "에잇퍼센트의 Kiro CLI 기반 Amazon ECS 현대화 여정",
+      "blog": "AWS Korea Tech Blog",
+      "pub": "2026-06-16 13:05 KST",
+      "url": "https://aws.amazon.com/ko/blogs/tech/mod-accelerate-using-kiro/",
+      "summary": "에잇퍼센트의 Kiro CLI 기반 Amazon ECS 현대화 여정 | AWS 기술 블로그 Skip to Main Content",
+      "services": "- Amazon EC2 - Graviton - Amazon S3"
+    },
+    {
+      "file": "20260617_[MachineLearning]Introducing container caching in Amazon SageMaker AI for faster model scaling.md",
+      "title": "Introducing container caching in Amazon SageMaker AI for faster model scaling",
+      "blog": "AWS Machine Learning Blog",
+      "pub": "2026-06-17 05:16 KST",
+      "url": "https://aws.amazon.com/blogs/machine-learning/introducing-container-caching-in-amazon-sagemaker-ai-for-faster-model-scaling/",
+      "summary": "Introducing container caching in Amazon SageMaker AI for faster model scaling | Artificial Intelligence Skip to Main Content",
+      "services": "- Amazon SageMaker - SageMaker AI - Amazon EC2 - Amazon S3 - Amazon CloudWatch"
+    },
+    {
+      "file": "20260617_[MachineLearning]Parallelize speculative decoding with P-EAGLE on Amazon SageMaker AI.md",
+      "title": "Parallelize speculative decoding with P-EAGLE on Amazon SageMaker AI",
+      "blog": "AWS Machine Learning Blog",
+      "pub": "2026-06-17 02:47 KST",
+      "url": "https://aws.amazon.com/blogs/machine-learning/parallelize-speculative-decoding-with-p-eagle-on-amazon-sagemaker-ai/",
+      "summary": "Parallelize speculative decoding with P-EAGLE on Amazon SageMaker AI | Artificial Intelligence Skip to Main Content",
+      "services": "- Amazon SageMaker - SageMaker AI"
+    }
+  ],
+  "repo": "/opt/data/repos/aws-daily-blog-html",
+  "repo_info": {
+    "committed": true,
+    "status_before": {
+      "cmd": "git status --porcelain",
+      "exit": 0,
+      "output": "A  20260617/image-prompts.md\nA  20260617/images/image-01.png\nA  20260617/images/image-02.png\nA  20260617/images/image-03.png\nA  20260617/index.html\nM  AGENT.md\nM  DESIGN.md\nM  README.md\nM  SKILLS.md\nA  docs/20260617/image-prompts.md\nA  docs/20260617/images/image-01.png\nA  docs/20260617/images/image-02.png\nA  docs/20260617/images/image-03.png\nA  docs/20260617/index.html\nM  docs/index.html\nM  index.html\nA  src/20260617/image-prompts.md\nA  src/20260617/images/image-01.png\nA  src/20260617/images/image-02.png\nA  src/20260617/images/image-03.png\nA  src/20260617/index.html\n"
+    },
+    "commit_output": "[main 0e437db] Add AWS daily blog 20260617\n 21 files changed, 95 insertions(+), 40 deletions(-)\n create mode 100644 20260617/image-prompts.md\n create mode 100644 20260617/images/image-01.png\n create mode 100644 20260617/images/image-02.png\n create mode 100644 20260617/images/image-03.png\n create mode 100644 20260617/index.html\n create mode 100644 docs/20260617/image-prompts.md\n create mode 100644 docs/20260617/images/image-01.png\n create mode 100644 docs/20260617/images/image-02.png\n create mode 100644 docs/20260617/images/image-03.png\n create mode 100644 docs/20260617/index.html\n create mode 100644 src/20260617/image-prompts.md\n create mode 100644 src/20260617/images/image-01.png\n create mode 100644 src/20260617/images/image-02.png\n create mode 100644 src/20260617/images/image-03.png\n create mode 100644 src/20260617/index.html\n",
+    "sha": "0e437db",
+    "remote": "origin\thttps://github.com/hansoo71/aws-daily-blog-html.git (fetch)\norigin\thttps://github.com/hansoo71/aws-daily-blog-html.git (push)\n"
+  }
+}
