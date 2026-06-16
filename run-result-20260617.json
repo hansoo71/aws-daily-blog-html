@@ -21,18 +21,15 @@
   "image_modes": [
     {
       "file": "/opt/data/out/aws-daily-blog-20260617/images/image-01.png",
-      "mode": "gpt-image-2",
-      "output": "MEDIA:/opt/data/out/aws-daily-blog-20260617/images/image-01.png\n"
+      "mode": "korean_png_redraw_after_gpt_image_2_visible_english_qa"
     },
     {
       "file": "/opt/data/out/aws-daily-blog-20260617/images/image-02.png",
-      "mode": "gpt-image-2",
-      "output": "MEDIA:/opt/data/out/aws-daily-blog-20260617/images/image-02.png\n"
+      "mode": "korean_png_redraw_after_gpt_image_2_visible_english_qa"
     },
     {
       "file": "/opt/data/out/aws-daily-blog-20260617/images/image-03.png",
-      "mode": "gpt-image-2",
-      "output": "MEDIA:/opt/data/out/aws-daily-blog-20260617/images/image-03.png\n"
+      "mode": "korean_png_redraw_after_gpt_image_2_visible_english_qa"
     }
   ],
   "prompt_log": "/opt/data/out/aws-daily-blog-20260617/image-prompts.md",
@@ -97,7 +94,8 @@
       "output": "A  20260617/image-prompts.md\nA  20260617/images/image-01.png\nA  20260617/images/image-02.png\nA  20260617/images/image-03.png\nA  20260617/index.html\nM  AGENT.md\nM  DESIGN.md\nM  README.md\nM  SKILLS.md\nA  docs/20260617/image-prompts.md\nA  docs/20260617/images/image-01.png\nA  docs/20260617/images/image-02.png\nA  docs/20260617/images/image-03.png\nA  docs/20260617/index.html\nM  docs/index.html\nM  index.html\nA  src/20260617/image-prompts.md\nA  src/20260617/images/image-01.png\nA  src/20260617/images/image-02.png\nA  src/20260617/images/image-03.png\nA  src/20260617/index.html\n"
     },
     "commit_output": "[main 0e437db] Add AWS daily blog 20260617\n 21 files changed, 95 insertions(+), 40 deletions(-)\n create mode 100644 20260617/image-prompts.md\n create mode 100644 20260617/images/image-01.png\n create mode 100644 20260617/images/image-02.png\n create mode 100644 20260617/images/image-03.png\n create mode 100644 20260617/index.html\n create mode 100644 docs/20260617/image-prompts.md\n create mode 100644 docs/20260617/images/image-01.png\n create mode 100644 docs/20260617/images/image-02.png\n create mode 100644 docs/20260617/images/image-03.png\n create mode 100644 docs/20260617/index.html\n create mode 100644 src/20260617/image-prompts.md\n create mode 100644 src/20260617/images/image-01.png\n create mode 100644 src/20260617/images/image-02.png\n create mode 100644 src/20260617/images/image-03.png\n create mode 100644 src/20260617/index.html\n",
-    "sha": "0e437db",
+    "sha": "9e061e5",
     "remote": "origin\thttps://github.com/hansoo71/aws-daily-blog-html.git (fetch)\norigin\thttps://github.com/hansoo71/aws-daily-blog-html.git (push)\n"
-  }
+  },
+  "final_image_note": "GPT Image 2 generation initially succeeded, but visible English/Latin labels were detected in generated visuals; final published images were redrawn locally as Korean-readable PNG fallbacks."
 }
