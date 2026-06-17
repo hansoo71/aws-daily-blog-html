@@ -1,6 +1,245 @@
 <!doctype html>
-<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AWS 일일 전략 블로그 20260617</title><meta name="description" content="AWS 공식 블로그 수집 데이터 기반 일일 전략형 한국어 분석입니다."><meta property="og:title" content="AWS 일일 전략 블로그 20260617"><meta property="og:description" content="AWS 블로그 신규 게시물을 기반으로 기업 관점의 기술 변화, 적용 검토, 리스크를 정리했습니다."><meta property="og:type" content="article"><style>
-:root{--ink:#0f172a;--muted:#475569;--line:#e2e8f0;--card:#fff;--blue:#1d4ed8;--orange:#ea580c;--green:#047857}*{box-sizing:border-box}body{margin:0;font-family:"Noto Sans KR","Apple SD Gothic Neo",system-ui,sans-serif;color:var(--ink);background:linear-gradient(180deg,#eef6ff 0,#fff 360px);font-size:17px;line-height:1.72;word-break:keep-all;overflow-wrap:break-word;text-wrap:pretty}a{color:var(--blue);text-decoration:none}.hero{padding:72px 24px 44px}.hero-inner{max-width:1120px;margin:auto;display:grid;grid-template-columns:1.1fr .9fr;gap:36px;align-items:center}.eyebrow{display:inline-flex;padding:8px 12px;border-radius:999px;background:#dbeafe;color:#1e40af;font-weight:800;font-size:14px}.hero h1{font-size:clamp(36px,6vw,68px);line-height:1.08;margin:18px 0}.hero p{font-size:20px;color:var(--muted)}.hero-card{background:rgba(255,255,255,.9);border:1px solid var(--line);border-radius:28px;padding:28px;box-shadow:0 24px 80px rgba(15,23,42,.12)}main{max-width:1060px;margin:auto;padding:0 24px 72px}section{margin:44px 0}.section-title{font-size:32px;line-height:1.25;margin:0 0 14px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}.card,.source-card,.message,.table-wrap{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:0 12px 36px rgba(15,23,42,.06)}.message{border-left:8px solid var(--orange)}.blog-image{width:100%;max-width:100%;height:auto;display:block;border-radius:28px;border:1px solid var(--line);box-shadow:0 18px 60px rgba(15,23,42,.12);margin:24px 0}.meta{color:var(--muted);font-size:14px;font-weight:700}.tech{color:#0f766e;font-weight:800}.kpi{font-size:42px;font-weight:900;color:var(--blue)}table{width:100%;border-collapse:collapse}th,td{text-align:left;border-bottom:1px solid var(--line);padding:14px;vertical-align:top}th{background:#f1f5f9}.infographic{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.bubble{padding:22px;border-radius:22px;background:#f8fafc;border:1px solid var(--line)}footer{padding:40px 24px;color:var(--muted);border-top:1px solid var(--line);background:#fff}.footer-inner{max-width:1060px;margin:auto}.table-scroll{overflow-x:auto;-webkit-overflow-scrolling:touch}.appendix{font-size:15px;color:#334155}@media (max-width:768px){body{font-size:16px;line-height:1.68}.hero{padding:48px 18px 28px}.hero-inner{grid-template-columns:1fr}.hero p{font-size:17px}main{padding:0 18px 56px}.infographic{grid-template-columns:1fr}.card,.source-card,.message,.table-wrap{padding:20px;border-radius:20px}th,td{min-width:180px;padding:12px}.hero-card{padding:22px}.section-title{font-size:26px}}@media (max-width:480px){body{font-size:16px}.hero h1{font-size:34px}.kpi{font-size:34px}.grid{grid-template-columns:1fr}.blog-image{border-radius:20px}}
-</style></head><body><header class="hero"><div class="hero-inner"><div><span class="eyebrow">AWS 일일 전략 블로그 · 2026-06-17 07:04 KST</span><h1>오늘의 AWS 기술 변화가 기업 의사결정에 주는 의미</h1><p>이번 글은 실제 수집·검증한 AWS 블로그 Markdown과 보강한 한국어 요약을 바탕으로 핵심 트렌드, 기술 변화의 의미, 기업 적용 관점, 한국 기업 시사점, 실행 검토 포인트와 리스크를 정리한 전문 블로그입니다.</p></div><aside class="hero-card" aria-label="수집 개요"><p class="meta">분석 입력</p><div class="kpi">3건</div><p>신규 저장 3건을 기본 입력으로 사용했습니다.</p><p class="meta">핵심 출처</p><p>에잇퍼센트 ECS 현대화 · SageMaker AI 컨테이너 캐싱 · P-EAGLE 추론 최적화</p></aside></div></header><main><img src="./20260617/images/image-01.png" alt="AWS 일일 전략 블로그의 핵심 트렌드를 보여주는 이미지" class="blog-image" /><section><h2 class="section-title">핵심 트렌드 분석</h2><div class="message"><strong>관찰된 사실:</strong> 이번 입력 문서는 애플리케이션 현대화, SageMaker AI inference 확장 성능, 대규모 언어 모델 추론 최적화라는 세 축으로 구성되어 있습니다. 근거가 부족한 항목은 확대 해석하지 않고 확인 필요로 남겼습니다.</div><div class="grid"><article class="card"><h3>기술 변화의 방향</h3><p>Kiro CLI 기반 현대화와 SageMaker AI 성능 개선 사례가 함께 관찰됩니다. 공통점은 개발·추론·배포 흐름에서 병목을 줄이고 반복 가능한 실행 패턴을 만들려는 시도입니다.</p></article><article class="card"><h3>기업 적용 관점</h3><p>기업은 새 기능의 도입 효과를 성능 수치만으로 판단하지 말고 권한, 비용, 로그, 데이터 위치, 기존 배포 체계와의 통합 가능성을 함께 검토해야 합니다.</p></article><article class="card"><h3>한국 기업 관점</h3><p>금융·제조·플랫폼 기업은 무중단 배포, 개인정보, 내부 보안 심사, 비용 통제 기준을 함께 고려해야 합니다. 이번 수집 데이터만으로 산업별 효과를 단정하지 않았습니다.</p></article></div></section><img src="./20260617/images/image-02.png" alt="기업 적용 관점의 검토 요소를 보여주는 이미지" class="blog-image" /><section><h2 class="section-title">출처 기반 주요 업데이트</h2><div class="grid"><article class="source-card"><p class="meta">AWS Korea Tech Blog · 2026-06-16 13:05 KST</p><h3>에잇퍼센트의 Kiro CLI 기반 Amazon ECS 현대화 여정</h3><p>에잇퍼센트는 Kiro CLI와 AI-Driven Modernization Prompt Sets를 활용해 Amazon EC2 기반 서비스를 Amazon ECS Fargate로 이전하고, 첫 대상 서비스에서 빠른 전환과 비용 절감 가능성을 검증했습니다.</p><p class="tech">Amazon ECS · AWS Fargate · Kiro CLI · Amazon EC2 · Graviton</p><a href="https://aws.amazon.com/ko/blogs/tech/mod-accelerate-using-kiro/" target="_blank" rel="noopener">원문 열기</a></article>
-<article class="source-card"><p class="meta">AWS Machine Learning Blog · 2026-06-17 05:16 KST</p><h3>Amazon SageMaker AI 컨테이너 캐싱 소개</h3><p>Amazon SageMaker AI inference에 container image caching이 추가되어 신규 인스턴스 scale-out 상황에서 컨테이너 이미지 다운로드 지연을 줄이고 생성형 AI 모델의 지연 시간을 개선할 수 있다고 설명했습니다.</p><p class="tech">Amazon SageMaker AI · Amazon ECR · Amazon EC2 · Amazon S3 · Amazon CloudWatch</p><a href="https://aws.amazon.com/blogs/machine-learning/introducing-container-caching-in-amazon-sagemaker-ai-for-faster-model-scaling/" target="_blank" rel="noopener">원문 열기</a></article>
-<article class="source-card"><p class="meta">AWS Machine Learning Blog · 2026-06-17 02:47 KST</p><h3>Amazon SageMaker AI에서 P-EAGLE로 speculative decoding 병렬화</h3><p>AWS는 P-EAGLE 방식을 통해 speculative decoding의 순차 draft token 병목을 줄이고, Amazon SageMaker AI에서 대규모 언어 모델 추론 처리량과 지연 시간을 개선하는 접근을 제시했습니다.</p><p class="tech">Amazon SageMaker AI · P-EAGLE · EAGLE · large language models · speculative decoding</p><a href="https://aws.amazon.com/blogs/machine-learning/parallelize-speculative-decoding-with-p-eagle-on-amazon-sagemaker-ai/" target="_blank" rel="noopener">원문 열기</a></article></div></section><section><h2 class="section-title">기업 의사결정자를 위한 검토 표</h2><div class="table-wrap table-scroll"><table><thead><tr><th>관찰된 변화</th><th>근거 출처</th><th>기회</th><th>리스크와 확인 포인트</th></tr></thead><tbody><tr><td>AI 코딩 도구와 컨테이너 기반 현대화가 실제 이전 사례로 제시되었습니다.</td><td>에잇퍼센트 ECS 현대화 글</td><td>기술부채 해소 속도와 배포 안정성을 함께 개선할 수 있습니다.</td><td>금융 서비스처럼 외부 연동과 무중단 요구가 높은 환경에서는 검증 절차가 필수입니다.</td></tr><tr><td>SageMaker AI inference scale-out 병목을 줄이는 container caching이 소개되었습니다.</td><td>SageMaker AI 컨테이너 캐싱 글</td><td>피크 트래픽에서 생성형 AI 추론 지연을 줄일 가능성이 있습니다.</td><td>실제 개선 폭은 모델 크기, 컨테이너 이미지, 트래픽 패턴, 리전 조건별 확인이 필요합니다.</td></tr><tr><td>P-EAGLE이 speculative decoding의 순차 병목을 병렬화하는 접근으로 제시되었습니다.</td><td>P-EAGLE 기술 글</td><td>대규모 언어 모델 추론 처리량과 비용 효율을 개선할 수 있습니다.</td><td>품질 저하 여부, 구현 안정성, 오픈소스 의존성, 운영 모니터링 기준을 확인해야 합니다.</td></tr></tbody></table></div></section><section><h2 class="section-title">실행 전략 대신 실행 검토 포인트</h2><div class="infographic"><div class="bubble"><h3>근거 확인</h3><p>원문 링크, 발행일, 출시 범위, 프리뷰 여부를 먼저 확인합니다.</p></div><div class="bubble"><h3>통합 비용</h3><p>현재 데이터·보안·배포 도구와 연결할 때의 변경 비용을 산정합니다.</p></div><div class="bubble"><h3>거버넌스</h3><p>권한, 로그, 모델 평가, 비용 책임을 의사결정 기준에 포함합니다.</p></div></div></section><img src="./20260617/images/image-03.png" alt="리스크와 거버넌스 검토 포인트를 보여주는 이미지" class="blog-image" /><section><h2 class="section-title">리스크와 거버넌스 고려사항</h2><div class="grid"><article class="card"><h3>데이터와 권한</h3><p>새 기능이 어떤 데이터에 접근하고 어떤 계정 권한을 요구하는지 확인해야 합니다.</p></article><article class="card"><h3>비용과 책임</h3><p>자동화와 추론 호출이 늘어날수록 저장소, 네트워크, 모델 사용량의 책임 경계가 중요해집니다.</p></article><article class="card"><h3>품질과 설명 가능성</h3><p>AI 결과의 오류 감지, 원인 분석, 사용자 피드백 반영 방식을 사전에 정의해야 합니다.</p></article></div></section><section class="appendix"><h2 class="section-title">이미지 프롬프트 기록</h2><p>상세 Image Prompt 기록은 같은 날짜 폴더의 image-prompts.md 파일에 보존했습니다. 최종 화면 이미지는 한글 가독성 검증을 위해 로컬 PNG로 다시 그렸습니다.</p></section></main><footer><div class="footer-inner"><p>이 문서는 AWS 공식 블로그 RSS와 로컬 LLM Wiki 수집 Markdown을 기반으로 자동 생성되었습니다. 원문 세부 조건은 각 링크에서 다시 확인해 주십시오.</p></div></footer></body></html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AWS 일일 전략 블로그: 지식·검색·컨텍스트가 에이전트 설계의 핵심 입력으로 부상했습니다</title>
+  <meta name="description" content="오늘 수집된 AWS 블로그는 Bedrock AgentCore, Managed Knowledge Base, Web Search, S3 annotations, Quick, SageMaker AI, Guardrails가 각각 에이전트의 지식 접근성·데이터 문맥·안전 점검·개발 검토를 어떻게 보강하는지 보여줍니다." />
+  <meta property="og:title" content="AWS 일일 전략 블로그: 지식·검색·컨텍스트가 에이전트 설계의 핵심 입력으로 부상했습니다" />
+  <meta property="og:description" content="오늘 수집된 AWS 블로그는 Bedrock AgentCore, Managed Knowledge Base, Web Search, S3 annotations, Quick, SageMaker AI, Guardrails가 각각 에이전트의 지식 접근성·데이터 문맥·안전 점검·개발 검토를 어떻게 보강하는지 보여줍니다." />
+  <meta property="og:type" content="article" />
+  <meta property="og:image" content="./20260618/images/image-01.png" />
+  <style>
+    :root { --bg:#071321; --panel:#0d1f34; --panel2:#102a45; --text:#eef7ff; --muted:#b8c9d9; --accent:#62d4ff; --accent2:#ffb15a; --line:rgba(255,255,255,.14); }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:'Noto Sans KR', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background:linear-gradient(180deg,#06111e 0%,#0b1728 45%,#f6f8fb 45%,#f6f8fb 100%); color:var(--text); word-break:keep-all; overflow-wrap:break-word; text-wrap:pretty; line-height:1.72; }
+    a { color:#0a6ea8; font-weight:700; }
+    .hero { padding:72px 24px 38px; background:radial-gradient(circle at 75% 10%, rgba(98,212,255,.30), transparent 34%), linear-gradient(135deg,#071321,#102a45); }
+    .hero-inner { max-width:1120px; margin:0 auto; display:grid; grid-template-columns:1.05fr .95fr; gap:34px; align-items:center; }
+    .eyebrow { display:inline-flex; gap:8px; align-items:center; padding:7px 12px; border:1px solid var(--line); border-radius:999px; color:#d9f4ff; background:rgba(255,255,255,.08); font-size:14px; }
+    h1 { font-size:clamp(34px,5vw,62px); line-height:1.12; margin:20px 0 18px; letter-spacing:-.04em; }
+    .lead { font-size:clamp(17px,2vw,21px); color:#dceaf5; margin:0 0 24px; }
+    .hero-stats { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin-top:24px; }
+    .stat { padding:16px; border-radius:18px; background:rgba(255,255,255,.08); border:1px solid var(--line); }
+    .stat strong { display:block; font-size:28px; color:#fff; }
+    .stat span { color:var(--muted); font-size:13px; }
+    .blog-image { max-width:100%; height:auto; display:block; border-radius:24px; box-shadow:0 24px 70px rgba(0,0,0,.28); border:1px solid rgba(255,255,255,.16); }
+    main { max-width:1080px; margin:0 auto; padding:44px 24px 70px; color:#122033; }
+    section { margin:42px 0; }
+    h2 { font-size:clamp(25px,3vw,36px); line-height:1.25; letter-spacing:-.03em; margin:0 0 16px; color:#08192b; }
+    h3 { line-height:1.35; letter-spacing:-.02em; }
+    .summary-box { background:#fff; border-radius:26px; padding:28px; border:1px solid #e5edf5; box-shadow:0 18px 46px rgba(16,42,69,.08); }
+    .message { padding:24px; border-radius:24px; background:linear-gradient(135deg,#e7f7ff,#fff7ea); border:1px solid #d7ecf7; font-size:18px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; }
+    .trend-card, .source-card, .check-card { min-width:0; background:#fff; border:1px solid #e3ebf4; border-radius:22px; padding:22px; box-shadow:0 12px 30px rgba(20,39,61,.07); }
+    .trend-card span, .source-blog { display:inline-block; padding:5px 10px; border-radius:999px; background:#eaf7ff; color:#075985; font-size:13px; font-weight:800; }
+    .trend-card h3, .source-card h3, .check-card h3 { color:#0b2540; margin:14px 0 8px; }
+    .trend-card p, .source-card p, .check-card p { color:#3e5062; margin:0 0 10px; }
+    .evidence { font-size:14px; color:#64748b !important; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:22px; align-items:start; }
+    .service-list { display:flex; flex-wrap:wrap; gap:10px; padding:0; list-style:none; }
+    .service-list li { padding:9px 12px; border-radius:999px; background:#0d2a45; color:#e6f7ff; font-size:14px; }
+    .table-wrap { overflow-x:auto; background:#fff; border:1px solid #e3ebf4; border-radius:22px; box-shadow:0 12px 30px rgba(20,39,61,.07); }
+    table { width:100%; border-collapse:collapse; min-width:720px; }
+    th, td { padding:18px; border-bottom:1px solid #e8eef5; text-align:left; vertical-align:top; }
+    th { width:220px; color:#0b2540; background:#f4f8fb; }
+    td { color:#3e5062; }
+    .note { color:#536578; font-size:15px; }
+    footer { padding:30px 24px 60px; text-align:center; color:#617287; }
+    @media (max-width: 768px) {
+      body { font-size:17px; line-height:1.75; }
+      .hero { padding:48px 18px 28px; }
+      .hero-inner, .split { grid-template-columns:1fr; }
+      .hero-stats { grid-template-columns:1fr; }
+      main { padding:32px 18px 54px; }
+      .summary-box, .message, .trend-card, .source-card, .check-card { padding:20px; border-radius:20px; }
+      table { min-width:640px; }
+      th, td { padding:14px; }
+    }
+    @media (max-width: 480px) {
+      body { font-size:16px; }
+      h1 { font-size:32px; }
+      .eyebrow { font-size:13px; }
+      .lead { font-size:17px; }
+      .service-list li { font-size:13px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="hero-inner">
+      <div>
+        <div class="eyebrow">한국시간 2026년 6월 18일 · AWS 블로그 일일 분석</div>
+        <h1>AWS 일일 전략 블로그: 지식·검색·컨텍스트가 에이전트 설계의 핵심 입력으로 부상했습니다</h1>
+        <p class="lead">오늘 수집된 AWS 블로그는 Bedrock AgentCore, Managed Knowledge Base, Web Search, S3 annotations, Quick, SageMaker AI, Guardrails가 각각 에이전트의 지식 접근성·데이터 문맥·안전 점검·개발 검토를 어떻게 보강하는지 보여줍니다.</p>
+        <div class="hero-stats" aria-label="수집 요약">
+          <div class="stat"><strong>3</strong><span>확인한 공식 피드</span></div>
+          <div class="stat"><strong>13</strong><span>신규 저장 문서</span></div>
+          <div class="stat"><strong>13</strong><span>분석 입력 문서</span></div>
+        </div>
+      </div>
+      <img src="./20260618/images/image-01.png" alt="클라우드와 데이터 허브, 에이전트 노드가 연결된 추상 일러스트" class="blog-image" />
+    </div>
+  </header>
+  <main>
+    <section class="summary-box">
+      <h2>핵심 요약</h2>
+      <div class="message">이번 실행에서 신규 저장한 문서를 기준으로 작성했습니다. 오늘의 수집 자료에서 반복적으로 관찰되는 축은 에이전트가 신뢰할 수 있는 지식에 접근하는 방식, 데이터 문맥을 가져오는 방식, 그리고 개발·보안 검토를 호출 가능한 기능으로 붙이는 방식입니다. 이는 특정 조직의 내부 전략으로 일반화하기보다, 각 기업의 데이터 권한·검색 품질·배포 책임 기준에 맞춰 검증해야 할 변화입니다.</div>
+    </section>
+
+    <section>
+      <h2>핵심 트렌드 분석</h2>
+      <div class="grid"><article class="trend-card"><span>관찰 1</span><h3>지식 연결의 제품화</h3><p>Amazon Bedrock Managed Knowledge Base와 AgentCore Web Search 발표는 검색증강생성과 웹 지식 연결을 별도 구현 과제가 아니라 관리형 구성요소로 흡수하려는 흐름을 보여줍니다.</p><p class="evidence">근거: News Blog의 Managed Knowledge Base·Web Search 게시물</p></article>
+<article class="trend-card"><span>관찰 2</span><h3>컨텍스트 계층의 확장</h3><p>S3 annotations와 컨텍스트 인텔리전스 관련 글은 객체·데이터 저장소·업무 지식이 에이전트 판단의 입력으로 재정의되고 있음을 시사합니다.</p><p class="evidence">근거: S3 annotations, Context intelligence 게시물</p></article>
+<article class="trend-card"><span>관찰 3</span><h3>검토와 통제의 개발자 흐름 편입</h3><p>DevOps Agent, Security Agent, Bedrock Guardrails API는 릴리스 검토·위협 모델링·가드레일 점검을 개발 과정 안에서 호출 가능한 기능으로 제시합니다.</p><p class="evidence">근거: DevOps Agent, Security Agent, Guardrails API 게시물</p></article>
+<article class="trend-card"><span>관찰 4</span><h3>한국 기업 적용의 현실 조건</h3><p>한국어 Korea Tech Blog의 MCP 정책 에이전트 글은 여러 계정·리전의 정책 점검 요구가 실제 클라우드 거버넌스 업무와 맞닿아 있음을 보여줍니다.</p><p class="evidence">근거: AWS Korea Tech Blog의 Amazon MWAA와 Bedrock AgentCore 게시물</p></article></div>
+    </section>
+
+    <section class="split">
+      <div>
+        <h2>기술 변화의 의미</h2>
+        <p>이번 게시물 묶음은 에이전트 기능 자체보다 에이전트가 참조하는 지식, 데이터 객체의 문맥, 릴리스·보안 검토 절차를 제품 기능으로 연결하는 데 초점이 있습니다. 기업은 모델 성능만이 아니라 어떤 문맥이 어떤 권한으로 들어가고 어떤 증거가 남는지를 설계 항목으로 다뤄야 합니다.</p>
+        <ul class="service-list"><li>Amazon Bedrock</li><li>Bedrock AgentCore</li><li>AWS Lambda</li><li>Amazon S3</li><li>Amazon EKS</li><li>MCP</li><li>Agent</li><li>AWS WAF</li><li>AWS Transform</li><li>Generative AI</li><li>Machine Learning</li><li>Foundation Model</li><li>Amazon Q</li><li>Amazon SageMaker</li></ul>
+      </div>
+      <img src="./20260618/images/image-02.png" alt="에이전트 아키텍처 주변으로 지식 기반과 검색, 보안 패널이 연결된 추상 이미지" class="blog-image" />
+    </section>
+
+    <section>
+      <h2>기업 적용 관점</h2>
+      <div class="grid">
+        <article class="check-card"><h3>기회</h3><p>관리형 지식 기반, 웹 검색, 객체 문맥 메타데이터를 활용하면 검색증강생성·에이전트 응답의 구현 부담을 줄일 가능성이 있습니다. 단, 실제 품질은 원천 데이터 정리와 접근 정책에 좌우됩니다.</p></article>
+        <article class="check-card"><h3>리스크</h3><p>에이전트가 웹과 내부 지식을 동시에 참조하면 환각보다 더 복잡한 문제가 생깁니다. 최신 정보의 출처, 보안 등급, 재사용 가능 범위를 응답과 로그에 남겨야 합니다.</p></article>
+        <article class="check-card"><h3>검토 포인트</h3><p>도입 전에는 지식 연결 경로, 데이터 소유권, 가드레일 호출 위치, 릴리스 승인 절차, 비용 계측 방식을 함께 정의하는 것이 현실적입니다.</p></article>
+      </div>
+    </section>
+
+    <section>
+      <h2>한국 기업 관점 시사점</h2>
+      <p>한국어 AWS Korea Tech Blog의 MCP 기반 정책 에이전트 사례는 여러 계정과 리전에 분산된 정책·리소스 설정을 팀별 관점에서 확인해야 하는 현실 문제를 제시합니다. 오늘 함께 수집된 News Blog와 Machine Learning Blog 글을 연결하면, 한국 기업의 검토 주제는 “어떤 에이전트를 만들 것인가”보다 “에이전트가 어떤 근거와 권한으로 판단하게 할 것인가”에 가깝습니다. 다만 업종별 규제, 개인정보 처리 기준, 망 분리 요구와의 적합성은 이 수집 자료만으로 판단하기 어려우므로 확인 필요입니다.</p>
+    </section>
+
+    <section>
+      <h2>실행 전략</h2>
+      <div class="grid">
+        <article class="check-card"><h3>지식 원천 목록화</h3><p>에이전트가 참조할 문서, 웹 출처, 객체 메타데이터, 업무 시스템을 먼저 분류하고 소유자와 최신성 기준을 지정합니다.</p></article>
+        <article class="check-card"><h3>권한·감사 설계</h3><p>AgentCore, Knowledge Base, S3 annotations, Guardrails 같은 구성요소는 호출 권한과 감사 로그가 설계의 일부가 되어야 합니다.</p></article>
+        <article class="check-card"><h3>품질 측정</h3><p>응답 정확도뿐 아니라 출처 인용률, 최신 정보 반영률, 가드레일 통과·차단 사유, 비용과 지연시간을 함께 측정합니다.</p></article>
+      </div>
+    </section>
+
+    <section class="split">
+      <img src="./20260618/images/image-03.png" alt="여러 팀이 클라우드와 인공지능 에이전트 시스템의 거버넌스를 검토하는 일러스트" class="blog-image" />
+      <div>
+        <h2>리스크와 거버넌스 고려사항</h2>
+        <div class="table-wrap"><table aria-label="리스크와 검토 포인트"><tbody><tr><th>근거 품질</th><td>웹 검색과 내부 지식 기반이 결합될수록 출처 신뢰도, 인용 보존, 최신성 검증 기준이 필요합니다.</td></tr>
+<tr><th>권한 경계</th><td>에이전트가 데이터·객체·저장소 문맥을 조회할 때 최소 권한, 감사 로그, 민감정보 필터링을 함께 설계해야 합니다.</td></tr>
+<tr><th>자동 변경 검토</th><td>기술 부채 개선·릴리스 검토 자동화는 유용하지만, 실제 반영 전 책임자 승인과 롤백 기준이 필요합니다.</td></tr>
+<tr><th>비용과 지연시간</th><td>관리형 검색증강생성, 웹 검색, 비동기 추론, 에이전트 호출이 늘어나면 비용 산정 단위와 응답 지연을 별도로 측정해야 합니다.</td></tr></tbody></table></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>오늘 수집한 원문 목록</h2>
+      <p class="note">화면에는 한국어 분석 제목을 표시하고, 원문 제목과 세부 추출 문맥은 LLM Wiki 및 로컬 Markdown에 보존했습니다.</p>
+      <div class="grid">
+<article class="source-card">
+  <div class="source-blog">아마존웹서비스 한국 기술 블로그</div>
+  <h3>Amazon MWAA와 Bedrock AgentCore 기반 MCP 정책 에이전트 구축 사례가 공개되었습니다</h3>
+  <p>여러 계정과 리전에 흩어진 정책·리소스 점검을 MCP 기반 에이전트로 구성하는 사례입니다.</p>
+  <a href="https://aws.amazon.com/ko/blogs/tech/amazon-mwaa-bedrock-agentcore-mcp-cloud-policy-agent/" target="_blank" rel="noopener">원문 보기</a>
+</article>
+
+<article class="source-card">
+  <div class="source-blog">아마존웹서비스 뉴스 블로그</div>
+  <h3>AWS Summit New York 2026 주요 발표가 에이전트와 데이터 문맥 확장을 보여줍니다</h3>
+  <p>공식 블로그에서 확인한 서비스 업데이트이며 세부 적용 조건은 원문 확인이 필요합니다.</p>
+  <a href="https://aws.amazon.com/blogs/aws/top-announcements-of-the-aws-summit-in-new-york-2026/" target="_blank" rel="noopener">원문 보기</a>
+</article>
+
+<article class="source-card">
+  <div class="source-blog">아마존웹서비스 뉴스 블로그</div>
+  <h3>Amazon Bedrock Managed Knowledge Base가 기업 검색증강생성 구성을 단순화합니다</h3>
+  <p>기업 지식 연결과 검색증강생성 구성 부담을 줄이는 관리형 기능 변화로 확인했습니다.</p>
+  <a href="https://aws.amazon.com/blogs/aws/introducing-amazon-bedrock-managed-knowledge-base-for-faster-more-accurate-enterprise-ai-applications/" target="_blank" rel="noopener">원문 보기</a>
+</article>
+
+<article class="source-card">
+  <div class="source-blog">아마존웹서비스 뉴스 블로그</div>
+  <h3>Amazon Bedrock AgentCore Web Search가 최신 웹 지식 기반 응답을 지원합니다</h3>
+  <p>에이전트 응답을 최신 웹 지식과 인용 가능한 근거에 연결하는 기능 변화로 확인했습니다.</p>
+  <a href="https://aws.amazon.com/blogs/aws/announcing-web-search-on-amazon-bedrock-agentcore-ground-your-ai-agents-in-current-accurate-web-knowledge/" target="_blank" rel="noopener">원문 보기</a>
+</article>
+
+<article class="source-card">
+  <div class="source-blog">아마존웹서비스 뉴스 블로그</div>
+  <h3>AWS Transform이 기술 부채 감지와 개선 자동화를 미리보기로 제시합니다</h3>
+  <p>코드 저장소의 기술 부채 탐지와 개선 제안을 자동화하려는 미리보기 기능으로 확인했습니다.</p>
+  <a href="https://aws.amazon.com/blogs/aws/proactively-reduce-tech-debt-autonomously-with-aws-transform-continuous-modernization-preview/" target="_blank" rel="noopener">원문 보기</a>
+</article>
+
+<article class="source-card">
+  <div class="source-blog">아마존웹서비스 뉴스 블로그</div>
+  <h3>AWS DevOps Agent가 배포 전 변경 검토 기능을 확장합니다</h3>
+  <p>배포 전 변경 검토와 릴리스 준비도 점검을 자동화하는 기능 확장으로 확인했습니다.</p>
+  <a href="https://aws.amazon.com/blogs/aws/aws-devops-agent-adds-release-management-capabilities-to-assess-code-changes-before-production-preview/" target="_blank" rel="noopener">원문 보기</a>
+</article>
+
+<article class="source-card">
+  <div class="source-blog">아마존웹서비스 뉴스 블로그</div>
+  <h3>AWS Security Agent가 위협 모델링과 개발 도구 연계를 강화합니다</h3>
+  <p>위협 모델링과 개발 도구 연계를 보안 검토 흐름에 붙이는 변화로 확인했습니다.</p>
+  <a href="https://aws.amazon.com/blogs/aws/aws-security-agent-adds-threat-modeling-kiro-power-and-claude-code-plugin-and-more/" target="_blank" rel="noopener">원문 보기</a>
+</article>
+
+<article class="source-card">
+  <div class="source-blog">아마존웹서비스 뉴스 블로그</div>
+  <h3>Amazon S3 annotations가 객체 단위 문맥 메타데이터를 확장합니다</h3>
+  <p>객체 단위 문맥 메타데이터를 검색·조회 가능한 형태로 확장하는 변화로 확인했습니다.</p>
+  <a href="https://aws.amazon.com/blogs/aws/amazon-s3-annotations-attach-rich-queryable-context-directly-to-your-objects/" target="_blank" rel="noopener">원문 보기</a>
+</article>
+
+<article class="source-card">
+  <div class="source-blog">아마존웹서비스 기계학습 블로그</div>
+  <h3>Amazon SageMaker AI Async Inference가 인라인 요청 페이로드를 지원합니다</h3>
+  <p>비동기 추론 호출에서 입력 데이터 준비 단계를 줄이는 기능 업데이트로 확인했습니다.</p>
+  <a href="https://aws.amazon.com/blogs/machine-learning/amazon-sagemaker-ai-async-inference-now-supports-inline-request-payloads/" target="_blank" rel="noopener">원문 보기</a>
+</article>
+
+<article class="source-card">
+  <div class="source-blog">아마존웹서비스 기계학습 블로그</div>
+  <h3>Amazon Quick이 자율 에이전트와 업무 우선순위 기능을 확장합니다</h3>
+  <p>업무 우선순위와 데이터 통찰을 에이전트형 경험으로 연결하는 발표로 확인했습니다.</p>
+  <a href="https://aws.amazon.com/blogs/machine-learning/get-back-hours-every-day-with-autonomous-agents-in-amazon-quick/" target="_blank" rel="noopener">원문 보기</a>
+</article>
+
+<article class="source-card">
+  <div class="source-blog">아마존웹서비스 기계학습 블로그</div>
+  <h3>데이터와 인공지능 에이전트를 위한 컨텍스트 인텔리전스가 강조됩니다</h3>
+  <p>데이터 저장소와 업무 지식의 문맥을 에이전트 판단에 연결하는 방향을 보여줍니다.</p>
+  <a href="https://aws.amazon.com/blogs/machine-learning/context-intelligence-for-your-data-and-ai-agents-at-scale/" target="_blank" rel="noopener">원문 보기</a>
+</article>
+
+<article class="source-card">
+  <div class="source-blog">아마존웹서비스 기계학습 블로그</div>
+  <h3>Amazon Bedrock AgentCore가 더 넓은 지식 연결과 지속 학습 기능을 추가합니다</h3>
+  <p>공식 블로그에서 확인한 서비스 업데이트이며 세부 적용 조건은 원문 확인이 필요합니다.</p>
+  <a href="https://aws.amazon.com/blogs/machine-learning/new-in-amazon-bedrock-agentcore-build-agents-with-broader-knowledge-and-continuous-learning/" target="_blank" rel="noopener">원문 보기</a>
+</article>
+
+<article class="source-card">
+  <div class="source-blog">아마존웹서비스 기계학습 블로그</div>
+  <h3>Amazon Bedrock Guardrails InvokeGuardrailChecks API가 에이전트 안전 점검을 세분화합니다</h3>
+  <p>에이전트 흐름 중 필요한 시점에 안전 점검을 호출하는 응용프로그램 인터페이스로 확인했습니다.</p>
+  <a href="https://aws.amazon.com/blogs/machine-learning/safeguard-your-agentic-ai-applications-with-the-amazon-bedrock-guardrails-invokeguardrailchecks-api/" target="_blank" rel="noopener">원문 보기</a>
+</article></div>
+    </section>
+
+    <section class="summary-box">
+      <h2>수집 파일</h2>
+      <p class="note">신규 저장 파일 13건입니다.</p>
+      <ol><li>수집 문서 1: Amazon MWAA와 Bedrock AgentCore 기반 MCP 정책 에이전트 구축 사례가 공개되었습니다</li><li>수집 문서 2: AWS Summit New York 2026 주요 발표가 에이전트와 데이터 문맥 확장을 보여줍니다</li><li>수집 문서 3: Amazon Bedrock Managed Knowledge Base가 기업 검색증강생성 구성을 단순화합니다</li><li>수집 문서 4: Amazon Bedrock AgentCore Web Search가 최신 웹 지식 기반 응답을 지원합니다</li><li>수집 문서 5: AWS Transform이 기술 부채 감지와 개선 자동화를 미리보기로 제시합니다</li><li>수집 문서 6: AWS DevOps Agent가 배포 전 변경 검토 기능을 확장합니다</li><li>수집 문서 7: AWS Security Agent가 위협 모델링과 개발 도구 연계를 강화합니다</li><li>수집 문서 8: Amazon S3 annotations가 객체 단위 문맥 메타데이터를 확장합니다</li><li>수집 문서 9: Amazon SageMaker AI Async Inference가 인라인 요청 페이로드를 지원합니다</li><li>수집 문서 10: Amazon Quick이 자율 에이전트와 업무 우선순위 기능을 확장합니다</li><li>수집 문서 11: 데이터와 인공지능 에이전트를 위한 컨텍스트 인텔리전스가 강조됩니다</li><li>수집 문서 12: Amazon Bedrock AgentCore가 더 넓은 지식 연결과 지속 학습 기능을 추가합니다</li><li>수집 문서 13: Amazon Bedrock Guardrails InvokeGuardrailChecks API가 에이전트 안전 점검을 세분화합니다</li></ol>
+    </section>
+  </main>
+  <footer>이 문서는 공식 AWS 블로그 RSS와 원문 페이지에서 수집한 자료를 바탕으로 자동 작성되었습니다. 불확실한 적용 판단은 확인 필요로 취급해 주십시오.</footer>
+</body>
+</html>
