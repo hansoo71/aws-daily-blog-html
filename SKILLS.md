@@ -1,1 +1,1 @@
-자연어 요청 예시: 오늘 날짜 HTML의 문구를 더 간결하게 수정해줘, 날짜별 이미지를 교체해줘, GitHub Pages 최신본을 검증해줘.
+반복 실행 시 날짜별 `src/YYYYMMDD`와 `docs/YYYYMMDD`를 갱신하고 `docs/index.html`을 최신 문서로 맞춥니다.
