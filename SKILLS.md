@@ -1,1 +1,3 @@
-자연어 수정 예시: 오늘 날짜 HTML의 핵심 요약을 더 간결하게 고치고 docs/index.html과 날짜별 페이지를 동기화해 주세요.
+# SKILLS
+
+자연어 요청 예: 오늘자 AWS 블로그 HTML을 업데이트해줘. src와 docs, standalone 산출물을 함께 검증합니다.
