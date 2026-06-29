@@ -1,1 +1,1 @@
-반복 실행 시 날짜별 `src/YYYYMMDD`와 `docs/YYYYMMDD`를 갱신하고 `docs/index.html`을 최신 문서로 맞춥니다.
+자연어 수정 예시: 오늘 날짜 HTML의 핵심 요약을 더 간결하게 고치고 docs/index.html과 날짜별 페이지를 동기화해 주세요.
