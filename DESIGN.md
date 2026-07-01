@@ -1,3 +1,6 @@
 # DESIGN
 
-Noto Sans KR, Executive Blog 스타일, 반응형 카드 레이아웃, 모바일 1열 전환, 이미지 max-width 100% 원칙을 사용합니다.
+- Noto Sans KR 기반의 반응형 Executive Blog 스타일입니다.
+- 데스크톱은 넓은 hero와 960~1120px 본문 폭을 사용합니다.
+- 모바일은 1열 카드와 가로 스크롤 표로 전환합니다.
+- 색상은 남색, 파랑, 연한 회색 배경을 중심으로 사용합니다.
