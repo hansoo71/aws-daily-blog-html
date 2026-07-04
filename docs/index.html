@@ -1,61 +1,36 @@
 <!doctype html>
-<html lang="ko">
+<html lang='ko'>
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>아마존웹서비스 일일 기술 블로그 전략 브리핑 — 2026-07-04</title>
-<meta name="description" content="2026-07-04 기준 아마존웹서비스 공식 기술 블로그 수집 데이터 기반 한국어 전략형 기술 블로그입니다." />
-<meta property="og:title" content="아마존웹서비스 일일 기술 블로그 전략 브리핑 — 2026-07-04" />
-<meta property="og:description" content="아마존웹서비스 공식 블로그 수집 데이터 기반 클라우드·인공지능·데이터 관점의 기업 의사결정 브리핑" />
-<meta property="og:type" content="article" />
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<title>아마존웹서비스 블로그 일일 전략 브리핑 — 2026-07-05</title>
+<meta name='description' content='아마존웹서비스 공식 블로그 신규·최근 글을 바탕으로 정리한 엔터프라이즈 인공지능·데이터·클라우드 관점 일일 전략형 블로그입니다.'>
+<meta property='og:title' content='아마존웹서비스 블로그 일일 전략 브리핑 — 2026-07-05'>
+<meta property='og:description' content='공식 블로그 수집 데이터 기반 핵심 트렌드, 기술 변화, 기업 적용 관점, 리스크와 거버넌스 고려사항을 요약합니다.'>
+<meta property='og:type' content='article'>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700;800&display=swap');
-:root { --bg:#f5f7fb; --ink:#182235; --muted:#607089; --brand:#23395d; --accent:#ff9900; --card:#ffffff; --line:#dce4ef; }
-* { box-sizing:border-box; }
-body { margin:0; font-family:'Noto Sans KR', system-ui, sans-serif; background:var(--bg); color:var(--ink); line-height:1.72; word-break:keep-all; overflow-wrap:break-word; text-wrap:pretty; font-size:17px; }
-a { color:#0a5cad; font-weight:700; }
-.hero { background:linear-gradient(135deg,#17233a,#2d4d7d); color:white; padding:72px 24px 56px; }
-.hero-inner { max-width:1120px; margin:0 auto; }
-.badge { display:inline-flex; gap:8px; align-items:center; background:rgba(255,255,255,.12); border:1px solid rgba(255,255,255,.25); padding:8px 14px; border-radius:999px; font-size:14px; }
-h1 { font-size:clamp(34px,5vw,64px); line-height:1.14; margin:22px 0; letter-spacing:-.04em; }
-.subtitle { max-width:850px; font-size:clamp(17px,2vw,22px); color:#e5edf8; }
-main { max-width:1080px; margin:0 auto; padding:34px 22px 70px; }
-.section { margin:34px 0; }
-.section h2 { font-size:clamp(25px,3vw,38px); line-height:1.25; margin:0 0 16px; letter-spacing:-.03em; }
-.keybox { background:#fff7e8; border:1px solid #ffd58a; border-left:8px solid var(--accent); border-radius:22px; padding:24px; margin:24px 0; }
-.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; }
-.card,.insight { background:var(--card); border:1px solid var(--line); border-radius:24px; padding:24px; box-shadow:0 12px 30px rgba(31,45,71,.07); min-width:0; }
-.card h3,.insight h3 { margin-top:0; line-height:1.34; }
-.eyebrow { color:#be6500; font-weight:800; font-size:14px; margin:0 0 8px; }
-.blog-image { max-width:100%; height:auto; display:block; border-radius:24px; border:1px solid var(--line); box-shadow:0 16px 34px rgba(31,45,71,.12); margin:22px auto; }
-.table-wrap { overflow-x:auto; background:white; border:1px solid var(--line); border-radius:20px; }
-table { width:100%; border-collapse:collapse; min-width:760px; }
-th,td { text-align:left; padding:14px 16px; border-bottom:1px solid var(--line); vertical-align:top; }
-th { background:#edf3fb; font-weight:800; }
-.appendix { background:#101827; color:#edf3ff; border-radius:24px; padding:24px; }
-.appendix code { color:#ffd58a; white-space:pre-wrap; }
-footer { color:var(--muted); font-size:14px; padding:30px 0; }
-@media (max-width:768px) { .hero { padding:48px 18px 38px; } main { padding:26px 16px 54px; } body { font-size:16px; line-height:1.7; } .card,.insight,.keybox { padding:18px; border-radius:18px; } table { min-width:680px; } }
-@media (max-width:480px) { .badge { font-size:13px; } h1 { font-size:34px; } .subtitle { font-size:16px; } table { min-width:620px; } }
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;800&display=swap');
+:root{--ink:#0f172a;--muted:#475569;--line:#e2e8f0;--soft:#f8fafc;--brand:#1d4ed8;--accent:#0f766e;--warn:#b45309;}
+*{box-sizing:border-box} body{margin:0;font-family:'Noto Sans KR',system-ui,sans-serif;color:var(--ink);background:linear-gradient(180deg,#eff6ff,#fff 420px);font-size:18px;line-height:1.75;word-break:keep-all;overflow-wrap:break-word;text-wrap:pretty} a{color:var(--brand)}
+.hero{padding:74px 24px 46px;} .hero-inner{max-width:1120px;margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:32px;align-items:center} .eyebrow{font-weight:800;color:var(--accent);letter-spacing:.02em} h1{font-size:clamp(34px,5vw,62px);line-height:1.15;margin:12px 0 18px} .lead{font-size:clamp(18px,2.2vw,24px);color:var(--muted)}
+main{max-width:1060px;margin:0 auto;padding:20px 24px 72px} section{margin:56px 0} h2{font-size:clamp(26px,3vw,38px);line-height:1.25;margin-bottom:18px} h3{font-size:22px;line-height:1.35} .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px} .card,.insight,.message,.prompt{background:#fff;border:1px solid var(--line);border-radius:24px;padding:24px;box-shadow:0 14px 34px rgba(15,23,42,.07)} .badge{display:inline-flex;padding:6px 11px;border-radius:999px;background:#dbeafe;color:#1e40af;font-size:14px;font-weight:800} .message{border-left:6px solid var(--brand);background:#f8fbff} .infographic{display:grid;grid-template-columns:repeat(3,1fr);gap:16px} .metric{background:#0f172a;color:#fff;border-radius:24px;padding:24px} .metric strong{display:block;font-size:34px} figure{margin:22px 0;background:#fff;border:1px solid var(--line);border-radius:26px;padding:14px} .blog-image{max-width:100%;height:auto;display:block;border-radius:18px;margin:auto} figcaption{font-size:14px;color:var(--muted);padding:8px 4px} .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:18px;background:#fff} table{width:100%;border-collapse:collapse;min-width:760px} th,td{padding:16px;border-bottom:1px solid var(--line);vertical-align:top} th{background:#f1f5f9;text-align:left} footer{padding:36px 24px;color:var(--muted);border-top:1px solid var(--line);background:#fff}
+@media (max-width: 768px){body{font-size:17px;line-height:1.7} .hero{padding:44px 18px 28px} .hero-inner{grid-template-columns:1fr} main{padding:12px 18px 56px} .infographic{grid-template-columns:1fr} .card,.insight,.message,.prompt{padding:20px;border-radius:20px} table{min-width:680px}}
+@media (max-width: 480px){body{font-size:16px;line-height:1.68} h1{font-size:32px} h2{font-size:25px} .hero{padding-left:14px;padding-right:14px} main{padding-left:14px;padding-right:14px}}
 </style>
-</head>
-<body>
-<header class="hero"><div class="hero-inner"><span class="badge">아마존웹서비스 공식 블로그 수집 · 2026-07-04 07:04 한국시간</span><h1>아마존웹서비스 일일 기술 블로그 전략 브리핑</h1><p class="subtitle">이번 문서는 아마존웹서비스 한국 기술 블로그, 뉴스 블로그, 머신러닝 블로그의 피드와 원문 추출 마크다운을 기준으로 작성한 한국어 전문 블로그형 브리핑입니다. 오늘 신규 저장 항목은 없어서 최근 24시간 로컬 지식 문서를 보조 입력으로 사용했으며, 최신성은 확인 필요입니다.</p></div></header>
+</head><body>
+<header class='hero'><div class='hero-inner'><div><div class='eyebrow'>공식 블로그 기반 일일 전략 브리핑</div><h1>아마존웹서비스 블로그에서 본 오늘의 엔터프라이즈 인공지능·데이터·클라우드 신호</h1><p class='lead'>신규 문서가 없어 최근 24시간 문서를 보조 입력으로 사용했으며 일부 판단은 확인 필요입니다. 본 문서는 확인된 원문과 저장·동기화 결과를 기준으로 작성했으며, 근거가 약한 항목은 확인 필요로 표시했습니다.</p></div><div><figure><img src='./images/image-01.png' alt='아마존웹서비스 블로그 일일 분석 이미지 1' class='blog-image' /><figcaption>분석 보조 이미지 1</figcaption></figure></div></div></header>
 <main>
-<section class="section keybox"><h2>핵심 메시지</h2><p>이번 실행에서는 새로 저장할 게시물이 없었습니다. 다만 최근 24시간 내 로컬 지식 저장소에 수집된 두 건의 아마존웹서비스 머신러닝 블로그 글을 기준으로, 다중 턴 에이전트 학습과 인공지능 생성 피싱 탐지라는 두 흐름을 확인했습니다.</p></section>
-<img src="./20260704/images/image-01.png" alt="아마존웹서비스 일일 기술 신호를 설명하는 한국어 인포그래픽" class="blog-image" />
-<section class="section"><h2>수집된 글 요약</h2><div class="grid"><article class="card"><p class="eyebrow">아마존웹서비스 머신러닝 블로그</p><h3>아마존 세이지메이커 인공지능의 다중 턴 강화학습 모범 사례</h3><p>지원 티켓 처리나 콘텐츠 조정처럼 여러 단계가 이어지는 에이전트 학습에서는 도구 호출, 결과 해석, 오류 복구가 반복됩니다. 원문은 신뢰 가능한 학습 환경, 외부 평가, 보상 설계, 다중 턴 지표 모니터링을 핵심 모범 사례로 제시합니다.</p><a href="https://aws.amazon.com/blogs/machine-learning/best-practices-for-multi-turn-reinforcement-learning-in-amazon-sagemaker-ai/" target="_blank" rel="noopener" aria-label="원문 링크 열기">원문 링크 열기</a></article>
-<article class="card"><p class="eyebrow">아마존웹서비스 머신러닝 블로그</p><h3>아마존 베드록의 인공지능 생성 피싱 탐지 방식</h3><p>원문은 생성형 인공지능과 공개 출처 정보를 활용한 피싱 메시지가 완벽한 문법과 개인화 문맥을 갖추면서 기존 오탈자 중심 탐지 방식의 효과가 낮아지는 문제를 다룹니다.</p><a href="https://aws.amazon.com/blogs/machine-learning/how-amazon-bedrock-catches-ai-generated-phishing/" target="_blank" rel="noopener" aria-label="원문 링크 열기">원문 링크 열기</a></article></div></section>
-<section class="section"><h2>핵심 트렌드 분석</h2><p>관찰 가능한 변화는 두 가지입니다. 첫째, 에이전트형 인공지능 학습은 단일 응답 품질보다 여러 단계의 도구 사용과 보상 설계가 중요해지고 있습니다. 둘째, 보안 영역에서는 생성형 인공지능으로 정교해진 피싱에 대응하기 위해 문맥 기반 탐지와 업무 행위 분석이 더 중요해지고 있습니다.</p></section>
-<img src="./20260704/images/image-02.png" alt="아마존웹서비스 서비스 변화 맵을 정리한 한국어 인포그래픽" class="blog-image" />
-<section class="section"><h2>기술 변화의 의미와 기업 적용 관점</h2><div class="table-wrap"><table><thead><tr><th>출처</th><th>글 제목</th><th>발행일</th><th>원문</th></tr></thead><tbody><tr><td>아마존웹서비스 머신러닝 블로그</td><td>아마존 세이지메이커 인공지능의 다중 턴 강화학습 모범 사례</td><td>2026-07-03 02:50 한국시간</td><td><a href='https://aws.amazon.com/blogs/machine-learning/best-practices-for-multi-turn-reinforcement-learning-in-amazon-sagemaker-ai/' target='_blank' rel='noopener' aria-label='원문 링크 열기'>원문 링크</a></td></tr>
-<tr><td>아마존웹서비스 머신러닝 블로그</td><td>아마존 베드록의 인공지능 생성 피싱 탐지 방식</td><td>2026-07-03 02:55 한국시간</td><td><a href='https://aws.amazon.com/blogs/machine-learning/how-amazon-bedrock-catches-ai-generated-phishing/' target='_blank' rel='noopener' aria-label='원문 링크 열기'>원문 링크</a></td></tr></tbody></table></div></section>
-<section class="section"><h2>한국 기업 관점 시사점</h2><p>한국 기업은 에이전트 학습·보안 탐지 모두에서 모델 성능만 보지 말고 데이터 접근 경계, 권한, 로그, 평가 기준, 비용 예측 가능성을 함께 확인해야 합니다. 특히 원문 사례가 특정 리전·계정·서비스 조건에 의존할 수 있으므로 실제 도입 전 공식 문서와 콘솔 가용성 확인이 필요합니다.</p></section>
-<section class="section"><h2>실행 전략</h2><p>실행 전략은 단계별 로드맵이 아니라 검증 우선순위로 정리합니다. 첫째, 원문 발표의 가용 리전과 계정 조건을 확인합니다. 둘째, 기존 아키텍처와 권한·로그·데이터 흐름의 변경 범위를 검토합니다. 셋째, 비용과 장애 대응 기준을 문서화한 뒤 제한된 환경에서 검증합니다.</p></section>
-<section class="section"><h2>리스크와 거버넌스 고려사항</h2><p>인공지능·데이터·보안 관련 기능은 모델 출력 품질, 접근권한, 감사 로그, 데이터 보존, 서드파티 의존성, 요금 변동 가능성을 함께 검토해야 합니다. 원문에서 확인되지 않은 성능·비용 효과는 확인 필요로 유지했습니다.</p></section>
-<img src="./20260704/images/image-03.png" alt="기업 의사결정 검토 포인트를 정리한 한국어 인포그래픽" class="blog-image" />
-<section class="section"><h2>시사점/인사이트 리포트</h2><section class="insight"><h3>1. 아마존 세이지메이커 인공지능의 다중 턴 강화학습 모범 사례</h3><ol><li><strong>관찰된 사실</strong>: 다중 턴 에이전트 강화학습은 단일 응답보다 보상 왜곡과 환경 신뢰성 문제가 커지므로, 학습 환경·외부 평가·보상 설계·지표 모니터링을 함께 다루어야 한다고 설명합니다.</li><li><strong>근거 출처 주소</strong>: <a href="https://aws.amazon.com/blogs/machine-learning/best-practices-for-multi-turn-reinforcement-learning-in-amazon-sagemaker-ai/" target="_blank" rel="noopener" aria-label="근거 출처 주소 열기">원문 주소 열기</a></li><li><strong>기업 의사결정 시사점/리스크/기회</strong>: 기업은 에이전트 학습을 기능 구현만으로 판단하지 말고, 평가 데이터와 보상 기준이 실제 업무 결과와 맞는지 검증해야 합니다. 보상 해킹, 도구 호출 실패, 장기 대화 품질 저하가 주요 리스크입니다.</li></ol></section>
-<section class="insight"><h3>2. 아마존 베드록의 인공지능 생성 피싱 탐지 방식</h3><ol><li><strong>관찰된 사실</strong>: 생성형 인공지능 기반 피싱은 문법 오류가 적고 맥락이 정교해져, 보안팀이 과거 규칙 기반 신호만으로 탐지하기 어려운 공격면을 만든다고 설명합니다.</li><li><strong>근거 출처 주소</strong>: <a href="https://aws.amazon.com/blogs/machine-learning/how-amazon-bedrock-catches-ai-generated-phishing/" target="_blank" rel="noopener" aria-label="근거 출처 주소 열기">원문 주소 열기</a></li><li><strong>기업 의사결정 시사점/리스크/기회</strong>: 기업은 이메일 보안 정책에서 문법 오류·일반 인사말 같은 과거 탐지 기준만 의존하지 말고, 메시지 의도·문맥·발신 행위·업무 프로세스 이상 징후를 함께 보는 탐지 체계를 검토해야 합니다. 단, 원문 사례의 구성 요소와 실제 서비스 적용 조건은 도입 전 재확인이 필요합니다.</li></ol></section></section>
-<section class="section appendix"><h2>이미지 프롬프트 부록</h2><p>이미지는 챗지피티 인증 기반 이미지 생성 경로로 생성했습니다. 원본 프롬프트 로그는 <code>/opt/data/out/aws-daily-blog-20260704/image-prompts.md</code>에 저장했습니다.</p><p>프롬프트 로그에는 이미지 목적, 삽입 위치, 생성 프롬프트, 권장 비율, 대체 텍스트를 항목별로 기록했습니다.</p></section>
-<footer>생성 기준: 2026-07-04 07:04:42 한국시간 · 마크다운은 옵시디언 원문 저장소, 엘엘엠 위키 컬렉션, 지브레인 소스에 저장된 항목을 기준으로 했습니다.</footer>
-</main></body></html>
+<section class='message'><h2>핵심 요약</h2><p>오늘 확인한 공식 피드는 3개이며, 신규 저장 건수는 0건입니다. 주요 판단은 수집된 원문 URL, 발행일, 본문 추출 결과에 한정했습니다.</p><p>수집 항목: 신규 항목 없음 — 최근 24시간 보조 입력 사용</p></section>
+<section><h2>핵심 트렌드 분석</h2><div class='infographic'><div class='metric'><strong>0</strong><span>분석 입력 문서</span></div><div class='metric'><strong>0</strong><span>신규 저장 문서</span></div><div class='metric'><strong>3+</strong><span>시각 자료</span></div></div></section>
+<section><h2>수집 출처 카드</h2><div class='grid'></div></section>
+<section><h2>기술 변화의 의미와 기업 적용 관점</h2><div class='table-wrap'><table><thead><tr><th>원문 제목</th><th>주요 서비스·기술</th><th>검토 포인트</th></tr></thead><tbody></tbody></table></div></section>
+<section><h2>시사점/인사이트 리포트</h2><div class='insight'><strong>1. 관찰된 사실</strong><p>이번 실행에서 신규 수집 문서가 없어 최근 24시간 GBrain 문서를 보조 입력으로 확인했습니다.</p><strong>근거 출처 URL</strong><p><a href='확인 필요'>확인 필요</a></p><strong>기업 의사결정 시사점/리스크/기회</strong><p>당일 신규 변화에 기반한 강한 결론은 보류하고, 최신 원문 확인 후 의사결정에 반영해야 합니다.</p></div></section>
+<section><h2>리스크와 거버넌스 고려사항</h2><div class='grid'><article class='card'><h3>근거 한정</h3><p>분석은 이번 실행에서 저장·동기화된 원문과 최근 24시간 보조 문서에 한정합니다. 원문 접근이 제한되거나 본문 추출이 불완전한 항목은 확인 필요입니다.</p></article><article class='card'><h3>도입 검토</h3><p>서비스 발표 글은 리전, 과금, 일반 제공 여부, 보안 책임 경계가 함께 확인되어야 기업 적용 판단이 가능합니다.</p></article><article class='card'><h3>데이터 통제</h3><p>생성형 인공지능·에이전트 관련 신호는 데이터 출처, 권한, 로그, 평가 기준, 외부 도구 호출 통제를 함께 검토해야 합니다.</p></article></div></section>
+<section><h2>시각 자료</h2><figure><img src='./images/image-01.png' alt='아마존웹서비스 블로그 일일 분석 이미지 1' class='blog-image' /><figcaption>분석 보조 이미지 1</figcaption></figure>
+<figure><img src='./images/image-02.png' alt='아마존웹서비스 블로그 일일 분석 이미지 2' class='blog-image' /><figcaption>분석 보조 이미지 2</figcaption></figure>
+<figure><img src='./images/image-03.png' alt='아마존웹서비스 블로그 일일 분석 이미지 3' class='blog-image' /><figcaption>분석 보조 이미지 3</figcaption></figure></section>
+<section><h2>이미지 프롬프트 기록</h2><section class='prompt'><h4>Image Prompt 1</h4><p><strong>목적:</strong> 오늘 수집 신호를 한눈에 보여주는 히어로 이미지</p><p><strong>삽입 위치:</strong> 상단 hero</p><p><strong>image2 prompt:</strong> Create a professional Korean executive blog hero illustration about Amazon Web Services official blog signals for enterprise artificial intelligence, data, and cloud. Clean editorial style, no official logo, abstract cloud nodes, readable Korean theme text: 오늘의 클라우드 신호.</p><p><strong>권장 비율:</strong> 3:2</p><p><strong>alt 텍스트:</strong> 아마존웹서비스 공식 블로그 기반 일일 클라우드 분석 히어로 이미지</p></section>
+<section class='prompt'><h4>Image Prompt 2</h4><p><strong>목적:</strong> 엔터프라이즈 인공지능 검토 포인트 시각화</p><p><strong>삽입 위치:</strong> 시각 자료 섹션 첫 번째</p><p><strong>image2 prompt:</strong> Create a clean Korean infographic-style illustration for enterprise artificial intelligence decision review. Show data, model, security, governance, cost as connected cards. No official brand logo. Use Korean visible labels.</p><p><strong>권장 비율:</strong> 3:2</p><p><strong>alt 텍스트:</strong> 엔터프라이즈 인공지능 검토 포인트를 표현한 분석 이미지</p></section>
+<section class='prompt'><h4>Image Prompt 3</h4><p><strong>목적:</strong> 데이터·보안·거버넌스 리스크 요약</p><p><strong>삽입 위치:</strong> 시각 자료 섹션 두 번째</p><p><strong>image2 prompt:</strong> Create a professional Korean visual showing cloud data governance, security review, and risk checkpoints based on official technology blog evidence. Editorial, clear, no logo, accessible colors, Korean labels.</p><p><strong>권장 비율:</strong> 3:2</p><p><strong>alt 텍스트:</strong> 데이터 보안 거버넌스 리스크를 표현한 이미지</p></section></section>
+</main><footer><p>생성 시각: 2026-07-05 07:04 KST. 원문 저장소와 LLM Wiki 동기화 결과를 기준으로 자동 작성했습니다.</p></footer>
+</body></html>
