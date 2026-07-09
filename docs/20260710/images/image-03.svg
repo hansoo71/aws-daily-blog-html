@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<rect width="1600" height="900" fill="#111827"/><circle cx="1300" cy="140" r="260" fill="#a7f3d0" opacity="0.18"/><circle cx="210" cy="760" r="210" fill="#a7f3d0" opacity="0.13"/>
+<text x="110" y="145" font-family="Arial, sans-serif" font-size="34" fill="#a7f3d0" font-weight="700">AWS BLOG · AI/Cloud</text>
+<foreignObject x="105" y="240" width="1280" height="350"><div xmlns="http://www.w3.org/1999/xhtml" style="font-family:Arial,sans-serif;color:white;font-size:66px;line-height:1.12;font-weight:800;word-break:keep-all;">AWS 주간 소식 모음: AWS 기반 Claude Sonnet 5, AI 에이전트용 Amazon WorkSpaces, AWS 서비스 가용성 업데이트 등</div></foreignObject>
+<text x="110" y="790" font-family="Arial, sans-serif" font-size="30" fill="#e5e7eb">Collected 2026-07-10 07:03 KST</text>
+<text x="1300" y="790" text-anchor="middle" font-family="Arial, sans-serif" font-size="96" fill="#a7f3d0" font-weight="900">03</text>
+</svg>
