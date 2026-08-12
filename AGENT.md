@@ -1,3 +1,1 @@
-# Agent Notes
-
-원문 출처와 수집일을 보존하고, 화면 표시 텍스트는 한국어로 유지합니다.
+Edit source in src/YYYYMMDD, sync docs and root fallback for Pages. Preserve source-first article links.
