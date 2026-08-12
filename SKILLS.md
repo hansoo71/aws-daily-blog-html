@@ -1,3 +1,1 @@
-# Skills
-
-매일 수집 HTML을 `src/YYYYMMDD`와 `docs/YYYYMMDD`에 동기화합니다.
+Use aws-blog-daily-publishing and html-report-repo-workflow for future updates.
