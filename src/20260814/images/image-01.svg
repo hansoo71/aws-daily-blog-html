@@ -1,1 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675"><rect width="1200" height="675" fill="#f8fafc"/><circle cx="985" cy="120" r="185" fill="#172554" opacity="0.12"/><rect x="70" y="78" width="1060" height="520" rx="36" fill="white" stroke="#172554" stroke-width="5"/><text x="104" y="158" font-family="Arial, sans-serif" font-size="45" font-weight="700" fill="#172554">AWS 기술 블로그 브리핑</text><text x="104" y="224" font-family="Arial, sans-serif" font-size="30" fill="#334155">2026-08-14 / 신규 5건</text><text x="104" y="316" font-family="Arial, sans-serif" font-size="38" font-weight="700" fill="#0f172a">클라우드 게임 스트리밍</text><text x="104" y="374" font-family="Arial, sans-serif" font-size="28" fill="#475569">GameLift Streams</text><path d="M104 470 H1096" stroke="#172554" stroke-width="4"/><text x="104" y="535" font-family="Arial, sans-serif" font-size="26" fill="#64748b">Official RSS → Raw → LLM Wiki → GBrain → HTML</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
+<rect width="1200" height="675" fill="#f8fafc"/>
+<circle cx="985" cy="120" r="185" fill="#172554" opacity="0.12"/>
+<rect x="70" y="78" width="1060" height="520" rx="36" fill="white" stroke="#172554" stroke-width="5"/>
+<text x="104" y="158" font-family="Noto Sans KR, Arial, sans-serif" font-size="42" font-weight="700" fill="#172554">AWS 기술 블로그 브리핑</text>
+<text x="104" y="220" font-family="Noto Sans KR, Arial, sans-serif" font-size="28" fill="#334155">2026-08-14 · 신규 5건</text>
+<text x="104" y="316" font-family="Noto Sans KR, Arial, sans-serif" font-size="38" font-weight="700" fill="#0f172a">클라우드 게임 스트리밍</text>
+<text x="104" y="374" font-family="Noto Sans KR, Arial, sans-serif" font-size="26" fill="#475569">Amazon GameLift Streams</text>
+<path d="M104 470 H1096" stroke="#172554" stroke-width="4"/>
+<text x="104" y="535" font-family="Noto Sans KR, Arial, sans-serif" font-size="24" fill="#64748b">공식 RSS → 원문 보존 → 한국어 HTML 브리핑</text>
+</svg>

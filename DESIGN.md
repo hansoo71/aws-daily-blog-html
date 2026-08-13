@@ -1,1 +1,1 @@
-Responsive Korean editorial report; navy/blue enterprise palette; deterministic SVG visuals.
+반응형 한국어 편집 리포트. 화면 문구·캡션·alt·메타는 한국어. 제품명·API·원문 URL은 원문 표기.
