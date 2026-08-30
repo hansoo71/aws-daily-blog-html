@@ -1,11 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675">
-<rect width="1200" height="675" fill="#f8fafc"/>
-<circle cx="985" cy="120" r="185" fill="#7c2d12" opacity="0.12"/>
-<rect x="70" y="78" width="1060" height="520" rx="36" fill="white" stroke="#7c2d12" stroke-width="5"/>
-<text x="104" y="158" font-family="Noto Sans KR, Arial, sans-serif" font-size="42" font-weight="700" fill="#7c2d12">AWS 기술 블로그 브리핑</text>
-<text x="104" y="220" font-family="Noto Sans KR, Arial, sans-serif" font-size="28" fill="#334155">2026-08-14 · 신규 5건</text>
-<text x="104" y="316" font-family="Noto Sans KR, Arial, sans-serif" font-size="38" font-weight="700" fill="#0f172a">업무 앱 안의 Agentic AI</text>
-<text x="104" y="374" font-family="Noto Sans KR, Arial, sans-serif" font-size="26" fill="#475569">Amazon Quick for Microsoft 365</text>
-<path d="M104 470 H1096" stroke="#7c2d12" stroke-width="4"/>
-<text x="104" y="535" font-family="Noto Sans KR, Arial, sans-serif" font-size="24" fill="#64748b">공식 RSS → 원문 보존 → 한국어 HTML 브리핑</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f766e"/><stop offset="1" stop-color="#0f172a"/></linearGradient></defs><rect width="1600" height="900" fill="url(#g)"/><circle cx="1280" cy="180" r="240" fill="#ffffff" opacity="0.08"/><rect x="110" y="110" width="1380" height="680" rx="48" fill="#ffffff" opacity="0.12" stroke="#ffffff" stroke-opacity="0.28"/><text x="160" y="250" fill="#fff" font-size="54" font-family="Noto Sans CJK KR, Noto Sans KR, Arial" font-weight="700">시사점 리포트</text><text x="160" y="335" fill="#e5e7eb" font-size="34" font-family="Noto Sans CJK KR, Noto Sans KR, Arial">관찰된 사실과 근거 URL 중심 분석</text><text x="160" y="710" fill="#f8fafc" font-size="30" font-family="Noto Sans CJK KR, Noto Sans KR, Arial">AWS 기술 블로그 일일 브리핑 · 2026-08-31</text></svg>
