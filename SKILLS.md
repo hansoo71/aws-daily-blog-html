@@ -1,1 +1,3 @@
-반복 작업: AWS RSS 수집 → raw 저장 → LLM Wiki sync → GBrain file import → HTML 생성 → Pages 검증.
+# Skills
+
+오늘자 AWS 일일 블로그를 재생성하고 Pages를 검증합니다.
