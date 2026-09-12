@@ -1,3 +1,3 @@
 # Skills
 
-오늘자 AWS 일일 블로그를 재생성하고 Pages를 검증합니다.
+매일 AWS 공식 블로그를 수집해 한국어 HTML과 wiki source-summary를 갱신합니다.
