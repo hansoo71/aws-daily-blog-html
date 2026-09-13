@@ -1,3 +1,3 @@
 # Skills
 
-매일 AWS 공식 블로그를 수집해 한국어 HTML과 wiki source-summary를 갱신합니다.
+매일 AWS RSS 수집 후 raw, LLM Wiki, GBrain, HTML, GitHub Pages를 동기화합니다.
