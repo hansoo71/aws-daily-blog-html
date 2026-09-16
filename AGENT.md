@@ -1,3 +1,3 @@
-# Agent Notes
+# Agent 운영 규칙
 
-원문은 raw/source에 보존하고 공개 HTML은 한국어 표시 필드만 사용합니다.
+원문 보존 후 한국어 표시 필드로만 HTML을 렌더링합니다.

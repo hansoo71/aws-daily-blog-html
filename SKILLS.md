@@ -1,3 +1,3 @@
 # Skills
 
-매일 AWS RSS 수집 후 raw, LLM Wiki, GBrain, HTML, GitHub Pages를 동기화합니다.
+자연어 요청 예: 오늘자 AWS 브리핑을 재생성하고 검증합니다.
