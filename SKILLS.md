@@ -1,3 +1,3 @@
 # Skills
 
-자연어 요청 예: 오늘자 AWS 브리핑을 재생성하고 검증합니다.
+매일 AWS 공식 블로그를 수집해 한국어 HTML과 wiki source-summary를 갱신합니다.
