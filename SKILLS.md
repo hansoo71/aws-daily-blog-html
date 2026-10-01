@@ -1,3 +1,3 @@
 # Skills
 
-매일 AWS 공식 블로그를 수집해 한국어 HTML과 wiki source-summary를 갱신합니다.
+매일 RSS 수집 후 src/docs/root fallback/standalone을 동기화합니다.
